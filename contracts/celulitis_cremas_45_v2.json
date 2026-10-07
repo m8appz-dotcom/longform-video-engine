@@ -1,0 +1,1072 @@
+{
+ "meta": {
+  "topic": "Cremas para celulitis en mujeres sobre 45",
+  "language": "es",
+  "target_seconds": 44,
+  "fps": 24,
+  "platform": "reels",
+  "narrative_structure": "countdown",
+  "avatar_policy": "required",
+  "media_policy": "production",
+  "angle_type": "prueba_practica",
+  "angle_sentence": "Una crema anticelulitica se decide con tres filtros de etiqueta, no por masaje ni por la palabra grande del frente.",
+  "angle_scorecard": [
+   {
+    "angle_type": "prueba_practica",
+    "angle_sentence": "Tres filtros de etiqueta separan apoyo cosmetico de promesa exagerada.",
+    "hook_claim": "No se evalua por masaje",
+    "common_belief": "Si una crema no funciona, falta masajear mas o usarla mas dias.",
+    "ignored_variable": "La promesa escrita en el envase revela si vende sensacion o criterio.",
+    "specific_case": "Frente dice piel lisa, etiqueta solo dice aroma, brillo y suavidad.",
+    "cta_action": "Comentar LISTA para revisar el frasco con una checklist.",
+    "tension": 5,
+    "novedad": 4,
+    "proof": 5,
+    "visualidad": 5,
+    "especificidad": 5,
+    "utilidad": 5,
+    "riesgo": 2,
+    "score": 32,
+    "selected": true,
+    "reason": "El giro es visual y aplicable en casa sin promesas medicas."
+   },
+   {
+    "angle_type": "error_comun",
+    "angle_sentence": "Comprar por textura confunde sensacion inmediata con valor real.",
+    "hook_claim": "Suave no significa eficaz",
+    "common_belief": "La crema que deja mejor sensacion es mejor para celulitis.",
+    "ignored_variable": "La sensacion de uso no prueba el tipo de promesa.",
+    "specific_case": "Aroma, brillo y piel suave como claims principales.",
+    "cta_action": "Separar sensacion de promesa.",
+    "tension": 4,
+    "novedad": 3,
+    "proof": 4,
+    "visualidad": 5,
+    "especificidad": 4,
+    "utilidad": 5,
+    "riesgo": 2,
+    "score": 29,
+    "selected": false,
+    "reason": "Bueno, pero menos estructural que los tres filtros."
+   },
+   {
+    "angle_type": "riesgo_evitable",
+    "angle_sentence": "La promesa de piel lisa en siete dias es una alerta de marketing.",
+    "hook_claim": "Siete dias es alerta",
+    "common_belief": "Una promesa rapida indica potencia.",
+    "ignored_variable": "La velocidad prometida revela exageracion.",
+    "specific_case": "Piel lisa en siete dias.",
+    "cta_action": "Usar banderas rojas.",
+    "tension": 5,
+    "novedad": 3,
+    "proof": 4,
+    "visualidad": 5,
+    "especificidad": 5,
+    "utilidad": 4,
+    "riesgo": 2,
+    "score": 30,
+    "selected": false,
+    "reason": "Funciona como pico, no como idea completa."
+   },
+   {
+    "angle_type": "mito_incompleto",
+    "angle_sentence": "No todas las cremas son inutiles; el problema es esperar transformacion total de un producto cosmetico.",
+    "hook_claim": "No es todo o nada",
+    "common_belief": "O sirve para borrar celulitis o no sirve.",
+    "ignored_variable": "Puede servir como apoyo cosmetico si la promesa es honesta.",
+    "specific_case": "Apariencia y textura frente a milagro total.",
+    "cta_action": "Clasificar la promesa.",
+    "tension": 4,
+    "novedad": 4,
+    "proof": 3,
+    "visualidad": 4,
+    "especificidad": 4,
+    "utilidad": 5,
+    "riesgo": 3,
+    "score": 27,
+    "selected": false,
+    "reason": "Matiz util, pero necesita el marco practico de filtros."
+   }
+  ],
+  "benchmark_notes": [
+   "references/ no contiene reels de referencia; solo README operativo.",
+   "Duracion 40-55s porque el mensaje usa tres filtros aplicables."
+  ],
+  "brand": {
+   "bg": "#F7F3EE",
+   "fg": "#18212F",
+   "accent": "#D85C4A"
+  },
+  "style": {
+   "base_theme": "light",
+   "background_role": "mixed",
+   "font": "plus_jakarta",
+   "caption_style": "word_pop",
+   "caption_emphasis_policy": "smart_stopwords",
+   "caption_granularity": "word",
+   "caption_decoration": "none",
+   "caption_position": "center_low",
+   "caption_readability_mode": "adaptive_boxed",
+   "render_policy": "declared_only",
+   "plate_layout": "none",
+   "graphic_style": "editorial",
+   "hook_overlay": "none",
+   "hook_text_zone": "top_clean",
+   "progress_bar": "accent",
+   "texture": "subtle",
+   "palette": {
+    "bg": "#F7F3EE",
+    "fg": "#18212F",
+    "accent": "#D85C4A",
+    "secondary": "#2E7D73",
+    "danger": "#B3261E",
+    "warning": "#C98A1B",
+    "panel": "#FFFFFF",
+    "cream": "#F7F3EE",
+    "off": "#EFE7DC",
+    "ink": "#18212F",
+    "muted": "#6C6F76"
+   }
+  },
+  "subject_lock": "tarro cilindrico bajo de crema corporal (no botella de pump), tapa blanca plana, cuerpo blanco/crema con etiqueta legible de marca inventada LUMEA (igual en todas las escenas)"
+ },
+ "hook": {
+  "spoken": "El problema de tu crema anticelulitica no es el masaje.",
+  "headline": "EL PROBLEMA NO ES EL MASAJE",
+  "mode": "evidence",
+  "visual": {
+   "provider": "image",
+   "prompt": "Fotografia vertical 9:16, baño claro, mujer de 50 años sosteniendo un frasco generico de crema corporal y mirando la etiqueta, una mano señala la parte trasera del envase, zona superior limpia para titular, sin marca real, sin texto legible excepto formas de etiqueta."
+  }
+ },
+ "script": "El problema de tu crema anticelulitica no es el masaje. Es la promesa del frasco. Si el frente dice piel lisa, pero la etiqueta solo habla de aroma, brillo y suavidad, eso es una crema hidratante con etiqueta de tratamiento. Antes de comprar otra, revisa tres cosas. Primero, busca el activo con nombre, como cafeina o retinol. Segundo, mira que resultado promete; mejorar la apariencia es honesto, borrar la celulitis no. Tercero, revisa el plazo; la bandera roja es prometer piel lisa en siete dias. La regla es simple, si falla dos de tres, compraste una hidratante, no un tratamiento. Y una hidratante se queda en la superficie; la celulitis empieza mas abajo. Comenta LISTA y te paso la checklist completa para revisar tu frasco.",
+ "scenes": [
+  {
+   "role": "hook",
+   "anchor": {
+    "at": "start"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Fotografia vertical 9:16, baño claro, mujer de 50 años sosteniendo un frasco generico de crema corporal y mirando la etiqueta, una mano señala la parte trasera del envase, zona superior limpia para titular, sin marca real, sin texto legible excepto formas de etiqueta.",
+    "treatment": "spotlight"
+   },
+   "motion": "kenburns-in",
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "hook_spectacle",
+   "why_this_visual_not_other": "Claim textual sobre base de media: se conserva la media (retencion) y el texto va declarado encima; un plate que reemplaza la media es ultimo recurso.",
+   "editorial_point": "La crema no se juzga por cuanto la masajeas, sino por la promesa escrita.",
+   "why_it_matters": "Quita culpa a la espectadora y la manda al objeto verificable: el envase.",
+   "visual_proof": "La media dramatiza el beat; la precision textual la lleva el overlay declarado compuesto encima.",
+   "coverage_required": true,
+   "intent": "hook",
+   "visual_targets": [
+    "frasco generico",
+    "etiqueta trasera",
+    "mano senalando"
+   ],
+   "max_duration_ms": 8400,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "crema anticelulitica"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El frasco queda identificado como el objeto que se va a revisar",
+     "target": "frasco generico",
+     "label": "TU FRASCO"
+    },
+    {
+     "anchor": {
+      "phrase": "no es el masaje"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El foco descarta el masaje y apunta al frasco",
+     "target": "frasco",
+     "label": "MIRA LA ETIQUETA"
+    },
+    {
+     "anchor": {
+      "phrase": "la promesa del frasco"
+     },
+     "action": "crop_reframe",
+     "semantic_delta": "El reencuadre acerca la etiqueta donde vive la promesa",
+     "target": "etiqueta trasera"
+    },
+    {
+     "anchor": {
+      "phrase": "Es la promesa del frasco"
+     },
+     "action": "component_state",
+     "semantic_delta": "El criterio real entra en pantalla: la promesa, no la tecnica",
+     "target": "rotulo del criterio"
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "Si el frente dice"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Composicion vertical 9:16 split visual del MISMO tarro cilindrico bajo de crema LUMEA (no botella): al FRENTE una etiqueta limpia y legible con el nombre LUMEA y un reclamo grande tipo 'piel lisa'; al REVERSO una etiqueta con letra pequena legible de ingredientes/beneficios cosmeticos genericos (sin numeros ni cifras). Mano femenina madura girando el envase para comparar frente y reverso, bano luminoso. Etiquetas NITIDAS y bien escritas (jamas letras deformes ni garabateadas), marca inventada (no una marca real existente), sin marcas de agua.",
+    "treatment": "none"
+   },
+   "motion": "pan-right",
+   "layout": "full_bleed",
+   "visual_mode": "media_backed",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "La frase compara frente contra etiqueta; una imagen controlada del giro del envase hace visible el contraste.",
+   "editorial_point": "El frente puede prometer una cosa mientras la etiqueta solo vende sensacion.",
+   "why_it_matters": "Es la prueba practica que cualquiera puede repetir con su frasco.",
+   "visual_proof": "Frasco girando de frente a reverso con lista de aroma, brillo y suavidad renderizada como overlay.",
+   "coverage_required": true,
+   "caption_position": "bottom",
+   "intent": "contraste frente contra etiqueta",
+   "visual_targets": [
+    "frente del frasco",
+    "etiqueta trasera",
+    "mano girando"
+   ],
+   "max_duration_ms": 10200,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "Si el frente dice"
+     },
+     "action": "layout_swap",
+     "semantic_delta": "Se presenta el contraste entre frente del frasco y etiqueta",
+     "target": "frente contra etiqueta",
+     "label": "FRENTE VS ETIQUETA"
+    },
+    {
+     "anchor": {
+      "phrase": "dice piel lisa"
+     },
+     "action": "crop_reframe",
+     "semantic_delta": "Reencuadre al frente del frasco: la promesa de piel lisa en grande",
+     "target": "frente del frasco"
+    },
+    {
+     "anchor": {
+      "phrase": "pero la etiqueta solo habla"
+     },
+     "action": "crop_reframe",
+     "semantic_delta": "Giro a la etiqueta trasera: lo que realmente declara",
+     "target": "etiqueta trasera"
+    },
+    {
+     "anchor": {
+      "phrase": "aroma, brillo y suavidad"
+     },
+     "action": "insert_card",
+     "semantic_delta": "Aparecen los tres claims sensoriales como prueba de la etiqueta",
+     "target": "lista sensorial",
+     "label": "SOLO SENSACION"
+    },
+    {
+     "anchor": {
+      "phrase": "con etiqueta de tratamiento"
+     },
+     "action": "component_state",
+     "semantic_delta": "El veredicto cambia de promesa a sensacion",
+     "target": "veredicto sensacion",
+     "label": "NO CRITERIO"
+    },
+    {
+     "anchor": {
+      "phrase": "solo habla de"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta trasera queda en foco: lo unico que declara esta por listarse",
+     "target": "etiqueta trasera"
+    },
+    {
+     "anchor": {
+      "phrase": "eso es una crema hidratante"
+     },
+     "action": "component_state",
+     "semantic_delta": "El veredicto de la escena entra: es una hidratante con otra etiqueta",
+     "target": "rotulo del veredicto"
+    },
+    {
+     "anchor": {
+      "phrase": "una crema hidratante"
+     },
+     "action": "component_state",
+     "semantic_delta": "El veredicto de la escena se sostiene mientras se nombra el producto real",
+     "target": "rotulo del veredicto"
+    }
+   ]
+  },
+  {
+   "role": "avatar",
+   "anchor": {
+    "phrase": "Antes de comprar otra"
+   },
+   "clip": {
+    "source": "kreado",
+    "avatar_key": "default",
+    "companion": {
+     "source": "image",
+     "image_provider": "codex-oauth",
+     "model": "gpt-image-2",
+     "prompt": "Fotografia vertical 9:16, close-up de manos femeninas sosteniendo el mismo tarro de crema LUMEA, gesto de sostenerlo con atencion, con la etiqueta LEGIBLE de la marca inventada LUMEA visible en el envase. Entorno de bano luminoso y limpio, luz natural suave, composicion simple. Etiqueta nitida y bien escrita (nunca deforme ni garabateada), sin marca real existente, sin marcas de agua.",
+     "motion": "kenburns-in"
+    }
+   },
+   "layout": "full_bleed",
+   "visual_family": "avatar_human",
+   "why_this_visual_not_other": "El presentador ancla la estructura de los tres filtros mirando a camara: es el pivote editorial antes de listarlos, con mas autoridad que un grafico solo.",
+   "editorial_point": "El presentador, con autoridad de criterio, anuncia los tres filtros que vienen.",
+   "why_it_matters": "Abre la pregunta que las tres escenas siguientes pagan una por una: cuales son y como se ven en el frasco.",
+   "visual_proof": "Se ve al presentador hablando directo a camara mientras el mapa de tres estaciones entra como overlay declarado encima.",
+   "coverage_required": true,
+   "intent": "presentador ancla la estructura de tres filtros",
+   "visual_targets": [
+    "ruta de tres estaciones",
+    "primera estacion por encenderse"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "Antes de comprar otra"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra la ruta de tres estaciones vacia: el mapa de lo que viene",
+     "target": "ruta de tres estaciones"
+    },
+    {
+     "anchor": {
+      "phrase": "revisa tres cosas"
+     },
+     "action": "component_state",
+     "semantic_delta": "Las tres estaciones ACTIVO/RESULTADO/PLAZO se nombran y la primera se enciende",
+     "target": "estaciones de la ruta"
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "Primero, busca el activo"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Fotografia vertical 9:16, close-up o plano medio de una persona realizando la accion del beat: Primer filtro y el mas facil de fallar: si la etiqueta no nombra un activo concreto, ya hay una bandera; y aun nombrandolo, faltan dos filtros mas duros.. La persona (manos, gesto) y el objeto en uso son el sujeto dominante, entorno cotidiano luminoso, luz natural suave, composicion limpia, sin marca real, sin logos, sin marcas de agua, sin texto legible especifico, espacio inferior despejado para captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "Claim dramatizable: media con la persona/gesto/objeto en accion sostiene la retencion; la precision del texto va en overlays declarados encima, no en un panel que reemplaza la media.",
+   "editorial_point": "Primer filtro y el mas facil de fallar: si la etiqueta no nombra un activo concreto, ya hay una bandera; y aun nombrandolo, faltan dos filtros mas duros.",
+   "why_it_matters": "Abre la pregunta que la escena siguiente responde: nombrar el activo no basta -- ¿que resultado promete y en cuanto tiempo? Cada filtro sube la exigencia.",
+   "visual_proof": "Se ve a la persona/gesto/objeto dramatizando el beat (autoseleccionado por medium_policy).",
+   "coverage_required": true,
+   "intent": "primer filtro",
+   "visual_targets": [
+    "rotulo activo con nombre",
+    "ejemplos cafeina y retinol"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "busca el"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo del activo entra apenas arranca la instruccion",
+     "target": "rotulo activo con nombre"
+    },
+    {
+     "anchor": {
+      "phrase": "con nombre"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El requisito queda subrayado: nombre concreto, no generico",
+     "target": "rotulo activo con nombre"
+    },
+    {
+     "anchor": {
+      "phrase": "o retinol"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El segundo ejemplo cierra la lista antes del corte de escena",
+     "target": "ejemplos del activo"
+    },
+    {
+     "anchor": {
+      "phrase": "como cafeina"
+     },
+     "action": "component_state",
+     "semantic_delta": "El primer ejemplo entra bajo el rotulo del activo",
+     "target": "ejemplos del activo"
+    },
+    {
+     "anchor": {
+      "phrase": "el activo"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo del activo se sostiene mientras se nombra el requisito",
+     "target": "rotulo activo con nombre"
+    }
+   ],
+   "motion": "kenburns-in"
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "Segundo, mira que resultado"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Fotografia vertical 9:16, close-up o plano medio de una persona realizando la accion del beat: El segundo filtro: mejorar la apariencia es promesa honesta; borrar la celulitis no.. La persona (manos, gesto) y el objeto en uso son el sujeto dominante, entorno cotidiano luminoso, luz natural suave, composicion limpia, sin marca real, sin logos, sin marcas de agua, sin texto legible especifico, espacio inferior despejado para captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "Claim dramatizable: media con la persona/gesto/objeto en accion sostiene la retencion; la precision del texto va en overlays declarados encima, no en un panel que reemplaza la media.",
+   "editorial_point": "El segundo filtro: mejorar la apariencia es promesa honesta; borrar la celulitis no.",
+   "why_it_matters": "Distingue en una frase la promesa aceptable de la que descalifica al frasco.",
+   "visual_proof": "Se ve a la persona/gesto/objeto dramatizando el beat (autoseleccionado por medium_policy).",
+   "coverage_required": true,
+   "intent": "segundo filtro",
+   "visual_targets": [
+    "palabra honesto",
+    "remate borrar no"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "que resultado promete"
+     },
+     "action": "component_state",
+     "semantic_delta": "El marco del segundo filtro entra: que resultado promete el frasco",
+     "target": "marco del filtro dos"
+    },
+    {
+     "anchor": {
+      "phrase": "mejorar la apariencia"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El resultado honesto queda señalado antes del golpe tipografico",
+     "target": "zona de la palabra honesto"
+    },
+    {
+     "anchor": {
+      "phrase": "es honesto"
+     },
+     "action": "component_state",
+     "semantic_delta": "La palabra HONESTO entra con su barra de acento",
+     "target": "palabra honesto"
+    },
+    {
+     "anchor": {
+      "phrase": "borrar la celulitis no"
+     },
+     "action": "component_state",
+     "semantic_delta": "El remate BORRAR NO cierra el contraste del filtro",
+     "target": "remate borrar no"
+    },
+    {
+     "anchor": {
+      "phrase": "borrar"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El remate BORRAR NO entra apenas se dice el verbo prohibido",
+     "target": "remate borrar no"
+    },
+    {
+     "anchor": {
+      "phrase": "celulitis no"
+     },
+     "action": "component_state",
+     "semantic_delta": "El remate se sostiene hasta el corte de escena",
+     "target": "remate borrar no"
+    },
+    {
+     "anchor": {
+      "phrase": "resultado promete"
+     },
+     "action": "component_state",
+     "semantic_delta": "El marco del filtro entra al nombrarse que se evalua",
+     "target": "marco del filtro dos"
+    },
+    {
+     "anchor": {
+      "phrase": "promete;"
+     },
+     "action": "component_state",
+     "semantic_delta": "El marco del filtro se sostiene mientras se completa la pregunta",
+     "target": "marco del filtro dos"
+    }
+   ],
+   "motion": "kenburns-in"
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "no. Tercero, revisa el plazo"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Fotografia vertical 9:16: mano de una mujer madura sosteniendo e inspeccionando un frasco generico de crema corporal, girandolo como quien revisa, bano claro desenfocado al fondo, luz suave, composicion limpia, sin marca real, sin logos, sin marcas de agua, sin texto legible, espacio inferior despejado para captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "media_backed",
+   "visual_family": "criteria_gate",
+   "why_this_visual_not_other": "La bandera roja es una REGLA textual (que promesa descalifica), no un dato a leer de un envase. Por eso '7 dias' es grafico declarado, no lectura fingida de la etiqueta.",
+   "editorial_point": "El tercer filtro es el plazo: prometer piel lisa en siete dias es la bandera roja.",
+   "why_it_matters": "Es el pico de retencion: una regla concreta que puede recordar.",
+   "visual_proof": "El plazo '7 dias' entra como grafico declarado (anillo) marcado con alerta: la REGLA de bandera roja que el video ensena, no una lectura del envase. La mano inspeccionando el producto es contexto, no evidencia.",
+   "coverage_required": true,
+   "intent": "bandera roja",
+   "visual_targets": [
+    "mano inspeccionando el frasco"
+   ],
+   "max_duration_ms": 8000,
+   "transition_in": "punch_in",
+   "transition_reason": "El video pasa de filtros a la alerta mas concreta.",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "Tercero,"
+     },
+     "action": "component_state",
+     "semantic_delta": "El diagrama entra apenas se anuncia el tercer filtro",
+     "target": "reverso del frasco"
+    },
+    {
+     "anchor": {
+      "phrase": "la bandera roja es prometer"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo del plazo se convierte en alerta: entra la bandera roja",
+     "target": "rotulo del plazo"
+    },
+    {
+     "anchor": {
+      "phrase": "piel lisa en siete dias"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La promesa exacta queda marcada como rechazo",
+     "target": "rotulo bandera roja"
+    },
+    {
+     "anchor": {
+      "phrase": "revisa el plazo"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra el grafico del plazo como regla declarada, no lectura del envase",
+     "target": "anillo del plazo"
+    },
+    {
+     "anchor": {
+      "phrase": "bandera roja"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El rotulo de alerta entra al nombrarse la bandera roja",
+     "target": "rotulo de alerta"
+    },
+    {
+     "anchor": {
+      "phrase": "piel lisa en"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo de siete dias entra sobre la promesa exacta antes del corte",
+     "target": "anillo siete dias"
+    },
+    {
+     "anchor": {
+      "phrase": "siete dias"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo de siete dias completa su llenado sobre la cifra exacta",
+     "target": "anillo siete dias"
+    },
+    {
+     "anchor": {
+      "phrase": "es prometer"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo de alerta se sostiene mientras se nombra la promesa exacta",
+     "target": "rotulo de alerta"
+    }
+   ]
+  },
+  {
+   "role": "avatar",
+   "anchor": {
+    "phrase": "La regla es simple"
+   },
+   "clip": {
+    "source": "kreado",
+    "avatar_key": "default",
+    "companion": {
+     "source": "image",
+     "image_provider": "codex-oauth",
+     "model": "gpt-image-2",
+     "prompt": "Fotografia vertical 9:16, close-up de manos femeninas sosteniendo el mismo tarro de crema LUMEA mientras deciden si comprarlo, expresion de evaluacion, con la etiqueta LEGIBLE de la marca inventada LUMEA visible en el envase. Entorno de bano luminoso, luz natural suave, composicion simple. Etiqueta nitida y bien escrita (nunca deforme ni garabateada), sin marca real existente, sin marcas de agua.",
+     "motion": "kenburns-in"
+    }
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "avatar_human",
+   "why_this_visual_not_other": "El veredicto (criterio de compra) lo da el presentador mirando a camara, no una foto de alguien decidiendo -- mas autoridad para el aha central del reel.",
+   "editorial_point": "El presentador entrega el criterio: si el frasco falla dos de tres, compraste una hidratante, no un tratamiento.",
+   "why_it_matters": "Este reencuadre permite usar una crema sin comprar una promesa exagerada.",
+   "visual_proof": "Se ve al presentador dando el veredicto; el panel HIDRATANTE/TRATAMIENTO entra como overlay declarado encima.",
+   "coverage_required": true,
+   "caption_position": "bottom",
+   "intent": "criterio de compra (aha central)",
+   "visual_targets": [
+    "apoyo cosmetico",
+    "transformacion total"
+   ],
+   "max_duration_ms": 10600,
+   "transition_in": "punch_in",
+   "transition_reason": "El guion anuncia el aha central y merece golpe visual.",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "es simple"
+     },
+     "action": "component_state",
+     "semantic_delta": "El panel de la regla entra apenas se anuncia el criterio",
+     "target": "panel hidratante"
+    },
+    {
+     "anchor": {
+      "phrase": "si falla dos de tres"
+     },
+     "action": "component_state",
+     "semantic_delta": "El conteo de filtros fallidos se sostiene en pantalla",
+     "target": "panel hidratante"
+    },
+    {
+     "anchor": {
+      "phrase": "dos de tres,"
+     },
+     "action": "component_state",
+     "semantic_delta": "El conteo de filtros fallidos entra a mitad de frase",
+     "target": "panel hidratante"
+    },
+    {
+     "anchor": {
+      "phrase": "compraste una hidratante"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo marca 2 de 3 filtros fallidos aplicados a los tres vistos: el veredicto se calcula, no se afirma",
+     "target": "anillo dos de tres"
+    },
+    {
+     "anchor": {
+      "phrase": "compraste una hidratante"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El panel HIDRATANTE se marca como veredicto justo al nombrarse",
+     "target": "panel hidratante"
+    },
+    {
+     "anchor": {
+      "phrase": "una hidratante,"
+     },
+     "action": "component_state",
+     "semantic_delta": "El panel hidratante se sostiene mientras se nombra el producto",
+     "target": "panel hidratante"
+    },
+    {
+     "anchor": {
+      "phrase": "no un tratamiento"
+     },
+     "action": "component_state",
+     "semantic_delta": "El panel TRATAMIENTO queda descartado al cerrar la frase",
+     "target": "panel tratamiento"
+    }
+   ],
+   "motion": "kenburns-in"
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Y una hidratante se queda"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "visual_mode": "diagrammatic",
+   "visual_family": "criteria_gate",
+   "why_this_visual_not_other": "La estructura bajo la piel no es fotografiable de forma etica; una ilustracion de capas muestra por que una crema de superficie tiene alcance limitado, como esquema.",
+   "editorial_point": "Por eso una crema que actua en la superficie no basta por si sola: el origen esta mas abajo de donde alcanza.",
+   "why_it_matters": "Cierra el porque y entrega el que hacer: si la crema no llega abajo, la unica jugada es leer el envase antes de pagar.",
+   "visual_proof": "Esquema explicativo simple de dos niveles (superficie donde actua la crema / mas abajo) para ilustrar por que una hidratante no alcanza. Declarado como esquema, sin afirmacion clinica.",
+   "coverage_required": true,
+   "intent": "veredicto de compra",
+   "visual_targets": [
+    "capa superficie",
+    "capa mas abajo"
+   ],
+   "max_duration_ms": 8200,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "una hidratante se queda"
+     },
+     "action": "component_state",
+     "semantic_delta": "El diagrama de dos capas entra apenas arranca el veredicto",
+     "target": "capa superficie"
+    },
+    {
+     "anchor": {
+      "phrase": "en la superficie"
+     },
+     "action": "component_state",
+     "semantic_delta": "La capa SUPERFICIE se ilumina: hasta ahi llega una hidratante",
+     "target": "capa superficie"
+    },
+    {
+     "anchor": {
+      "phrase": "la celulitis empieza"
+     },
+     "action": "component_state",
+     "semantic_delta": "La capa MAS ABAJO se ilumina: el origen del problema",
+     "target": "capa mas abajo"
+    },
+    {
+     "anchor": {
+      "phrase": "empieza mas abajo"
+     },
+     "action": "component_state",
+     "semantic_delta": "El veredicto final marca la separacion entre ambas capas",
+     "target": "linea de separacion"
+    },
+    {
+     "anchor": {
+      "phrase": "mas abajo."
+     },
+     "action": "component_state",
+     "semantic_delta": "El veredicto final se sostiene hasta el cierre de la escena",
+     "target": "linea de separacion"
+    }
+   ],
+   "plate_last_resort_reason": "La profundidad bajo la piel no se puede fotografiar ni dramatizar sin simular anatomia; el diagrama de dos capas es la unica representacion honesta y verificable del limite de una crema topica.",
+   "plate_purpose": "decision_card"
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "LISTA"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "cta",
+   "plate_purpose": "cta_resource",
+   "visual_mode": "cta",
+   "visual_family": "cta_document",
+   "why_this_visual_not_other": "El CTA ofrece una checklist; la tarjeta de recurso paga exactamente esa promesa.",
+   "editorial_point": "La checklist convierte los tres filtros en una revision de envase que cualquiera hace en la tienda.",
+   "why_it_matters": "Convierte el aha en comentario y accion inmediata.",
+   "visual_proof": "Heuristica observable del envase en pantalla: tarjeta con los tres filtros (activo con nombre, resultado honesto, plazo realista) listandose antes del boton COMENTA LISTA.",
+   "coverage_required": false,
+   "intent": "cta",
+   "visual_targets": [
+    "checklist",
+    "activo",
+    "promesa",
+    "tiempo",
+    "boton LISTA"
+   ],
+   "max_duration_ms": 8200,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "LISTA"
+     },
+     "action": "insert_card",
+     "semantic_delta": "Entra la tarjeta con los tres filtros como checklist accionable: la respuesta a que hacer en vez de masajear",
+     "target": "tarjeta checklist del frasco"
+    },
+    {
+     "anchor": {
+      "phrase": "la checklist completa"
+     },
+     "action": "component_state",
+     "semantic_delta": "Los tres checks de la tarjeta terminan de listarse mientras se nombra la checklist",
+     "target": "tarjeta checklist del frasco"
+    },
+    {
+     "anchor": {
+      "phrase": "revisar tu frasco"
+     },
+     "action": "component_state",
+     "semantic_delta": "Los tres puntos del recurso quedan listados y el boton queda activo",
+     "target": "boton comenta lista"
+    }
+   ]
+  }
+ ],
+ "overlays": [
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "Tu crema anticelulitica"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "hook_subject"
+   ],
+   "rationale": "El hook descarta el masaje como criterio y manda la atencion al frasco.",
+   "duration_ms": 4200,
+   "params": {
+    "text": "NO ES MASAJE",
+    "sub": "mira la etiqueta",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "Si el frente dice"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_top",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "La escena arranca comparando el frente del frasco contra la etiqueta.",
+   "duration_ms": 3600,
+   "params": {
+    "text": "FRENTE VS ETIQUETA",
+    "sub": "no creas solo el frente",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "list",
+   "component": "StepList",
+   "anchor": {
+    "phrase": "aroma, brillo y suavidad"
+   },
+   "semantic_kind": "list",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption",
+    "subject"
+   ],
+   "rationale": "La etiqueta lista tres claims sensoriales; StepList los agrupa como evidencia de sensacion.",
+   "duration_ms": 4800,
+   "params": {
+    "items": [
+     "AROMA",
+     "BRILLO",
+     "SUAVIDAD"
+    ],
+    "variant": "diagnosis",
+    "future_reveal": "skeleton_only",
+    "item_anchors": [
+     "aroma",
+     "brillo",
+     "suavidad"
+    ]
+   }
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "con etiqueta de tratamiento"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "El veredicto sensacion versus criterio es el primer mini aha.",
+   "duration_ms": 2500,
+   "params": {
+    "text": "HIDRATANTE CON OTRA ETIQUETA",
+    "sub": "eso es lo que compraste",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "la bandera roja es prometer"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "La promesa rapida es el ejemplo literal de bandera roja.",
+   "duration_ms": 3000,
+   "params": {
+    "text": "ALERTA",
+    "sub": "piel lisa en 7 dias",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "emphasis",
+   "component": "BigWordSequence",
+   "anchor": {
+    "phrase": "Segundo, mira que resultado"
+   },
+   "semantic_kind": "emphasis",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "El contraste del segundo filtro se dice en dos golpes: honesto y borrar no; secuencia de palabras gigantes ancladas a la voz.",
+   "duration_ms": 2400,
+   "params": {
+    "words": [
+     "HONESTO",
+     "BORRAR NO"
+    ],
+    "item_anchors": [
+     "es honesto",
+     "borrar la celulitis"
+    ]
+   }
+  },
+  {
+   "type": "stat",
+   "component": "StatRing",
+   "anchor": {
+    "phrase": "piel lisa en siete dias"
+   },
+   "semantic_kind": "number",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "El plazo de la bandera roja se dice literal (siete dias); el anillo lo pone en pantalla como el numero que se evalua y se rechaza.",
+   "duration_ms": 2200,
+   "params": {
+    "value": 7,
+    "suffix": "dias",
+    "label": "la promesa del envase",
+    "fit_mode": "responsive"
+   }
+  },
+  {
+   "type": "compare",
+   "component": "SplitCompare",
+   "anchor": {
+    "phrase": "una hidratante se queda"
+   },
+   "semantic_kind": "process",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "Diagrama de profundidad vertical: superficie arriba (donde trabaja la hidratante) y mas abajo el origen del problema, separados por la linea de frontera. La geometria vertical comunica profundidad, que un split horizontal no puede.",
+   "duration_ms": 4800,
+   "params": {
+    "left_label": "SUPERFICIE",
+    "right_label": "MAS ABAJO",
+    "verdict": "right",
+    "orientation": "vertical",
+    "note_top": "donde actua una crema",
+    "note_bottom": "la crema ya no llega aqui"
+   }
+  },
+  {
+   "type": "emphasis",
+   "component": "BigWordSequence",
+   "anchor": {
+    "phrase": "Primero, busca el activo"
+   },
+   "semantic_kind": "emphasis",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "El primer filtro se dice literal: un activo con nombre. Una palabra gigante dominante (mismo patron que funciono en la escena HONESTO/BORRAR NO) en vez de tres piezas chicas compitiendo.",
+   "duration_ms": 2400,
+   "params": {
+    "words": [
+     "ACTIVO",
+     "CON NOMBRE"
+    ],
+    "item_anchors": [
+     "busca el activo",
+     "con nombre, como"
+    ]
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "id": "ui-impact-soft",
+   "anchor": {
+    "phrase": "no es el masaje"
+   },
+   "gain": 0.9
+  },
+  {
+   "id": "ui-card-pop",
+   "anchor": {
+    "phrase": "revisa tres cosas"
+   },
+   "gain": 0.85
+  },
+  {
+   "id": "ui-filter-reject",
+   "anchor": {
+    "phrase": "piel lisa en siete dias"
+   },
+   "gain": 0.9
+  },
+  {
+   "id": "ui-filter-pass",
+   "anchor": {
+    "phrase": "compraste una hidratante"
+   },
+   "gain": 0.9
+  },
+  {
+   "id": "ui-page-swipe",
+   "anchor": {
+    "phrase": "Comenta LISTA"
+   },
+   "gain": 0.9
+  }
+ ],
+ "cta": {
+  "text": "Comenta LISTA y revisa tu crema",
+  "button": "COMENTA LISTA",
+  "anchor": {
+   "phrase": "LISTA"
+  },
+  "resource_title": "Checklist del frasco",
+  "resource_footer": "Comenta LISTA y te la envio",
+  "resource_points": [
+   "Activo con nombre",
+   "Resultado honesto",
+   "Plazo realista"
+  ],
+  "mockup_type": "checklist",
+  "visual_style": "Tarjeta clara con tres checks y boton LISTA."
+ }
+}

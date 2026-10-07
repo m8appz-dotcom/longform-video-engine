@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "run_id": "smoke-media-router-v4",
+  "script_locked": true,
+  "script_hash": "3f8474c77526ee891c23a746970ebf30719450a77363bab954e1638664cf3392",
+  "title": "Antes de comprar otra crema reductora, mira esto",
+  "thumbnail_promise": "¿REDUCE GRASA?",
+  "hook": "Antes de comprar otra crema reductora, mira esto.",
+  "target_minutes": 2,
+  "language": "es",
+  "audience_profile": "Mujeres hispanas adultas que exigen explicaciones visuales, concretas y creíbles antes de gastar dinero en productos de bienestar.",
+  "avatar_feedback": "Muéstrame la diferencia entre una sensación temporal y un resultado real.",
+  "avatar_appearances": 2,
+  "user_clips": [],
+  "chapters": [
+    {
+      "id": "C01",
+      "title": "La promesa",
+      "text": "Antes de comprar otra crema reductora, mira esto. Que la piel se sienta caliente, fría o más tirante no significa automáticamente que la grasa desapareció. En los próximos minutos vas a separar tres efectos distintos: hidratación, apariencia temporal y reducción real de grasa. Esa diferencia importa porque el envase puede usar palabras parecidas para resultados que no son equivalentes."
+    },
+    {
+      "id": "C02",
+      "title": "Qué cambia",
+      "text": "Una crema sí puede hidratar la superficie y hacer que la piel se vea más lisa durante algunas horas. El masaje también puede cambiar momentáneamente cómo se distribuyen los líquidos. Eso puede mejorar la apariencia, pero no demuestra que el producto haya eliminado tejido graso. La pregunta útil no es si sientes algo. Es qué cambio puedes observar, medir y repetir con el tiempo."
+    },
+    {
+      "id": "C03",
+      "title": "La prueba",
+      "text": "Haz una comparación sencilla. Elige dos zonas equivalentes, usa la misma luz, la misma distancia y la misma postura. Aplica el producto solo en una zona y toma una fotografía antes, una hora después y al día siguiente. No cambies el ángulo para buscar el resultado que deseas. Si la diferencia desaparece pronto, probablemente observaste un efecto cosmético temporal."
+    },
+    {
+      "id": "C04",
+      "title": "La decisión",
+      "text": "Lee la etiqueta con una regla clara: una promesa de apariencia no es una promesa de pérdida de grasa. Si te gusta cómo hidrata o cómo deja la piel, puedes valorarla como cosmético. Pero no pagues un precio extraordinario esperando un cambio que el producto no puede demostrar. La próxima vez que veas una transformación sorprendente, revisa primero la luz, la postura y el tiempo transcurrido."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "runId": "longform-fixture",
+  "durationMs": 12000,
+  "audioSrc": "fixtures/longform_audio.wav",
+  "sfx": [{"src": "sfx/ui-card-pop.wav", "startMs": 6000, "volume": 0.1}],
+  "musicBeds": [{"src": "fixtures/longform_audio.wav", "startMs": 0, "endMs": 12000, "volume": 0.02, "mood": "qa"}],
+  "endScreen": {"startMs": 9000, "durationMs": 3000, "targetVideoTitle": "Cómo comparar cambios reales", "screenCopy": "MIRA ESTE VIDEO"},
+  "showCaptions": false,
+  "showProgress": false,
+  "brand": {"ink": "#111315", "cream": "#F3F0E8", "teal": "#218B7A", "gold": "#C89B3C", "red": "#D84932"},
+  "captions": [],
+  "shots": [
+    {"shotId": "S001", "chapterId": "C01", "startMs": 0, "endMs": 3000, "visualKind": "avatar-full", "source": "fixtures/avatar_1.mp4", "mediaType": "video", "sourceInMs": 0, "sourceOutMs": 3000, "screenCopy": "PRIMER PUNTO", "subcopy": "Avatar completo sin recorte"},
+    {"shotId": "S002", "chapterId": "C01", "startMs": 3000, "endMs": 6000, "visualKind": "broll", "source": "fixtures/support_2.mp4", "mediaType": "video", "sourceInMs": 0, "sourceOutMs": 3000, "screenCopy": "PRUEBA VISUAL", "subcopy": "Una fuente por shot"},
+    {"shotId": "S003", "chapterId": "C02", "startMs": 6000, "endMs": 9000, "visualKind": "motion-card", "source": "", "mediaType": "card", "sourceInMs": 0, "sourceOutMs": 0, "screenCopy": "COMPARA CON MÉTODO", "subcopy": "Misma luz y distancia", "cardVariant": "compare"},
+    {"shotId": "S004", "chapterId": "C02", "startMs": 9000, "endMs": 12000, "visualKind": "avatar-full", "source": "fixtures/avatar_2.mp4", "mediaType": "video", "sourceInMs": 0, "sourceOutMs": 3000, "screenCopy": "CONCLUSIÓN", "subcopy": "La promesa debe coincidir"}
+  ]
+}

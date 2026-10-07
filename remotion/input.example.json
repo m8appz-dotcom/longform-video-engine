@@ -1,0 +1,590 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "totalMs": 31820,
+ "brand": {
+  "bg": "#0E0E10",
+  "fg": "#FFFFFF",
+  "accent": "#C8FF3D"
+ },
+ "hook": {
+  "headline": "POR QUE NADIE TERMINA TUS REELS",
+  "hookEndMs": 8740
+ },
+ "captions": [
+  {
+   "word": "El",
+   "startMs": 0,
+   "endMs": 380
+  },
+  {
+   "word": "80",
+   "startMs": 380,
+   "endMs": 760
+  },
+  {
+   "word": "de",
+   "startMs": 760,
+   "endMs": 1140
+  },
+  {
+   "word": "la",
+   "startMs": 1140,
+   "endMs": 1520
+  },
+  {
+   "word": "gente",
+   "startMs": 1520,
+   "endMs": 1900
+  },
+  {
+   "word": "se",
+   "startMs": 1900,
+   "endMs": 2280
+  },
+  {
+   "word": "va",
+   "startMs": 2280,
+   "endMs": 2660
+  },
+  {
+   "word": "en",
+   "startMs": 2660,
+   "endMs": 3040
+  },
+  {
+   "word": "los",
+   "startMs": 3040,
+   "endMs": 3420
+  },
+  {
+   "word": "primeros",
+   "startMs": 3420,
+   "endMs": 3800
+  },
+  {
+   "word": "3",
+   "startMs": 3800,
+   "endMs": 4180
+  },
+  {
+   "word": "segundos",
+   "startMs": 4180,
+   "endMs": 4560
+  },
+  {
+   "word": "Y",
+   "startMs": 4560,
+   "endMs": 4940
+  },
+  {
+   "word": "casi",
+   "startMs": 4940,
+   "endMs": 5320
+  },
+  {
+   "word": "siempre",
+   "startMs": 5320,
+   "endMs": 5700
+  },
+  {
+   "word": "es",
+   "startMs": 5700,
+   "endMs": 6080
+  },
+  {
+   "word": "por",
+   "startMs": 6080,
+   "endMs": 6460
+  },
+  {
+   "word": "los",
+   "startMs": 6460,
+   "endMs": 6840
+  },
+  {
+   "word": "mismos",
+   "startMs": 6840,
+   "endMs": 7220
+  },
+  {
+   "word": "tres",
+   "startMs": 7220,
+   "endMs": 7600
+  },
+  {
+   "word": "errores",
+   "startMs": 7600,
+   "endMs": 7980
+  },
+  {
+   "word": "El",
+   "startMs": 7980,
+   "endMs": 8360
+  },
+  {
+   "word": "primero",
+   "startMs": 8360,
+   "endMs": 8740
+  },
+  {
+   "word": "abres",
+   "startMs": 8740,
+   "endMs": 9120
+  },
+  {
+   "word": "con",
+   "startMs": 9120,
+   "endMs": 9500
+  },
+  {
+   "word": "relleno",
+   "startMs": 9500,
+   "endMs": 9880
+  },
+  {
+   "word": "un",
+   "startMs": 9880,
+   "endMs": 10260
+  },
+  {
+   "word": "saludo",
+   "startMs": 10260,
+   "endMs": 10640
+  },
+  {
+   "word": "una",
+   "startMs": 10640,
+   "endMs": 11020
+  },
+  {
+   "word": "intro",
+   "startMs": 11020,
+   "endMs": 11400
+  },
+  {
+   "word": "contexto",
+   "startMs": 11400,
+   "endMs": 11780
+  },
+  {
+   "word": "que",
+   "startMs": 11780,
+   "endMs": 12160
+  },
+  {
+   "word": "nadie",
+   "startMs": 12160,
+   "endMs": 12540
+  },
+  {
+   "word": "pidio",
+   "startMs": 12540,
+   "endMs": 12920
+  },
+  {
+   "word": "El",
+   "startMs": 12920,
+   "endMs": 13300
+  },
+  {
+   "word": "segundo",
+   "startMs": 13300,
+   "endMs": 13680
+  },
+  {
+   "word": "cambias",
+   "startMs": 13680,
+   "endMs": 14060
+  },
+  {
+   "word": "de",
+   "startMs": 14060,
+   "endMs": 14440
+  },
+  {
+   "word": "tema",
+   "startMs": 14440,
+   "endMs": 14820
+  },
+  {
+   "word": "sin",
+   "startMs": 14820,
+   "endMs": 15200
+  },
+  {
+   "word": "transicion",
+   "startMs": 15200,
+   "endMs": 15580
+  },
+  {
+   "word": "el",
+   "startMs": 15580,
+   "endMs": 15960
+  },
+  {
+   "word": "cerebro",
+   "startMs": 15960,
+   "endMs": 16340
+  },
+  {
+   "word": "se",
+   "startMs": 16340,
+   "endMs": 16720
+  },
+  {
+   "word": "pierde",
+   "startMs": 16720,
+   "endMs": 17100
+  },
+  {
+   "word": "y",
+   "startMs": 17100,
+   "endMs": 17480
+  },
+  {
+   "word": "desliza",
+   "startMs": 17480,
+   "endMs": 17860
+  },
+  {
+   "word": "El",
+   "startMs": 17860,
+   "endMs": 18240
+  },
+  {
+   "word": "tercero",
+   "startMs": 18240,
+   "endMs": 18620
+  },
+  {
+   "word": "hablas",
+   "startMs": 18620,
+   "endMs": 19000
+  },
+  {
+   "word": "lento",
+   "startMs": 19000,
+   "endMs": 19380
+  },
+  {
+   "word": "y",
+   "startMs": 19380,
+   "endMs": 19760
+  },
+  {
+   "word": "monotono",
+   "startMs": 19760,
+   "endMs": 20140
+  },
+  {
+   "word": "sin",
+   "startMs": 20140,
+   "endMs": 20520
+  },
+  {
+   "word": "ritmo",
+   "startMs": 20520,
+   "endMs": 20900
+  },
+  {
+   "word": "Arreglalo",
+   "startMs": 20900,
+   "endMs": 21280
+  },
+  {
+   "word": "asi",
+   "startMs": 21280,
+   "endMs": 21660
+  },
+  {
+   "word": "empieza",
+   "startMs": 21660,
+   "endMs": 22040
+  },
+  {
+   "word": "por",
+   "startMs": 22040,
+   "endMs": 22420
+  },
+  {
+   "word": "la",
+   "startMs": 22420,
+   "endMs": 22800
+  },
+  {
+   "word": "conclusion",
+   "startMs": 22800,
+   "endMs": 23180
+  },
+  {
+   "word": "corta",
+   "startMs": 23180,
+   "endMs": 23560
+  },
+  {
+   "word": "todo",
+   "startMs": 23560,
+   "endMs": 23940
+  },
+  {
+   "word": "silencio",
+   "startMs": 23940,
+   "endMs": 24320
+  },
+  {
+   "word": "y",
+   "startMs": 24320,
+   "endMs": 24700
+  },
+  {
+   "word": "cambia",
+   "startMs": 24700,
+   "endMs": 25080
+  },
+  {
+   "word": "de",
+   "startMs": 25080,
+   "endMs": 25460
+  },
+  {
+   "word": "plano",
+   "startMs": 25460,
+   "endMs": 25840
+  },
+  {
+   "word": "cada",
+   "startMs": 25840,
+   "endMs": 26220
+  },
+  {
+   "word": "dos",
+   "startMs": 26220,
+   "endMs": 26600
+  },
+  {
+   "word": "segundos",
+   "startMs": 26600,
+   "endMs": 26980
+  },
+  {
+   "word": "Hazlo",
+   "startMs": 26980,
+   "endMs": 27360
+  },
+  {
+   "word": "y",
+   "startMs": 27360,
+   "endMs": 27740
+  },
+  {
+   "word": "vas",
+   "startMs": 27740,
+   "endMs": 28120
+  },
+  {
+   "word": "a",
+   "startMs": 28120,
+   "endMs": 28500
+  },
+  {
+   "word": "ver",
+   "startMs": 28500,
+   "endMs": 28880
+  },
+  {
+   "word": "la",
+   "startMs": 28880,
+   "endMs": 29260
+  },
+  {
+   "word": "retencion",
+   "startMs": 29260,
+   "endMs": 29640
+  },
+  {
+   "word": "subir",
+   "startMs": 29640,
+   "endMs": 29936
+  }
+ ],
+ "scenes": [
+  {
+   "role": "hook",
+   "media": "media/hook.mp4",
+   "fromMs": 0,
+   "toMs": 8740,
+   "motion": "static",
+   "transition_in": "cut"
+  },
+  {
+   "role": "broll",
+   "media": "media/plate.mp4",
+   "fromMs": 8740,
+   "toMs": 13680,
+   "motion": "kenburns-in",
+   "transition_in": "wipe"
+  },
+  {
+   "role": "broll",
+   "media": "media/plate.mp4",
+   "fromMs": 13680,
+   "toMs": 18620,
+   "motion": "pan-right",
+   "transition_in": "slide"
+  },
+  {
+   "role": "broll",
+   "media": "media/plate.mp4",
+   "fromMs": 18620,
+   "toMs": 21660,
+   "motion": "kenburns-in",
+   "transition_in": "slide"
+  },
+  {
+   "role": "broll",
+   "media": "media/plate.mp4",
+   "fromMs": 21660,
+   "toMs": 30020,
+   "motion": "kenburns-out",
+   "transition_in": "clockWipe"
+  }
+ ],
+ "overlays": [
+  {
+   "type": "stat",
+   "component": "StatRing",
+   "toolbox": [
+    "count-up",
+    "shapes",
+    "motion-blur"
+   ],
+   "params": {
+    "value": 80,
+    "suffix": "%",
+    "label": "se va en 3s",
+    "from": 0
+   },
+   "startMs": 380,
+   "durMs": 1900,
+   "itemMs": null
+  },
+  {
+   "type": "list",
+   "component": "StepList",
+   "toolbox": [
+    "shapes",
+    "transitions",
+    "layout-utils"
+   ],
+   "params": {
+    "items": [
+     "Abres con relleno",
+     "Cambias de tema sin transicion",
+     "Hablas lento y monotono"
+    ],
+    "item_anchors": [
+     "El primero",
+     "El segundo",
+     "El tercero"
+    ]
+   },
+   "startMs": 7980,
+   "durMs": 10980,
+   "itemMs": [
+    7980,
+    12920,
+    17860
+   ]
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "toolbox": [
+    "layout-utils",
+    "paths"
+   ],
+   "params": {
+    "text": "EL ARREGLO",
+    "sub": "3 ajustes"
+   },
+   "startMs": 20900,
+   "durMs": 2200,
+   "itemMs": null
+  },
+  {
+   "type": "emphasis",
+   "component": "KeywordPop",
+   "toolbox": [
+    "motion-blur"
+   ],
+   "params": {
+    "words": [
+     "dos segundos"
+    ]
+   },
+   "startMs": 25840,
+   "durMs": 1200,
+   "itemMs": null
+  },
+  {
+   "type": "annotation",
+   "component": "Annotation",
+   "toolbox": [
+    "paths"
+   ],
+   "params": {
+    "shape": "circle",
+    "target": "center",
+    "label": "primero esto"
+   },
+   "startMs": 21660,
+   "durMs": 1600,
+   "itemMs": null
+  }
+ ],
+ "sfx": [
+  {
+   "id": "sub-drop",
+   "atMs": 0,
+   "gain": 0.6
+  },
+  {
+   "id": "impact",
+   "atMs": 380,
+   "gain": 0.6
+  },
+  {
+   "id": "whoosh",
+   "atMs": 7980,
+   "gain": 0.5
+  },
+  {
+   "id": "whoosh",
+   "atMs": 12920,
+   "gain": 0.5
+  },
+  {
+   "id": "whoosh",
+   "atMs": 17860,
+   "gain": 0.5
+  },
+  {
+   "id": "swoosh-up",
+   "atMs": 20900,
+   "gain": 0.5
+  },
+  {
+   "id": "riser",
+   "atMs": 30020,
+   "gain": 0.5
+  }
+ ],
+ "cta": {
+  "text": "Sigueme y arregla tus reels",
+  "button": "Guarda este video",
+  "fromMs": 30020
+ },
+ "audio": "media/audio.m4a"
+}

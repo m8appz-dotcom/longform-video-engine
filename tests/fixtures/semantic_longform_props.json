@@ -1,0 +1,58 @@
+{
+  "runId": "semantic-validation",
+  "durationMs": 16000,
+  "audioSrc": "",
+  "sfx": [],
+  "musicBeds": [],
+  "endScreen": {
+    "startMs": 12000,
+    "durationMs": 4000,
+    "targetVideoTitle": "Cómo comparar cambios reales",
+    "targetVideoId": "nZ5KG52rfH8",
+    "targetChannelId": "channel-test",
+    "targetUrl": "https://youtu.be/nZ5KG52rfH8",
+    "visibility": "public",
+    "verifiedAt": "2026-07-21T00:00:00Z",
+    "screenCopy": "MÍRALO AHORA",
+    "thumbnailSrc": "fixtures/semantic-v2/product.png"
+  },
+  "showCaptions": false,
+  "showProgress": false,
+  "brand": {"ink": "#171717", "cream": "#F4F1E9", "teal": "#218B7A", "gold": "#C99A2E", "red": "#CE4C36", "fontDisplay": "Arial", "fontBody": "Arial"},
+  "theme": {"background": "#F4F1E9", "surface": "#FFFFFF", "text": "#171717", "accent": "#218B7A", "highlight": "#C99A2E", "danger": "#CE4C36", "fontDisplay": "Arial", "fontBody": "Arial", "profileId": "semantic-validation"},
+  "designProfile": {"id": "semantic-validation", "composition": {"edgePadding": 86, "panelGap": 46, "cardRadius": 4}, "motion": {"transitionFrames": 14}},
+  "shots": [
+    {
+      "shotId": "S0001", "chapterId": "C01", "startMs": 0, "endMs": 4000,
+      "visualKind": "ui-card", "source": "", "mediaType": "card", "sourceInMs": 0, "sourceOutMs": 0,
+      "backgroundSource": "fixtures/semantic-v2/protocol-photo.png", "backgroundMediaType": "image", "backgroundObjectPosition": "left center",
+      "screenCopy": "MISMA TOMA", "visualStrategy": "hybrid", "representation": "photo", "textOwner": "remotion", "backgroundTextPolicy": "forbidden", "maxBackgroundWords": 0, "overlayZones": ["right"], "evidenceZone": "left", "evidenceMustRemainDominant": true, "rendererVersion": "semantic-v2", "fallbackRenderer": "semantic-v1", "artDirection": "editorial", "evidenceLayer": "media", "annotationLayer": "remotion", "motionPattern": "technical-reveal",
+      "motionSpec": {"purpose": "explain", "evidenceRole": "primary", "visualPrimitive": "diagram", "timeline": [], "meaningfulChanges": 3},
+      "uiSpec": {"template": "process-steps", "variant": "protocol-diagram", "state": "resolved", "headline": "COMPARA CON MÉTODO", "subcopy": "", "items": ["LUZ FIJA", "DISTANCIA", "POSTURA"], "values": ["45°", "2,0 M", "MISMA MARCA"], "dataSource": "locked_narration"}
+    },
+    {
+      "shotId": "S0002", "chapterId": "C01", "startMs": 4000, "endMs": 8000,
+      "visualKind": "ui-card", "source": "", "mediaType": "card", "sourceInMs": 0, "sourceOutMs": 0,
+      "backgroundSource": "fixtures/semantic-v2/anatomy-cutaway.png", "backgroundMediaType": "image", "backgroundObjectPosition": "left center",
+      "screenCopy": "NO ES LO MISMO", "visualStrategy": "hybrid", "representation": "editorial_illustration", "textOwner": "remotion", "backgroundTextPolicy": "forbidden", "maxBackgroundWords": 0, "overlayZones": ["right"], "evidenceZone": "left", "evidenceMustRemainDominant": true, "rendererVersion": "semantic-v2", "fallbackRenderer": "semantic-v1", "artDirection": "editorial", "evidenceLayer": "media", "annotationLayer": "remotion", "motionPattern": "layer-build",
+      "motionSpec": {"purpose": "compare", "evidenceRole": "primary", "visualPrimitive": "anatomy", "timeline": [], "meaningfulChanges": 3},
+      "uiSpec": {"template": "body-distinction", "variant": "surface-swelling-fat", "state": "resolved", "headline": "TRES CAMBIOS DISTINTOS", "subcopy": "", "items": ["PIEL", "HINCHAZÓN", "GRASA"], "values": ["SUPERFICIE", "TEMPORAL", "SUBCUTÁNEA"], "dataSource": "locked_narration"}
+    },
+    {
+      "shotId": "S0003", "chapterId": "C01", "startMs": 8000, "endMs": 12000,
+      "visualKind": "ui-card", "source": "", "mediaType": "card", "sourceInMs": 0, "sourceOutMs": 0,
+      "backgroundSource": "fixtures/semantic-v2/product.png", "backgroundMediaType": "image", "backgroundObjectPosition": "60% center",
+      "screenCopy": "PROMESA VS EVIDENCIA", "visualStrategy": "hybrid", "representation": "semantic_diagram", "textOwner": "remotion", "backgroundTextPolicy": "forbidden", "maxBackgroundWords": 0, "overlayZones": ["right"], "evidenceZone": "left", "evidenceMustRemainDominant": true, "rendererVersion": "semantic-v2", "fallbackRenderer": "semantic-v1", "artDirection": "editorial", "evidenceLayer": "media", "annotationLayer": "remotion", "motionPattern": "evidence-scan",
+      "motionSpec": {"purpose": "compare", "evidenceRole": "primary", "visualPrimitive": "comparison", "timeline": [], "meaningfulChanges": 3},
+      "uiSpec": {"template": "comparison", "variant": "claim-evidence", "state": "resolved", "headline": "PROMESA VS EVIDENCIA", "subcopy": "", "items": ["PROMESA", "EVIDENCIA", "DECISIÓN"], "values": ["REDUCE CENTÍMETROS", "NO REDUCE GRASA", "NO COMPRES LA PROMESA"], "dataSource": "locked_narration"}
+    },
+    {
+      "shotId": "S0004", "chapterId": "C01", "startMs": 12000, "endMs": 16000,
+      "visualKind": "ui-card", "source": "", "mediaType": "card", "sourceInMs": 0, "sourceOutMs": 0,
+      "screenCopy": "SIGUIENTE PASO", "visualStrategy": "motion", "representation": "ui", "textOwner": "remotion", "ctaAnchor": true, "rendererVersion": "semantic-v1", "fallbackRenderer": "semantic-v1", "artDirection": "data", "evidenceLayer": "ui", "annotationLayer": "remotion", "motionPattern": "cta-path",
+      "motionSpec": {"purpose": "transition", "evidenceRole": "supporting", "visualPrimitive": "process", "timeline": [], "meaningfulChanges": 2},
+      "uiSpec": {"template": "process-steps", "state": "resolved", "headline": "SIGUIENTE PASO", "subcopy": "", "items": ["OBSERVA", "COMPARA", "DECIDE"], "values": ["MISMA LUZ", "MISMA DISTANCIA", "SIN ANSIEDAD"], "dataSource": "locked_narration"}
+    }
+  ],
+  "captions": []
+}

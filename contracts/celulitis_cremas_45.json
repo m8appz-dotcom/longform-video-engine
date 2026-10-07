@@ -1,0 +1,984 @@
+{
+ "meta": {
+  "topic": "Cremas para celulitis en mujeres sobre 45",
+  "language": "es",
+  "target_seconds": 48,
+  "fps": 24,
+  "platform": "reels",
+  "narrative_structure": "arc",
+  "avatar_policy": "disabled",
+  "avatar_disabled_reason": "El contact sheet mostro el beat de avatar como montaje vacio; este reel depende mas de etiqueta, mecanismo y decision visual que de presentador.",
+  "media_policy": "production",
+  "media_min_scenes": 2,
+  "angle_type": "mito_incompleto",
+  "angle_sentence": "El error no es usar crema, sino elegirla por la promesa anticelulitis en vez de leer que puede hacer la etiqueta.",
+  "angle_scorecard": [
+   {
+    "angle_type": "mito_incompleto",
+    "angle_sentence": "Las cremas no fallan solo por falta de constancia; fallan cuando prometen alisar algo que depende de capas debajo de la superficie.",
+    "hook_claim": "No falla por masaje",
+    "common_belief": "Si la crema no funciona, falta masajear mas tiempo o aplicarla mas dias.",
+    "ignored_variable": "La etiqueta y el tipo de promesa dicen si solo hidrata o si tiene activos utiles.",
+    "cta_action": "Comentar LISTA para recibir checklist de decision.",
+    "tension": 5,
+    "novedad": 4,
+    "proof": 4,
+    "visualidad": 5,
+    "especificidad": 5,
+    "utilidad": 5,
+    "riesgo": 3,
+    "score": 31,
+    "selected": true,
+    "reason": "Da un aha accionable sin negar todo el producto ni hacer promesas medicas."
+   },
+   {
+    "angle_type": "error_comun",
+    "angle_sentence": "Comprar por aroma y textura confunde sensacion inmediata con mejora visible.",
+    "hook_claim": "Aroma no es resultado",
+    "common_belief": "Una crema rica y suave parece mas efectiva.",
+    "ignored_variable": "La sensacion cosmetica no prueba accion sobre apariencia de celulitis.",
+    "cta_action": "Revisar el frasco antes de comprar otro.",
+    "tension": 4,
+    "novedad": 3,
+    "proof": 4,
+    "visualidad": 5,
+    "especificidad": 4,
+    "utilidad": 5,
+    "riesgo": 2,
+    "score": 29,
+    "selected": false,
+    "reason": "Es util pero menos fuerte que el giro de etiqueta contra promesa."
+   },
+   {
+    "angle_type": "mecanismo_oculto",
+    "angle_sentence": "La celulitis se ve arriba, pero la tension visual nace de grasa, liquido y fibras debajo.",
+    "hook_claim": "Se ve arriba, nace abajo",
+    "common_belief": "La celulitis es un problema de piel superficial.",
+    "ignored_variable": "La estructura bajo la superficie cambia lo que una crema puede prometer.",
+    "cta_action": "Comparar promesa con mecanismo real.",
+    "tension": 4,
+    "novedad": 5,
+    "proof": 3,
+    "visualidad": 4,
+    "especificidad": 4,
+    "utilidad": 4,
+    "riesgo": 4,
+    "score": 28,
+    "selected": false,
+    "reason": "Tiene buen aha, pero puede sonar mas tecnico y menos accionable para CTA."
+   },
+   {
+    "angle_type": "riesgo_evitable",
+    "angle_sentence": "La promesa de piel lisa en siete dias es la bandera roja mas facil de detectar.",
+    "hook_claim": "Siete dias es alerta",
+    "common_belief": "Una promesa rapida indica producto potente.",
+    "ignored_variable": "La velocidad prometida revela marketing antes que evidencia.",
+    "cta_action": "Usar checklist de banderas rojas.",
+    "tension": 5,
+    "novedad": 3,
+    "proof": 4,
+    "visualidad": 5,
+    "especificidad": 4,
+    "utilidad": 5,
+    "riesgo": 2,
+    "score": 30,
+    "selected": false,
+    "reason": "Fuerte para cierre, pero demasiado estrecho como estructura principal."
+   }
+  ],
+  "benchmark_notes": [
+   "references/ no contiene reels de referencia; solo README operativo, se sigue con reglas base del skill.",
+   "Duracion elegida 40-55s: un mecanismo corto con dos criterios accionables."
+  ],
+  "brand": {
+   "bg": "#F7F3EE",
+   "fg": "#18212F",
+   "accent": "#D85C4A"
+  },
+  "style": {
+   "base_theme": "light",
+   "background_role": "mixed",
+   "font": "plus_jakarta",
+   "caption_style": "word_pop",
+   "caption_emphasis_policy": "smart_stopwords",
+   "caption_granularity": "word",
+   "caption_decoration": "none",
+   "caption_position": "center_low",
+   "caption_readability_mode": "adaptive_boxed",
+   "render_policy": "declared_only",
+   "plate_layout": "none",
+   "graphic_style": "editorial",
+   "hook_overlay": "none",
+   "hook_text_zone": "top_clean",
+   "progress_bar": "accent",
+   "texture": "subtle",
+   "palette": {
+    "bg": "#F7F3EE",
+    "fg": "#18212F",
+    "accent": "#D85C4A",
+    "secondary": "#2E7D73",
+    "danger": "#B3261E",
+    "warning": "#C98A1B",
+    "panel": "#FFFFFF",
+    "cream": "#F7F3EE",
+    "off": "#EFE7DC",
+    "ink": "#18212F",
+    "muted": "#6C6F76"
+   },
+   "hook_label": "asi funciona tu piel por dentro"
+  }
+ },
+ "hook": {
+  "spoken": "Tu crema anticelulitica no esta fallando por falta de masaje.",
+  "headline": "TU CREMA NO FALLA POR MASAJE",
+  "mode": "spectacle",
+  "visual": {
+   "provider": "image",
+   "prompt": "Clip vertical 9:16, macro cenital: en primer plano un frasco de crema corporal sin marca abierto, junto a el una espatula extiende su crema blanca sobre tela acolchada estilo capitone color piel; la franja queda lisa un instante y el hundimiento del boton central reaparece bajo la capa, luz suave lateral, fondo limpio, tercio superior despejado para el titular, sin texto, sin logos, sin marcas de agua"
+  }
+ },
+ "script": "Tu crema anticelulitica no esta fallando por falta de masaje. Esta fallando porque promete alisar algo que nace debajo de la superficie. Mira el frasco: si la etiqueta solo presume aroma, brillo o piel suave, eso es hidratacion, no un plan contra celulitis. La celulitis aparece cuando grasa, retencion y fibras tensas empujan la piel en direcciones distintas. Una crema puede mejorar la apariencia por unas horas si hidrata bien la superficie. Pero no puede borrar esos tirones como si fuera una plancha. El aha es este: no eliges la crema por la palabra anticelulitis. La eliges por la etiqueta. Busca cafeina, retinol o peptidos, y desconfia de promesas como piel lisa en siete dias. Si tu frasco no pasa esa revision, no necesitas mas constancia; necesitas otra decision. Comenta LISTA y te paso la checklist para decidir si una crema vale la pena.",
+ "scenes": [
+  {
+   "role": "hook",
+   "anchor": {
+    "at": "start"
+   },
+   "clip": {
+    "source": "image",
+    "prompt": "Clip vertical 9:16, macro cenital: en primer plano un frasco de crema corporal sin marca abierto, junto a el una espatula extiende su crema blanca sobre tela acolchada estilo capitone color piel; la franja queda lisa un instante y el hundimiento del boton central reaparece bajo la capa, luz suave lateral, fondo limpio, tercio superior despejado para el titular, sin texto, sin logos, sin marcas de agua",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "treatment": "spotlight"
+   },
+   "motion": "kenburns-in",
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "hook_spectacle",
+   "why_this_visual_not_other": "El hook contradice la culpa del masaje; una imagen exacta de frasco y sello MASAJE lo comunica antes de explicar el mecanismo.",
+   "editorial_point": "Alisar la superficie no elimina un hundimiento que nace por debajo.",
+   "why_it_matters": "Si el espectador entiende ESTO en un segundo, entiende por que su crema no esta fallando por tecnica.",
+   "visual_proof": "El frasco real esta en el frame mientras su crema alisa la franja y el hundimiento reaparece; el microcopy bajo el titular ancla la analogia: asi funciona tu piel por dentro.",
+   "coverage_required": true,
+   "intent": "hook",
+   "visual_targets": [
+    "frasco de crema abierto",
+    "espatula extendiendo crema",
+    "hundimiento reapareciendo"
+   ],
+   "max_duration_ms": 8200,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "no esta fallando"
+     },
+     "action": "component_state",
+     "semantic_delta": "La crema termina de cubrir la franja: la superficie queda lisa un instante",
+     "target": "franja de crema recien extendida"
+    },
+    {
+     "anchor": {
+      "phrase": "por falta de masaje"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El foco marca el gesto de aplicar: la tecnica no es lo que falla",
+     "target": "espatula sobre la tela"
+    },
+    {
+     "anchor": {
+      "phrase": "Esta fallando porque"
+     },
+     "action": "crop_reframe",
+     "semantic_delta": "Reencuadre al centro de la franja: el hundimiento empieza a reaparecer",
+     "target": "hundimiento del boton central"
+    },
+    {
+     "anchor": {
+      "phrase": "promete alisar"
+     },
+     "action": "component_state",
+     "semantic_delta": "El hundimiento vuelve a marcarse pese a la capa lisa de crema",
+     "target": "hundimiento del boton central"
+    },
+    {
+     "anchor": {
+      "phrase": "nace debajo de la superficie"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta apunta al origen: el boton que tira desde abajo, fuera del alcance de la capa",
+     "target": "hundimiento del boton central"
+    },
+    {
+     "anchor": {
+      "phrase": "la superficie"
+     },
+     "action": "component_state",
+     "semantic_delta": "La capa de crema queda como una pelicula superficial mientras el relieve interno domina",
+     "target": "franja de crema"
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "Mira el frasco"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Still vertical 9:16, macro editorial: una mano gira un frasco de crema corporal sin marca mostrando su parte trasera hacia la camara, el dorso del frasco liso y limpio listo para sobreimpresion, luz suave de bano, fondo neutro desenfocado, sin texto, sin logos, sin marcas de agua, espacio inferior despejado para captions"
+   },
+   "motion": "kenburns-in",
+   "layout": "full_bleed",
+   "visual_mode": "media_backed",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "Stock generico no garantiza el gesto exacto ni un dorso limpio para componer; la imagen controlada da la accion precisa de revisar y la superficie donde la lista declarada vive.",
+   "editorial_point": "La decision empieza leyendo la etiqueta, no sintiendo la textura.",
+   "why_it_matters": "Convierte el aha en una accion que puede hacer en su baño.",
+   "visual_proof": "Composicion exacta del gesto: la mano gira el frasco y muestra el dorso limpio hacia camara; los tres claims narrados entran como lista declarada sobre ese dorso, sincronizados con la voz.",
+   "coverage_required": true,
+   "intent": "evidencia visual de etiqueta",
+   "visual_targets": [
+    "mano girando el frasco",
+    "etiqueta de frente a camara"
+   ],
+   "max_duration_ms": 9000,
+   "caption_position": "bottom",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "aroma, brillo o piel suave"
+     },
+     "action": "insert_card",
+     "semantic_delta": "Aparece una tarjeta con tres claims superficiales para separar sensacion de plan",
+     "target": "tarjeta claims superficiales",
+     "label": "SOLO SENSACION"
+    },
+    {
+     "anchor": {
+      "phrase": "eso es hidratacion"
+     },
+     "action": "component_state",
+     "semantic_delta": "El veredicto baja la promesa a hidratacion, no tratamiento",
+     "target": "tarjeta claims superficiales",
+     "label": "HIDRATACION"
+    },
+    {
+     "anchor": {
+      "phrase": "si la etiqueta solo presume"
+     },
+     "action": "crop_reframe",
+     "semantic_delta": "Reencuadre al gesto de girar el frasco hacia la vista: el habito de revisar antes de creer",
+     "target": "mano girando el frasco"
+    },
+    {
+     "anchor": {
+      "phrase": "no un plan contra celulitis"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta remata la conclusion: eso es hidratacion, no tratamiento",
+     "target": "rotulo de la conclusion"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "La celulitis aparece"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "full_frame",
+   "plate_purpose": "diagnosis_card",
+   "visual_mode": "diagrammatic",
+   "visual_family": "diagnostic_flow",
+   "why_this_visual_not_other": "El mecanismo es causal e invisible: tres factores dichos literalmente empujan una superficie; la tarjeta fuente muestra el efecto fisico sin claims medicos.",
+   "editorial_point": "La apariencia visible viene de fuerzas debajo de la piel.",
+   "why_it_matters": "Este es el aha que limita lo que una crema puede prometer honestamente.",
+   "visual_proof": "Diagrama causal declarado con las tres causas dichas como tokens y una tarjeta fuente de superficie empujada desde abajo, rotulada como la misma mecanica: analogia declarada, no anatomia.",
+   "coverage_required": true,
+   "intent": "mecanismo visual",
+   "visual_targets": [
+    "capa de piel",
+    "grasa",
+    "retencion",
+    "fibras tensas"
+   ],
+   "caption_position": "bottom",
+   "max_duration_ms": 10000,
+   "transition_in": "punch_in",
+   "transition_reason": "Cambio de evidencia externa a mecanismo oculto debajo de la superficie.",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "grasa, retencion"
+     },
+     "action": "component_state",
+     "semantic_delta": "Se revelan las dos primeras fuerzas del diagrama",
+     "target": "grasa y retencion",
+     "label": "DEBAJO"
+    },
+    {
+     "anchor": {
+      "phrase": "fibras tensas"
+     },
+     "action": "component_state",
+     "semantic_delta": "Aparece la tercera fuerza que tira la piel",
+     "target": "fibras tensas"
+    },
+    {
+     "anchor": {
+      "phrase": "direcciones distintas"
+     },
+     "action": "callout_target",
+     "semantic_delta": "Flechas opuestas muestran por que la superficie se marca",
+     "target": "flechas opuestas",
+     "label": "FUERZAS DISTINTAS"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Una crema puede mejorar"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "stat_card",
+   "visual_mode": "diagrammatic",
+   "visual_family": "action_proof",
+   "why_this_visual_not_other": "El matiz es temporal y cuantificable: una tarjeta de efecto por horas se lee mejor que el avatar, que en preview quedo vacio.",
+   "editorial_point": "La crema si logra un efecto real pero temporal: hidratar bien la superficie por horas.",
+   "why_it_matters": "La concesion gana credibilidad y abre la pregunta que paga la siguiente escena: si algo hace, por que no borra la celulitis.",
+   "visual_proof": "Tarjeta visible con anillo HORAS y etiqueta HIDRATACION: mejora temporal de apariencia, no borrado del mecanismo.",
+   "coverage_required": true,
+   "intent": "concesion visual: reconocer lo que la crema SI hace abre la pregunta de por que igual no borra",
+   "visual_targets": [
+    "anillo por horas",
+    "hidratacion",
+    "superficie"
+   ],
+   "max_duration_ms": 10000,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "por unas horas"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El temporizador comunica que el efecto tiene ventana limitada",
+     "target": "anillo por horas",
+     "label": "HORAS"
+    },
+    {
+     "anchor": {
+      "phrase": "mejorar la apariencia"
+     },
+     "action": "component_state",
+     "semantic_delta": "La tarjeta muestra el efecto temporal que la crema si logra",
+     "target": "tarjeta hidratacion"
+    },
+    {
+     "anchor": {
+      "phrase": "hidrata bien la superficie"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta precisa el efecto real y mostrable: hidratacion de la superficie",
+     "target": "tarjeta hidratacion"
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "Pero no puede borrar"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Still vertical 9:16, macro del REVERSO de una tela acolchada estilo capitone color piel: se ven los hilos internos tensados tirando del boton hacia abajo, la trama estirada en direcciones distintas alrededor del anclaje, luz rasante que dibuja la tension, fondo oscuro suave, sin texto, sin logos, sin marcas de agua, espacio inferior para captions"
+   },
+   "layout": "full_bleed",
+   "plate_purpose": "none",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "El hook mostro el resultado en superficie; esta escena revela la causa desde adentro. Es la misma analogia fisica avanzando, no repetida: paga la pregunta de por que no se borra.",
+   "editorial_point": "El tiron nace de anclajes internos que ninguna capa superficial alcanza.",
+   "why_it_matters": "Ver la causa desde adentro explica por que ni la mejor crema borra el relieve: no llega al anclaje.",
+   "visual_proof": "El reverso de la tela muestra los hilos tensados tirando del boton: la CAUSA interna, informacion nueva que el hook (resultado en superficie) no mostro.",
+   "coverage_required": true,
+   "intent": "probar fisicamente por que una crema superficial no borra un tiron interno",
+   "visual_targets": [
+    "hilos internos tensados",
+    "anclaje del boton visto desde abajo"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "esos tirones"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo entra y nombra que es lo que la crema no puede tocar",
+     "target": "rotulo del limite"
+    },
+    {
+     "anchor": {
+      "phrase": "como si fuera una plancha"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El subrayado remata la comparacion: no existe efecto plancha",
+     "target": "rotulo del limite",
+     "label": "NO ES UNA PLANCHA"
+    }
+   ],
+   "motion": "kenburns-in"
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "El aha es este"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "decision_card",
+   "visual_mode": "diagrammatic",
+   "visual_family": "criteria_gate",
+   "why_this_visual_not_other": "El aha es un contraste de criterios dicho literalmente; el A/B declarado lo comunica sin pedirle texto legible a una imagen generada.",
+   "editorial_point": "No se elige por la palabra anticelulitis, se elige por la etiqueta.",
+   "why_it_matters": "Da el criterio operativo que cambia la compra.",
+   "visual_proof": "Comparacion declarada con veredicto: elegir por la palabra del frente contra elegir por la etiqueta; el texto lo renderiza Remotion, no una imagen generada.",
+   "coverage_required": true,
+   "intent": "aha central",
+   "visual_targets": [
+    "palabra anticelulitis rechazada",
+    "etiqueta con check"
+   ],
+   "caption_position": "bottom",
+   "max_duration_ms": 9000,
+   "transition_in": "punch_in",
+   "transition_reason": "El guion anuncia explicitamente el aha central y requiere golpe visual.",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "palabra anticelulitis"
+     },
+     "action": "component_state",
+     "semantic_delta": "El lado marketing queda rechazado con una equis",
+     "target": "lado anticelulitis",
+     "label": "NO"
+    },
+    {
+     "anchor": {
+      "phrase": "La eliges por la etiqueta"
+     },
+     "action": "component_state",
+     "semantic_delta": "El lado etiqueta gana con check y acento",
+     "target": "lado etiqueta",
+     "label": "SI"
+    },
+    {
+     "anchor": {
+      "phrase": "no eliges la crema"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra el panel izquierdo: elegir por la palabra anticelulitis",
+     "target": "panel palabra"
+    },
+    {
+     "anchor": {
+      "phrase": "La eliges por la etiqueta"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra el panel derecho ganador: elegir por la etiqueta",
+     "target": "panel etiqueta"
+    },
+    {
+     "anchor": {
+      "phrase": "por la palabra anticelulitis"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El foco marca la palabra de marketing que NO debe decidir la compra",
+     "target": "panel palabra"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Busca cafeina"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "motion": "kenburns-in",
+   "layout": "diagram",
+   "visual_mode": "diagrammatic",
+   "visual_family": "rule_cards",
+   "why_this_visual_not_other": "Leer ingredientes exactos en una etiqueta generada es poco fiable; los nombres son contenido declarado del overlay y se muestran como lista.",
+   "editorial_point": "La etiqueta debe mostrar activos concretos, no solo promesas sensoriales.",
+   "why_it_matters": "Le da a la espectadora una prueba visual para aplicar al frasco que ya tiene.",
+   "visual_proof": "Checklist declarado con los tres ingredientes dichos y la promesa sospechosa marcada como rechazo; texto renderizado por Remotion, no leido de una etiqueta generada.",
+   "coverage_required": true,
+   "intent": "prueba de ingredientes",
+   "visual_targets": [
+    "cafeina",
+    "retinol",
+    "peptidos",
+    "etiqueta"
+   ],
+   "caption_position": "bottom",
+   "max_duration_ms": 10000,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "retinol o peptidos"
+     },
+     "action": "callout_target",
+     "semantic_delta": "Los tres ingredientes quedan resaltados como criterios utiles",
+     "target": "ingredientes resaltados",
+     "label": "BUSCA ESTO"
+    },
+    {
+     "anchor": {
+      "phrase": "piel lisa en siete dias"
+     },
+     "action": "insert_card",
+     "semantic_delta": "Aparece una etiqueta roja de alerta sobre la promesa rapida",
+     "target": "promesa siete dias",
+     "label": "ALERTA"
+    },
+    {
+     "anchor": {
+      "phrase": "retinol o peptidos"
+     },
+     "action": "component_state",
+     "semantic_delta": "Se revelan los ingredientes dos y tres de la lista",
+     "target": "filas retinol y peptidos"
+    },
+    {
+     "anchor": {
+      "phrase": "desconfia de promesas"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El foco pasa de los ingredientes validos a la promesa sospechosa",
+     "target": "rotulo de la promesa"
+    }
+   ],
+   "plate_purpose": "rule_checklist"
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Si tu frasco no pasa"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "decision_card",
+   "visual_mode": "diagrammatic",
+   "visual_family": "criteria_gate",
+   "why_this_visual_not_other": "El cierre opone dos caminos dichos literalmente; el A/B con veredicto convierte el remate en una decision visible, no en tipografia.",
+   "editorial_point": "Si el frasco falla la revision, el problema ya no es constancia sino decision de compra.",
+   "why_it_matters": "Cierra la culpa y empuja una accion concreta.",
+   "visual_proof": "Comparacion con veredicto: insistir con constancia (descartado) contra cambiar la decision de compra (resaltado).",
+   "coverage_required": true,
+   "intent": "veredicto",
+   "visual_targets": [
+    "tarjeta no pasa",
+    "constancia tachada",
+    "decision resaltada"
+   ],
+   "caption_position": "bottom",
+   "max_duration_ms": 9000,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "esa revision"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra el panel izquierdo: seguir insistiendo con constancia",
+     "target": "panel constancia"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "no necesitas mas constancia"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "cta",
+   "plate_purpose": "cta_resource",
+   "visual_mode": "cta",
+   "visual_family": "cta_document",
+   "why_this_visual_not_other": "El recurso prometido es un documento de decision; el mockup checklist con los puntos reales es la unica prueba visual coherente con esa promesa.",
+   "editorial_point": "La checklist convierte la otra decision en tres pasos concretos: que buscar, que descartar y que hacer si el frasco no pasa.",
+   "why_it_matters": "Paga la tension abierta (cual es esa otra decision) con la herramienta exacta para tomarla hoy.",
+   "visual_proof": "Tarjeta del recurso con el titulo Checklist del frasco y sus tres puntos reales: ingredientes con evidencia, frases que son solo marketing, y cambiar/complementar/devolver; el boton COMENTA LISTA queda activo al final.",
+   "coverage_required": false,
+   "intent": "cta",
+   "visual_targets": [
+    "tarjeta checklist del frasco",
+    "tres puntos del recurso",
+    "boton comenta lista"
+   ],
+   "max_duration_ms": 8000,
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "Comenta LISTA"
+     },
+     "action": "insert_card",
+     "semantic_delta": "Entra la tarjeta del recurso con el titulo de la checklist",
+     "target": "tarjeta del recurso",
+     "label": "LA CHECKLIST"
+    },
+    {
+     "anchor": {
+      "phrase": "vale la pena"
+     },
+     "action": "component_state",
+     "semantic_delta": "Los tres puntos del recurso terminan de listarse y el boton queda activo",
+     "target": "boton comenta lista"
+    }
+   ]
+  }
+ ],
+ "overlays": [
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "falta de masaje"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "hook_subject"
+   ],
+   "rationale": "El hook niega que el masaje sea la causa; el rotulo lo fija sin tapar el frasco.",
+   "duration_ms": 2400,
+   "params": {
+    "text": "NO ES MASAJE",
+    "sub": "mira la promesa",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "list",
+   "component": "StepList",
+   "anchor": {
+    "phrase": "aroma, brillo o piel suave"
+   },
+   "semantic_kind": "list",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption",
+    "subject"
+   ],
+   "rationale": "La frase enumera tres claims sensoriales; StepList los separa de un plan real contra celulitis.",
+   "duration_ms": 4700,
+   "params": {
+    "items": [
+     "AROMA",
+     "BRILLO",
+     "PIEL SUAVE"
+    ],
+    "variant": "diagnosis",
+    "future_reveal": "skeleton_only",
+    "item_anchors": [
+     "aroma",
+     "brillo",
+     "piel suave"
+    ]
+   }
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "eso es hidratacion"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "El veredicto necesita bajar la expectativa: hidratacion no es plan contra celulitis.",
+   "duration_ms": 2300,
+   "params": {
+    "text": "HIDRATACION",
+    "sub": "no plan anticelulitis",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "chart",
+   "component": "CausalMeter",
+   "anchor": {
+    "phrase": "La celulitis aparece"
+   },
+   "semantic_kind": "process",
+   "placement": "full_context",
+   "must_not_cover": [
+    "caption",
+    "data"
+   ],
+   "rationale": "El mecanismo tiene tres causas que empujan en conjunto; CausalMeter muestra fuerzas acumuladas y no una lista decorativa.",
+   "duration_ms": 6200,
+   "params": {
+    "label": "BAJO LA SUPERFICIE",
+    "items": [
+     "GRASA",
+     "RETENCION",
+     "FIBRAS TENSAS"
+    ],
+    "tokens": [
+     33,
+     27,
+     40
+    ],
+    "future_reveal": "skeleton_only",
+    "item_anchors": [
+     "grasa, retencion",
+     "retencion y fibras",
+     "fibras tensas"
+    ],
+    "meter": 72,
+    "visual_asset_strategy": "hybrid",
+    "image_slots": [
+     {
+      "id": "superficie_empujada",
+      "role": "source_card",
+      "label": "superficie",
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "prompt": "Macro de tela elastica color crema con tres ondulaciones suaves empujadas desde abajo, luz lateral que marca el relieve, fondo claro liso, sin texto, sin logos, sin marcas de agua"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stat",
+   "component": "StatRing",
+   "anchor": {
+    "phrase": "Una crema puede mejorar"
+   },
+   "semantic_kind": "number",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption",
+    "face"
+   ],
+   "rationale": "El beat empieza concediendo que la crema puede mejorar la apariencia; el anillo entra desde el inicio y limita el efecto a horas.",
+   "duration_ms": 4800,
+   "params": {
+    "value": 1,
+    "suffix": "efecto",
+    "label": "por unas horas",
+    "fit_mode": "responsive"
+   }
+  },
+  {
+   "type": "compare",
+   "component": "SplitCompare",
+   "anchor": {
+    "phrase": "El aha es este"
+   },
+   "semantic_kind": "process",
+   "placement": "full_context",
+   "must_not_cover": [
+    "caption",
+    "data"
+   ],
+   "rationale": "El aha contrasta dos criterios de compra; SplitCompare muestra la palabra de marketing perdiendo contra etiqueta.",
+   "duration_ms": 5400,
+   "params": {
+    "left_label": "PALABRA",
+    "right_label": "ETIQUETA",
+    "verdict": "right"
+   }
+  },
+  {
+   "type": "list",
+   "component": "StepList",
+   "anchor": {
+    "phrase": "Busca cafeina"
+   },
+   "semantic_kind": "list",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption",
+    "subject"
+   ],
+   "rationale": "La frase da tres ingredientes; una lista revela cada criterio de etiqueta en orden.",
+   "duration_ms": 4800,
+   "params": {
+    "items": [
+     "CAFEINA",
+     "RETINOL",
+     "PEPTIDOS"
+    ],
+    "variant": "criteria",
+    "future_reveal": "skeleton_only",
+    "item_anchors": [
+     "Busca cafeina",
+     "retinol",
+     "peptidos"
+    ]
+   }
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "piel lisa en siete dias"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "La promesa rapida es una bandera roja concreta; el rotulo de alerta la marca al instante.",
+   "duration_ms": 2500,
+   "params": {
+    "text": "ALERTA",
+    "sub": "piel lisa en 7 dias",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "compare",
+   "component": "SplitCompare",
+   "anchor": {
+    "phrase": "Si tu frasco no pasa"
+   },
+   "semantic_kind": "process",
+   "placement": "full_context",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "El guion opone literalmente mas constancia contra otra decision; el contraste con veredicto responde la pregunta abierta (que hago si mi frasco no pasa).",
+   "duration_ms": 2200,
+   "params": {
+    "left_label": "MAS CONSTANCIA",
+    "right_label": "OTRA DECISION",
+    "verdict": "right"
+   }
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "Pero no puede borrar"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "El limite se dice literal: no puede borrar esos tirones; rotulo inferior sin construir estructura nueva.",
+   "duration_ms": 3300,
+   "params": {
+    "text": "NO PUEDE BORRAR LOS TIRONES",
+    "sub": "no es una plancha",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "label",
+   "component": "Annotation",
+   "anchor": {
+    "phrase": "empujan la piel"
+   },
+   "semantic_kind": "label",
+   "placement": "right_callout",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "Ancla la tarjeta fuente: lo que se ve es la misma mecanica de empuje, dicho en la frase.",
+   "duration_ms": 1600,
+   "params": {
+    "label": "asi empujan",
+    "target": "tarjeta de superficie",
+    "side": "right"
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "id": "ui-impact-soft",
+   "anchor": {
+    "phrase": "falta de masaje"
+   },
+   "gain": 0.9
+  },
+  {
+   "id": "ui-card-pop",
+   "anchor": {
+    "phrase": "aroma, brillo"
+   },
+   "gain": 0.85
+  },
+  {
+   "id": "ui-meter-fill",
+   "anchor": {
+    "phrase": "grasa, retencion"
+   },
+   "gain": 0.95
+  },
+  {
+   "id": "ui-filter-reject",
+   "anchor": {
+    "phrase": "no puede borrar"
+   },
+   "gain": 0.85
+  },
+  {
+   "id": "ui-filter-pass",
+   "anchor": {
+    "phrase": "La eliges por la etiqueta"
+   },
+   "gain": 0.95
+  },
+  {
+   "id": "ui-callout-ping",
+   "anchor": {
+    "phrase": "piel lisa en siete dias"
+   },
+   "gain": 0.8
+  },
+  {
+   "id": "ui-page-swipe",
+   "anchor": {
+    "phrase": "Comenta LISTA"
+   },
+   "gain": 0.9
+  }
+ ],
+ "cta": {
+  "text": "Comenta LISTA y revisa tu frasco",
+  "button": "LISTA",
+  "anchor": {
+   "phrase": "y te paso la checklist"
+  },
+  "resource_title": "Checklist del frasco",
+  "resource_footer": "decide antes de comprar",
+  "resource_points": [
+   "3 ingredientes con evidencia real",
+   "7 frases que son solo marketing",
+   "Cambiar, complementar o devolver"
+  ],
+  "mockup_type": "checklist",
+  "visual_style": "Tarjeta clara de baño, checks verdes y alerta roja para promesas rapidas."
+ }
+}

@@ -1,0 +1,65 @@
+{
+  "runId": "motion-spec-smoke",
+  "durationMs": 4000,
+  "audioSrc": "",
+  "sfx": [],
+  "musicBeds": [],
+  "showCaptions": false,
+  "showProgress": false,
+  "brand": {
+    "ink": "#0D0D0D",
+    "cream": "#F0EDE6",
+    "teal": "#2D8C74",
+    "gold": "#B08A2E",
+    "red": "#C64232",
+    "fontDisplay": "Plus Jakarta Sans",
+    "fontBody": "Plus Jakarta Sans"
+  },
+  "theme": {
+    "background": "#F0EDE6",
+    "surface": "#F5F3EE",
+    "text": "#0D0D0D",
+    "accent": "#2D8C74",
+    "highlight": "#B08A2E",
+    "danger": "#C64232",
+    "fontDisplay": "Plus Jakarta Sans",
+    "fontBody": "Plus Jakarta Sans",
+    "profileId": "motion-smoke"
+  },
+  "designProfile": {},
+  "shots": [{
+    "shotId": "S0001",
+    "chapterId": "C01",
+    "startMs": 0,
+    "endMs": 4000,
+    "visualKind": "ui-card",
+    "source": "",
+    "mediaType": "card",
+    "sourceInMs": 0,
+    "sourceOutMs": 0,
+    "screenCopy": "TRES SEÑALES",
+    "uiSpec": {
+      "template": "concept",
+      "state": "resolved",
+      "headline": "TRES SEÑALES",
+      "items": ["SUPERFICIE", "CAMBIO", "LÍMITE"],
+      "values": [],
+      "dataSource": "locked_narration"
+    },
+    "motionSpec": {
+      "purpose": "explain",
+      "evidenceRole": "primary",
+      "visualPrimitive": "three_scene",
+      "timeline": [
+        {"at": 0, "action": "stage", "target": "primary"},
+        {"at": 0.2, "action": "reveal", "target": "layers"},
+        {"at": 0.8, "action": "resolve", "target": "primary"}
+      ],
+      "sfxCues": [],
+      "mustNotCover": ["data"],
+      "safeZone": "auto",
+      "meaningfulChanges": 3
+    }
+  }],
+  "captions": []
+}

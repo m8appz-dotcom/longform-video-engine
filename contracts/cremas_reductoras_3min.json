@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.1",
+  "run_id": "cremas-reductoras-3min-v4",
+  "script_locked": true,
+  "script_hash": "e83a5e7b8637952adad1c5f7494738aa3285f35990b673bc29adf5b42f7f32a5",
+  "title": "Antes de comprar otra crema reductora, mira esto",
+  "thumbnail_promise": "¿REDUCE GRASA?",
+  "hook": "¿Reduce grasa? Esa es la pregunta que este envase quiere que te hagas.",
+  "target_minutes": 3.0,
+  "language": "es",
+  "audience_profile": "Audiencia hispanohablante mayormente fría, con fuerte peso de mujeres de 45 años o más, que consume en móvil y TV y exige decisiones prácticas sin promesas milagrosas.",
+  "avatar_feedback": "Simplificar citas institucionales en el audio; mostrar respaldo en pantalla. Tratar aminofilina como decisión de etiqueta, no como giro dramático.",
+  "avatar_appearances": 2,
+  "cta": {
+    "spoken_text": "Ahora mira Cómo distinguir grasa, hinchazón y piel flácida. Ahí verás qué cambia en cada caso y qué conviene hacer después.",
+    "target_video_title": "Cómo distinguir grasa, hinchazón y piel flácida",
+    "screen_copy": "MIRA ESTE VIDEO AHORA",
+    "end_screen_hold_seconds": 9
+  },
+  "user_clips": [],
+  "chapters": [
+    {
+      "id": "C01",
+      "title": "Gancho",
+      "spoken_text": "¿Reduce grasa? Esa es la pregunta que este envase quiere que te hagas. Y aquí está el problema: una crema puede cambiar cómo se ve la piel, sin demostrar que quitó grasa. Si confundes esas dos cosas, puedes pagar por una promesa que el producto nunca pudo cumplir. Pero tampoco significa que todo sea mentira. Hay cosas que sí puede hacer. Y una palabra en la etiqueta puede delatarlo. Primero: celulitis no es lo mismo que grasa. La celulitis es cómo se ve la piel por la estructura debajo de ella. Por eso una crema no debería venderte la idea de “disolver grasa” como si fuera una hidratante común."
+    },
+    {
+      "id": "C02",
+      "title": "Qué sí cambia",
+      "spoken_text": "Lo que sí puede pasar es esto: la piel se ve más lisa durante un rato. Algunas cremas con cafeína pueden hacer la celulitis menos visible temporalmente porque reducen agua en las células superficiales. Si se ve mejor el mismo día, eso no prueba pérdida de grasa. Prueba un cambio de apariencia. Y normalmente requiere uso diario. Si la dejas, el efecto visual puede irse. Segundo ingrediente: retinol. Aquí la promesa es más lenta. El retinol al 0.3% puede mejorar algo la apariencia al engrosar la piel, pero necesita paciencia. No es magia de una semana. Puede necesitar seis meses o más."
+    },
+    {
+      "id": "C03",
+      "title": "Qué revisar",
+      "spoken_text": "Entonces, si el anuncio promete cambio rápido con retinol, ya tienes una alerta. Otro ingrediente que conviene revisar es la aminofilina. Puede causar reacciones. Si tienes asma, conviene evitar productos que la contengan. No todos los ingredientes “fuertes” hacen mejor compra. A veces solo aumentan el riesgo. Antes de usar cualquier crema nueva, prueba una pequeña zona primero. Espera y mira si hay irritación. Y si quieres comparar resultados, no hagas trampa sin querer. Misma luz. Misma distancia. Misma hora. Misma postura. Y fotos separadas por semanas, no por minutos. Eso compara apariencia con más justicia. Pero no convierte la foto en prueba de pérdida de grasa."
+    },
+    {
+      "id": "C04",
+      "title": "Regla de compra",
+      "spoken_text": "Regla de compra: si promete grasa, pide evidencia seria. Si promete apariencia, mira ingrediente, tiempo y posibles reacciones. Y si la etiqueta no distingue entre hidratar, tensar, celulitis y grasa, la confusión es parte de la venta. Ahora mira Cómo distinguir grasa, hinchazón y piel flácida. Ahí verás qué cambia en cada caso y qué conviene hacer después."
+    }
+  ]
+}

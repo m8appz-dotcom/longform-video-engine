@@ -1,0 +1,49 @@
+{
+  "comment": "UNICA fuente de verdad para geometria y registro de componentes. Editar SOLO este archivo y correr scripts/codegen.py: genera engine/_generated.py y remotion/src/generated.ts. Nunca editar los generados a mano.",
+  "canvas": { "width": 1080, "height": 1920, "fps": 24 },
+  "caption": {
+    "pill_height": 150,
+    "pad_bottom": { "center_low": 420, "bottom": 320 },
+    "pad_top_when_top": 240
+  },
+  "panel": { "top_margin": 214, "min_height": 640, "content_padding": 300 },
+  "overlay_row_px": { "StepList": 126, "CausalMeter": 156, "ChapterDots": 92 },
+  "components": [
+    "StatRing", "CountUp", "StepList", "CausalMeter", "StoryArcChart",
+    "KeywordPop", "LowerThird", "ChapterDots", "ObjectCallout", "Annotation",
+    "FocusPunch", "SplitCompare", "BigWordSequence"
+  ],
+  "component_aliases": { "CountUp": "StatRing", "Annotation": "ObjectCallout" },
+  "strong_overlays": [
+    "KeywordPop", "StepList", "CausalMeter", "StatRing", "CountUp",
+    "StoryArcChart", "SplitCompare", "BigWordSequence"
+  ],
+  "expressive_transitions": { "kinds": ["punch_in", "whip"], "max_per_reel": 3 },
+  "media_base": {
+    "comment": "Mandato SEMANTICA SOBRE PRECISION: base del reel = personas/accion; texto = acento. Leido por validate_plan/validate_props/visual_qa/jueces via codegen.",
+    "media_backed_min_ratio": 0.6,
+    "max_consecutive_text_scenes": 2,
+    "kinetic_text_hits_max": 4
+  },
+  "viewer_gate": {
+    "comment": "Filtro ESPECTADOR (mandato 2026-07-05): ultimo gate de cada etapa (guion, motion, broll, final). runs>=2: un blocker solo bloquea si PERSISTE en todas las corridas -- anti-varianza del juez (7 corridas del mismo render dieron 7 hallazgos contradictorios). Engine-only: no se emite a TS.",
+    "min_score": 70,
+    "runs": 2
+  },
+  "avatar_split": {
+    "comment": "Layout de avatar: mitad superior broll/motion, franja de captions, y avatar 16:9 EXACTO abajo (1080x608 = 16:9) para que NUNCA se recorte la cara (causa del 'se veia montado'). companion_h + caption_band_h + avatar_h = 1920.",
+    "companion_h": 960,
+    "caption_band_h": 352,
+    "avatar_h": 608,
+    "appearances": 2,
+    "max_appearance_ms": 0
+  },
+  "max_appearance_ms_comment": "0 = SIN tope duro de duracion por aparicion del avatar (mandato 2026-07-05: el avatar va en los MEJORES momentos, no solo en escenas cortas). Antes estaba capeado a 5000ms en resolve.py/props_build.py, lo que forzaba escenas breves. Override por env AVATAR_MAX_MS.",
+  "sfx_max_gain": {
+    "sub-drop": 1.10, "impact": 1.10, "riser": 1.00, "whoosh": 1.10, "swoosh-up": 1.10,
+    "click": 0.95, "pop": 1.00, "ui-soft-click": 0.85, "ui-card-pop": 1.20,
+    "ui-check-tick": 1.00, "ui-line-draw": 1.20, "ui-meter-fill": 1.25,
+    "ui-filter-pass": 1.15, "ui-filter-reject": 1.05, "ui-callout-ping": 0.95,
+    "ui-page-swipe": 1.10, "ui-impact-soft": 1.25
+  }
+}

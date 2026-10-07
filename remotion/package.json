@@ -1,0 +1,28 @@
+{
+  "name": "reel-engine-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render Reel out/reel.mp4",
+    "render:props": "remotion render Reel out/reel.mp4 --props=./props.json",
+    "render:longform": "remotion render Longform out/longform.mp4 --props=./longform-props.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.18.0",
+    "@remotion/cli": "4.0.487",
+    "@remotion/google-fonts": "4.0.487",
+    "@remotion/media": "4.0.487",
+    "@remotion/three": "^4.0.487",
+    "@types/three": "^0.180.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.487",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "typescript": "^5.4.0"
+  }
+}

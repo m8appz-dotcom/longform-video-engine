@@ -1,0 +1,606 @@
+{
+ "meta": {
+  "topic": "why everyone is making money with AI except you",
+  "language": "en",
+  "target_seconds": 49,
+  "fps": 24,
+  "platform": "reels",
+  "narrative_structure": "arc",
+  "avatar_policy": "disabled",
+  "avatar_disabled_reason": "plan_qa penalizo 3/3 veces (scores 71/78/74) el riesgo de avatar visiblemente montado en revelacion y cierre para este contenido explicativo; hallazgo consistente, no ruido.",
+  "media_policy": "production",
+  "angle_type": "mecanismo_oculto",
+  "angle_sentence": "People think AI money comes from writing better prompts; it actually comes from building automated workflows around AI.",
+  "benchmark_notes": [
+   "references/ is empty; no reference reels available.",
+   "45-60s duration fits a myth+mechanism arc with 3 named automated tasks."
+  ],
+  "person_lock": "a man in his early 30s, short dark brown hair (not curly), light stubble, wearing a dark charcoal casual sweater",
+  "brand": {
+   "bg": "#0B0E14",
+   "fg": "#F2F5F9",
+   "accent": "#22D3A6"
+  },
+  "style": {
+   "base_theme": "dark",
+   "background_role": "mixed",
+   "font": "plus_jakarta",
+   "caption_style": "word_pop",
+   "caption_emphasis_policy": "smart_stopwords",
+   "caption_granularity": "word",
+   "caption_decoration": "none",
+   "caption_position": "center_low",
+   "caption_readability_mode": "adaptive_boxed",
+   "render_policy": "declared_only",
+   "plate_layout": "none",
+   "graphic_style": "editorial",
+   "hook_overlay": "none",
+   "hook_text_zone": "top_clean",
+   "progress_bar": "accent",
+   "texture": "subtle",
+   "palette": {
+    "bg": "#0B0E14",
+    "fg": "#F2F5F9",
+    "accent": "#22D3A6",
+    "secondary": "#7C5CFF",
+    "danger": "#E24A4A",
+    "warning": "#E2B93B",
+    "panel": "#151A24",
+    "cream": "#0B0E14",
+    "off": "#111621",
+    "ink": "#F2F5F9",
+    "muted": "#8891A3"
+   }
+  }
+ },
+ "script": "Most people are still waiting for ChatGPT to make them money. It feels like you're building an AI business. Really, you're just working for free, for a chatbot. You spend hours tweaking a single paragraph, waiting for the perfect response, thinking you’re mastering the tool. The people making money aren't writing prompts; they're building workflows. They use AI to connect five different apps that talk to each other while they sleep. While you’re staring at a blinking cursor trying to get a better sentence, they’re setting up automated systems. Those systems handle customer service, data entry, and lead generation, and nobody has to touch a keyboard. You’re treating AI like a search engine, but the profit is in the automation. That's the shift: less chatting, more connecting. Connect two apps today. You're already ahead.",
+ "hook": {
+  "spoken": "Most people are still waiting for ChatGPT to make them money.",
+  "headline": "STILL WAITING FOR AI TO PAY OFF",
+  "mode": "evidence",
+  "visual": {
+   "provider": "image",
+   "prompt": "Vertical 9:16 photo, dim home room at night, a young adult sitting at a desk typing on a laptop, screen glow lighting their tired face, a ChatGPT-style chat interface visible on screen with a long scrollback of messages, hand on keyboard mid-type, clean modern desk setup, empty space at top for a headline."
+  }
+ },
+ "cta": {
+  "text": "Connect two apps today and you're already ahead",
+  "button": "CONNECT",
+  "anchor": {
+   "phrase": "Connect two apps today"
+  },
+  "resource_title": "The Workflow Starter Kit",
+  "resource_footer": "Two apps. Today. That's the whole first step.",
+  "resource_points": [
+   "Pick one task",
+   "Connect two apps",
+   "Let it run without you"
+  ],
+  "mockup_type": "checklist",
+  "visual_style": "Dark card with three glowing checks and a FOLLOW button."
+ },
+ "scenes": [
+  {
+   "role": "hook",
+   "anchor": {
+    "phrase": "Most people are still waiting"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, dim home room at night, a young adult sitting at a desk typing on a laptop, screen glow lighting their tired face, a ChatGPT-style chat interface visible on screen with a long scrollback of messages, hand on keyboard mid-type, clean modern desk setup, empty space at top for a headline."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "hook_spectacle",
+   "why_this_visual_not_other": "Shows the shared, unglamorous routine the hook names -- months of chatting with no payoff -- as an observation about a common situation, not a pointed accusation at the viewer.",
+   "editorial_point": "The reel opens on a specific, checkable fact about most people trying AI: months of chatting, zero dollars made.",
+   "why_it_matters": "A precise, shared cost invites the viewer in rather than singling them out.",
+   "visual_proof": "A person visibly chatting with AI alone at night dramatizes months of effort with nothing to show for it.",
+   "coverage_required": true,
+   "intent": "the precise, shared cost named: months of chatting, zero dollars made",
+   "visual_targets": [
+    "laptop screen",
+    "chat interface",
+    "typing hand"
+   ],
+   "max_duration_ms": 6500,
+   "motion": "kenburns-in",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "still waiting for ChatGPT"
+     },
+     "action": "crop_reframe",
+     "target": "left",
+     "semantic_delta": "Early pattern-interrupt push into the chat interface."
+    },
+    {
+     "anchor": {
+      "phrase": "to make them money"
+     },
+     "action": "crop_reframe",
+     "target": "right",
+     "semantic_delta": "Reframe holding on the wait for a payoff."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "It feels like you're building"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, same young adult at the same desk, frustrated expression, leaning back from the laptop with hands over face for a moment, multiple browser tabs visible on screen, warm desk lamp light, clean modern room, empty lower area for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "The frustrated pause dramatizes the gap between feeling productive and actually doing free work for the tool.",
+   "editorial_point": "Explains the trap gently: it feels like progress, but it's free labor for the chatbot.",
+   "why_it_matters": "Naming the feeling first (it feels like X) before the reveal (it's actually Y) reads as explaining, not accusing.",
+   "visual_proof": "Visible frustration and repetitive screen-tab checking dramatizes free work done for the chatbot.",
+   "coverage_required": true,
+   "intent": "the myth explained: it feels like building, it's actually free work",
+   "visual_targets": [
+    "frustrated expression",
+    "browser tabs",
+    "desk lamp"
+   ],
+   "max_duration_ms": 7500,
+   "motion": "kenburns-out",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "Really, you're just working for free"
+     },
+     "action": "crop_reframe",
+     "target": "top",
+     "semantic_delta": "Reframe as the myth flips to the reveal mid-scene."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "spend hours tweaking a single paragraph"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, extreme close-up on hands typing and repeatedly backspacing on a laptop keyboard, screen softly blurred in the background showing a chat window, a subtle sense of repetition and time passing, cool blue screen light on the hands, clean composition with lower area free for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "Close-up hands retyping the same line dramatizes hours lost polishing a single prompt.",
+   "editorial_point": "The cost of the myth: hours spent perfecting a sentence instead of building anything reusable.",
+   "why_it_matters": "Quantifies the waste before the reveal makes the alternative obvious.",
+   "visual_proof": "Repeated backspacing gesture on the same paragraph visualizes wasted hours.",
+   "coverage_required": true,
+   "intent": "the cost: hours spent perfecting one prompt",
+   "visual_targets": [
+    "typing hands",
+    "keyboard close-up",
+    "backspacing gesture"
+   ],
+   "max_duration_ms": 7500,
+   "motion": "pan-right",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "waiting for the perfect response"
+     },
+     "action": "crop_reframe",
+     "target": "right",
+     "semantic_delta": "Push in on the waiting cursor."
+    },
+    {
+     "anchor": {
+      "phrase": "thinking you’re mastering the tool"
+     },
+     "action": "crop_reframe",
+     "target": "left",
+     "semantic_delta": "Reframe on the false sense of mastery."
+    },
+    {
+     "anchor": {
+      "phrase": "The people making money"
+     },
+     "action": "crop_reframe",
+     "target": "top",
+     "semantic_delta": "Reframe as the contrast begins."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "aren't writing prompts; they're building workflows"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, a confident young adult at a clean desk pointing at a laptop screen showing a simple automation flow diagram with connected boxes and arrows, purposeful expression, bright daylight through a window, organized modern workspace, empty lower area for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "A visible flow diagram dramatizes the reveal: real AI money is a built system, not a chat message.",
+   "editorial_point": "The reveal: real earners build workflows, they don't write prompts.",
+   "why_it_matters": "This is the pivot the whole reel sets up -- the actual mechanism behind AI money.",
+   "visual_proof": "A person confidently pointing at a connected flow diagram dramatizes 'building workflows' as the real action.",
+   "coverage_required": true,
+   "intent": "the reveal: workflows, not prompts, make the money",
+   "visual_targets": [
+    "automation flow diagram",
+    "connected boxes and arrows",
+    "confident gesture"
+   ],
+   "max_duration_ms": 6000,
+   "transition_in": "punch_in",
+   "transition_reason": "The reel's central reveal deserves a visual punch.",
+   "motion": "kenburns-in",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "they're building workflows"
+     },
+     "action": "component_state",
+     "target": "workflow diagram",
+     "semantic_delta": "The PROMPTS vs WORKFLOWS compare locks onto workflows as the answer."
+    },
+    {
+     "anchor": {
+      "phrase": "They use AI to"
+     },
+     "action": "crop_reframe",
+     "target": "right",
+     "semantic_delta": "Reframe into the next mechanism beat."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "connect five different apps"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, a phone propped on a desk showing a screen with five app icons connected by glowing lines forming a simple automation network, soft ambient room light, nobody visible in frame or a hand just placing the phone down, minimal modern desk, empty lower area for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "Connected app icons dramatize automation running between tools without manual work.",
+   "editorial_point": "Shows the mechanism in miniature: apps talking to each other automatically.",
+   "why_it_matters": "Makes 'workflow' concrete and visual instead of an abstract business term.",
+   "visual_proof": "Five glowing connected app icons on a phone screen dramatize automation running unattended.",
+   "coverage_required": true,
+   "intent": "the mechanism made visible: connected apps",
+   "visual_targets": [
+    "phone screen",
+    "connected app icons",
+    "glowing lines"
+   ],
+   "max_duration_ms": 6500,
+   "motion": "kenburns-out",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "that talk to each other"
+     },
+     "action": "crop_reframe",
+     "target": "left",
+     "semantic_delta": "Push toward the connected-apps network."
+    },
+    {
+     "anchor": {
+      "phrase": "while they sleep"
+     },
+     "action": "crop_reframe",
+     "target": "right",
+     "semantic_delta": "Reframe on the unattended automation running overnight."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "staring at a blinking cursor"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, a tired person seated at a desk facing an open laptop, the laptop SCREEN faces the person and shows a single blinking text cursor; on a separate wall monitor behind them a glowing automation dashboard runs. Only ONE display per device: the laptop screen is on the inside facing the user, the outer lid is plain with NO screen, NO glowing panel and NO second display on the back of the lid. Cool blue light, clean modern desk, empty lower area for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "The blinking-cursor stare next to a running dashboard dramatizes the exact contrast the line narrates.",
+   "editorial_point": "Contrasts wasted attention (the cursor) with unattended systems already working.",
+   "why_it_matters": "Makes the cost of the myth concrete one more time right before the named proof.",
+   "visual_proof": "A person staring at a blinking cursor beside a running dashboard dramatizes effort versus automation.",
+   "coverage_required": true,
+   "intent": "the contrast: cursor-staring versus systems running",
+   "visual_targets": [
+    "blinking cursor",
+    "tired stare",
+    "automation dashboard"
+   ],
+   "max_duration_ms": 6500,
+   "motion": "pan-left",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "trying to get a better sentence"
+     },
+     "action": "crop_reframe",
+     "target": "bottom",
+     "semantic_delta": "Reframe holding on the wasted-effort contrast."
+    },
+    {
+     "anchor": {
+      "phrase": "setting up automated systems"
+     },
+     "action": "crop_reframe",
+     "target": "top",
+     "semantic_delta": "Reframe leading into the named systems."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "customer service, data entry, and lead generation"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, a laptop screen showing a simple dashboard with three task rows each getting a checkmark automatically, softly blurred, nobody touching the keyboard, ambient desk light, clean modern room, empty lower and upper area for overlay and captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "A dashboard auto-checking tasks dramatizes the exact three named systems running without a human.",
+   "editorial_point": "Names the three concrete systems: customer service, data entry, lead generation, all automated.",
+   "why_it_matters": "Specific, nameable tasks make the abstract idea of 'automation' actionable and credible.",
+   "visual_proof": "A dashboard auto-completing task rows dramatizes systems running with nobody touching the keyboard.",
+   "coverage_required": true,
+   "intent": "the three automated systems named",
+   "visual_targets": [
+    "dashboard screen",
+    "task checkmarks",
+    "automated rows"
+   ],
+   "max_duration_ms": 8500,
+   "motion": "kenburns-in",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "and nobody has to touch a keyboard"
+     },
+     "action": "component_state",
+     "target": "dashboard",
+     "semantic_delta": "The dashboard holds on all three tasks checked, unattended."
+    },
+    {
+     "anchor": {
+      "phrase": "You’re treating AI like a search engine"
+     },
+     "action": "crop_reframe",
+     "target": "right",
+     "semantic_delta": "Reframe into the closing contrast."
+    }
+   ]
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "the profit is in the automation"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, the same young adult standing confidently by the desk, arms crossed, laptop screen glowing behind them showing the automation dashboard still running, satisfied expression, bright daylight, clean modern workspace, empty lower area for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "A confident stance next to a running dashboard dramatizes ownership of a working system versus chatting with a tool.",
+   "editorial_point": "Restates the core lesson: the money is in the automation, not the chat.",
+   "why_it_matters": "Locks in the reframe right before the closing directive.",
+   "visual_proof": "Confident posture beside a running dashboard dramatizes 'the profit is in the automation'.",
+   "coverage_required": true,
+   "intent": "restating the mechanism as the takeaway",
+   "visual_targets": [
+    "confident stance",
+    "running dashboard",
+    "satisfied expression"
+   ],
+   "max_duration_ms": 6000,
+   "motion": "kenburns-in"
+  },
+  {
+   "role": "broll",
+   "anchor": {
+    "phrase": "That's the shift"
+   },
+   "clip": {
+    "source": "image",
+    "image_provider": "codex-oauth",
+    "model": "gpt-image-2",
+    "prompt": "Vertical 9:16 photo, close-up of a hand closing a laptop chat window and instead clicking on an automation/connector app icon, decisive gesture, bright clean desk, empty lower area for captions."
+   },
+   "layout": "full_bleed",
+   "visual_mode": "concrete",
+   "visual_family": "concrete_proof",
+   "why_this_visual_not_other": "The gesture of closing chat and opening the connector app dramatizes the shift being named, without a command tone.",
+   "editorial_point": "Names the takeaway as a shift already happening, not an order to obey.",
+   "why_it_matters": "Stating the shift declaratively (that's the shift) reads as a revealed insight, not a scold.",
+   "visual_proof": "A hand closing chat and opening a connector app dramatizes the shift from chatting to connecting.",
+   "coverage_required": true,
+   "intent": "the closing insight, said with authority and confidence",
+   "visual_targets": [
+    "hand gesture",
+    "closing chat window",
+    "connector app icon"
+   ],
+   "max_duration_ms": 4500,
+   "motion": "pan-left"
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Connect two apps today"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "cta",
+   "plate_purpose": "cta_resource",
+   "visual_mode": "cta",
+   "visual_family": "cta_document",
+   "why_this_visual_not_other": "A resource card delivers the action itself (connect two apps) as value now, not a tease for a future video.",
+   "editorial_point": "Closes with a concrete action the viewer can do today, not a promise of more content later.",
+   "why_it_matters": "Ending on value delivered now, not a follow bait, keeps the tone consistent with the rest of the reel.",
+   "visual_proof": "Observable resource card on screen: three checklist points (pick one task, connect two apps, let it run) listed before the CONNECT button, with the 'connect two apps' step visibly checking as it's named.",
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "Connect two apps today"
+     },
+     "action": "insert_card",
+     "target": "resource card",
+     "semantic_delta": "The resource card enters with the three-step checklist, 'connect two apps' as the visible middle step."
+    },
+    {
+     "anchor": {
+      "phrase": "You're already ahead"
+     },
+     "action": "component_state",
+     "target": "connect two apps checklist item",
+     "semantic_delta": "The 'connect two apps' checklist item visibly checks as the concrete action lands, dramatizing the action instead of leaving it abstract."
+    }
+   ],
+   "coverage_required": false,
+   "intent": "deliver one concrete action as the close, not a tease",
+   "visual_targets": [
+    "checklist",
+    "task",
+    "apps",
+    "CONNECT button"
+   ],
+   "max_duration_ms": 8200
+  }
+ ],
+ "overlays": [
+  {
+   "type": "emphasis",
+   "component": "KeywordPop",
+   "anchor": {
+    "phrase": "working for free"
+   },
+   "semantic_kind": "emphasis",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "The reveal of the myth gets named in one punch: it's free work, not a business.",
+   "duration_ms": 1200,
+   "params": {
+    "words": [
+     "WORKING FOR FREE"
+    ],
+    "item_anchors": [
+     "working for free"
+    ]
+   }
+  },
+  {
+   "type": "compare",
+   "component": "SplitCompare",
+   "anchor": {
+    "phrase": "aren't writing prompts; they're building workflows"
+   },
+   "semantic_kind": "process",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "The reveal is literally a contrast between two actions the script names side by side: writing prompts vs building workflows.",
+   "duration_ms": 4200,
+   "params": {
+    "left_label": "PROMPTS",
+    "right_label": "WORKFLOWS",
+    "verdict": "right",
+    "orientation": "horizontal"
+   }
+  },
+  {
+   "type": "list",
+   "component": "StepList",
+   "anchor": {
+    "phrase": "customer service, data entry, and lead generation"
+   },
+   "semantic_kind": "list",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption",
+    "subject"
+   ],
+   "rationale": "The script names three concrete automated systems in a row; StepList reveals them as the voice names each one.",
+   "duration_ms": 6500,
+   "params": {
+    "items": [
+     "CUSTOMER SERVICE",
+     "DATA ENTRY",
+     "LEAD GENERATION"
+    ],
+    "variant": "diagnosis",
+    "future_reveal": "skeleton_only",
+    "item_anchors": [
+     "customer service",
+     "data entry",
+     "lead generation"
+    ]
+   }
+  },
+  {
+   "type": "emphasis",
+   "component": "BigWordSequence",
+   "anchor": {
+    "phrase": "the profit is in the automation"
+   },
+   "semantic_kind": "emphasis",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "The takeaway lands in two words said back to back: the target (profit) and the mechanism (automation).",
+   "duration_ms": 2400,
+   "params": {
+    "words": [
+     "THE PROFIT",
+     "THE AUTOMATION"
+    ],
+    "item_anchors": [
+     "the profit is",
+     "in the automation"
+    ]
+   }
+  }
+ ],
+ "sfx": []
+}

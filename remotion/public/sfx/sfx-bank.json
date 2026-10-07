@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-06-25T19:10:33.452041+00:00",
+  "provider": "elevenlabs",
+  "endpoint": "/v1/sound-generation",
+  "files": [
+    {
+      "id": "ui-soft-click",
+      "label": "UI soft click",
+      "category": "micro",
+      "duration_seconds": 0.5,
+      "prompt_influence": 0.45,
+      "gain_max": 0.12,
+      "use_when": "tiny UI selection, subtle word/card acknowledgement",
+      "avoid_when": "major reveal, scene transition, or emotional beat",
+      "prompt": "Very soft modern UI click, one-shot, clean high-end mobile app tap, no harsh transient, no reverb, quiet.",
+      "file": "sfx/ui-soft-click.wav"
+    },
+    {
+      "id": "ui-card-pop",
+      "label": "Card pop",
+      "category": "motion",
+      "duration_seconds": 0.6,
+      "prompt_influence": 0.5,
+      "gain_max": 0.14,
+      "use_when": "card/list row appears or expands",
+      "avoid_when": "every caption word or dense rapid list",
+      "prompt": "Soft rounded card pop sound, one-shot UI motion, gentle rubbery pop with tiny air, premium app interface, not cartoonish.",
+      "file": "sfx/ui-card-pop.wav"
+    },
+    {
+      "id": "ui-check-tick",
+      "label": "Check tick",
+      "category": "decision",
+      "duration_seconds": 0.5,
+      "prompt_influence": 0.5,
+      "gain_max": 0.13,
+      "use_when": "criterion passes, checklist confirms, positive gate result",
+      "avoid_when": "negative/rejection state",
+      "prompt": "Small satisfying checkmark tick, clean glassy UI confirmation, one-shot, bright but soft, no melody.",
+      "file": "sfx/ui-check-tick.wav"
+    },
+    {
+      "id": "ui-line-draw",
+      "label": "Line draw",
+      "category": "motion",
+      "duration_seconds": 0.75,
+      "prompt_influence": 0.55,
+      "gain_max": 0.13,
+      "use_when": "path, connector, underline-free progress line, graph stroke draws",
+      "avoid_when": "static text emphasis",
+      "prompt": "Subtle whoosh of a thin line being drawn across a glass interface, one-shot, airy, clean, no impact, no noise burst.",
+      "file": "sfx/ui-line-draw.wav"
+    },
+    {
+      "id": "ui-meter-fill",
+      "label": "Meter fill",
+      "category": "motion",
+      "duration_seconds": 0.85,
+      "prompt_influence": 0.55,
+      "gain_max": 0.14,
+      "use_when": "ring/meter/count progress fills or reaches a threshold",
+      "avoid_when": "plain scene cuts",
+      "prompt": "Smooth circular meter filling sound, rising soft UI shimmer, restrained premium health app, one-shot, no alarm.",
+      "file": "sfx/ui-meter-fill.wav"
+    },
+    {
+      "id": "ui-filter-pass",
+      "label": "Filter pass",
+      "category": "decision",
+      "duration_seconds": 0.7,
+      "prompt_influence": 0.5,
+      "gain_max": 0.14,
+      "use_when": "rule passes, item clears the 2 of 3 gate",
+      "avoid_when": "negative result or failure event",
+      "prompt": "Soft positive filter pass sound, clean digital gate opens, small warm chime tail, one-shot, premium and quiet.",
+      "file": "sfx/ui-filter-pass.wav"
+    },
+    {
+      "id": "ui-filter-reject",
+      "label": "Filter reject",
+      "category": "decision",
+      "duration_seconds": 0.6,
+      "prompt_influence": 0.5,
+      "gain_max": 0.12,
+      "use_when": "item fails a rule, warning without red/harsh error",
+      "avoid_when": "positive criterion or CTA",
+      "prompt": "Gentle muted reject sound, soft low thud with tiny UI click, not alarming, no buzzer, no distortion.",
+      "file": "sfx/ui-filter-reject.wav"
+    },
+    {
+      "id": "ui-callout-ping",
+      "label": "Callout ping",
+      "category": "attention",
+      "duration_seconds": 0.5,
+      "prompt_influence": 0.45,
+      "gain_max": 0.12,
+      "use_when": "small annotation/callout points to an object or metric",
+      "avoid_when": "large full-screen transition",
+      "prompt": "Short soft callout ping, clean interface notification, one-shot, rounded and quiet, no phone ringtone.",
+      "file": "sfx/ui-callout-ping.wav"
+    },
+    {
+      "id": "ui-page-swipe",
+      "label": "Page swipe",
+      "category": "transition",
+      "duration_seconds": 0.7,
+      "prompt_influence": 0.45,
+      "gain_max": 0.14,
+      "use_when": "scene wipe, plate to B-roll, CTA document/mockup appears",
+      "avoid_when": "small row reveal",
+      "prompt": "Soft page swipe transition, paper and air movement blended with clean UI whoosh, one-shot, no snap, no harsh highs.",
+      "file": "sfx/ui-page-swipe.wav"
+    },
+    {
+      "id": "ui-impact-soft",
+      "label": "Soft impact",
+      "category": "attention",
+      "duration_seconds": 0.65,
+      "prompt_influence": 0.45,
+      "gain_max": 0.16,
+      "use_when": "major diagnosis/reveal, hook beat, important warning",
+      "avoid_when": "minor UI micro motion or B-roll",
+      "prompt": "Soft cinematic impact for social video, low rounded thump with tiny air, controlled, no distortion, no trailer boom.",
+      "file": "sfx/ui-impact-soft.wav"
+    }
+  ]
+}

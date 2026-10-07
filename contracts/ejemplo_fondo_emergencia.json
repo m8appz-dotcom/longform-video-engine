@@ -1,0 +1,609 @@
+{
+ "meta": {
+  "topic": "Fondo de emergencia con ingreso variable",
+  "language": "es",
+  "target_seconds": 40,
+  "fps": 24,
+  "platform": "reels",
+  "narrative_structure": "arc",
+  "avatar_policy": "disabled",
+  "avatar_disabled_reason": "Plan de ejemplo puramente diagramatico para validar el pipeline; no hay beat de autoridad ni pivote emocional que requiera ancla humana.",
+  "media_policy": "diagram_only",
+  "brand": {
+   "bg": "#F4EFE6",
+   "fg": "#15243B",
+   "accent": "#2D6CB5"
+  },
+  "style": {
+   "base_theme": "light",
+   "background_role": "cream",
+   "font": "plus_jakarta",
+   "caption_style": "word_pop",
+   "caption_emphasis_policy": "smart_stopwords",
+   "caption_granularity": "word",
+   "caption_decoration": "none",
+   "caption_position": "center_low",
+   "caption_readability_mode": "adaptive_boxed",
+   "render_policy": "declared_only",
+   "plate_layout": "none",
+   "graphic_style": "clean",
+   "hook_overlay": "none",
+   "hook_text_zone": "top_clean",
+   "progress_bar": "none"
+  }
+ },
+ "hook": {
+  "spoken": "Tu fondo de emergencia esta mal calculado.",
+  "headline": "TU FONDO ESTA MAL CALCULADO",
+  "mode": "spectacle",
+  "visual": {
+   "provider": "none"
+  }
+ },
+ "script": "Tu fondo de emergencia esta mal calculado. La regla dice tres meses de gastos y suena segura. Esa regla asume un ingreso fijo que llega igual cada mes. Si tu ingreso varia, la reserva se queda corta justo cuando mas la necesitas. Mide dos cosas antes de decidir. Primero cuanto gastas en un mes normal. Despues que tan estable es tu ingreso real. Con ingreso variable la reserva correcta sube de tres a seis meses de gastos. Seis meses te compran tiempo para reponerte sin vender nada ni pedir prestado. Guarda este video y calcula tu numero real hoy.",
+ "scenes": [
+  {
+   "role": "hook",
+   "anchor": {
+    "at": "start"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "stat_card",
+   "visual_mode": "kinetic_text",
+   "visual_family": "hook_spectacle",
+   "why_this_visual_not_other": "El hook niega una regla conocida; el golpe es tipografico y directo, no hay objeto fisico que lo pruebe mejor.",
+   "editorial_point": "La regla de fondo de emergencia que usas esta mal calculada para tu caso.",
+   "why_it_matters": "Si el calculo base esta mal, todo el plan de ahorro protege menos de lo que crees.",
+   "visual_proof": "Titular grande en mayusculas sobre panel claro con la palabra CALCULADO resaltada en acento.",
+   "coverage_required": true,
+   "intent": "hook",
+   "visual_targets": [
+    "titular del hook",
+    "palabra clave resaltada"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "fondo de emergencia esta mal"
+     },
+     "action": "component_state",
+     "semantic_delta": "El titular golpea y la palabra CALCULADO se resalta en acento",
+     "target": "titular del hook",
+     "label": "MAL CALCULADO"
+    },
+    {
+     "anchor": {
+      "phrase": "La regla dice tres meses"
+     },
+     "action": "component_state",
+     "semantic_delta": "Aparece la cifra de la regla comun: el anillo marca tres meses",
+     "target": "anillo del numero tres",
+     "label": "LA REGLA COMUN"
+    },
+    {
+     "anchor": {
+      "phrase": "y suena segura"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta marca que la regla se percibe segura antes del giro",
+     "target": "etiqueta bajo el anillo"
+    },
+    {
+     "anchor": {
+      "phrase": "tres meses de gastos"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo llena hasta el nivel de la regla de tres meses",
+     "target": "anillo del numero tres"
+    },
+    {
+     "anchor": {
+      "phrase": "calculado"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La palabra CALCULADO recibe el resalte de acento del titular",
+     "target": "palabra calculado del titular"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Esa regla asume un ingreso fijo"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "decision_card",
+   "visual_mode": "kinetic_text",
+   "visual_family": "rule_cards",
+   "why_this_visual_not_other": "El supuesto oculto de la regla es abstracto; dos palabras gigantes secuenciales lo clavan mejor que un diagrama.",
+   "editorial_point": "La regla de tres meses presupone un ingreso fijo e identico cada mes.",
+   "why_it_matters": "Quien tiene ingreso variable aplica una regla que no fue pensada para su caso.",
+   "visual_proof": "Dos palabras gigantes secuenciales, INGRESO y FIJO, con barra de acento bajo cada una.",
+   "coverage_required": true,
+   "intent": "revelar el supuesto oculto de la regla",
+   "visual_targets": [
+    "palabra INGRESO",
+    "palabra FIJO"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "que llega igual cada mes"
+     },
+     "action": "component_state",
+     "semantic_delta": "La segunda palabra FIJO entra y su barra de acento se dibuja",
+     "target": "palabra fijo"
+    },
+    {
+     "anchor": {
+      "phrase": "un ingreso fijo"
+     },
+     "action": "component_state",
+     "semantic_delta": "La primera palabra INGRESO entra con su barra de acento",
+     "target": "palabra ingreso"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Si tu ingreso varia"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "decision_card",
+   "visual_mode": "kinetic_text",
+   "visual_family": "diagnostic_flow",
+   "why_this_visual_not_other": "La consecuencia es una relacion invisible entre variabilidad y reserva; el rotulo directo la nombra sin inventar un objeto.",
+   "editorial_point": "Con ingreso variable la reserva calculada con la regla se queda corta.",
+   "why_it_matters": "Es el momento exacto en que el espectador descubre que su colchon real es menor al que cree.",
+   "visual_proof": "Rotulo inferior con la frase SE QUEDA CORTA y subrayado de acento que se dibuja.",
+   "coverage_required": true,
+   "intent": "mostrar la consecuencia del supuesto roto",
+   "visual_targets": [
+    "rotulo se queda corta"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "justo cuando mas la necesitas"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo pulsa al nombrar el peor momento posible",
+     "target": "rotulo se queda corta",
+     "label": "CUANDO MAS LA NECESITAS"
+    },
+    {
+     "anchor": {
+      "phrase": "la reserva se queda corta"
+     },
+     "action": "component_state",
+     "semantic_delta": "El rotulo SE QUEDA CORTA entra y el subrayado se dibuja",
+     "target": "rotulo se queda corta"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Mide dos cosas antes de decidir"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "rule_checklist",
+   "visual_mode": "diagrammatic",
+   "visual_family": "criteria_gate",
+   "why_this_visual_not_other": "Son dos criterios discretos y accionables; una lista numerada es el formato exacto de la informacion.",
+   "editorial_point": "Antes de fijar la reserva se miden dos variables: gasto mensual y estabilidad del ingreso.",
+   "why_it_matters": "Con esas dos medidas el espectador puede calcular su numero real en minutos.",
+   "visual_proof": "Lista de dos filas numeradas: CUANTO GASTAS y QUE TAN ESTABLE, cada una revelada al decirse.",
+   "coverage_required": true,
+   "caption_position": "bottom",
+   "intent": "dar los dos criterios de medicion",
+   "visual_targets": [
+    "fila cuanto gastas",
+    "fila que tan estable"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "antes de decidir"
+     },
+     "action": "component_state",
+     "semantic_delta": "El marco del checklist entra con las dos filas en esqueleto, listas para revelarse",
+     "target": "marco del checklist"
+    },
+    {
+     "anchor": {
+      "phrase": "Despues que tan estable"
+     },
+     "action": "component_state",
+     "semantic_delta": "La segunda fila del checklist se revela con su criterio",
+     "target": "fila que tan estable"
+    },
+    {
+     "anchor": {
+      "phrase": "Primero cuanto gastas"
+     },
+     "action": "component_state",
+     "semantic_delta": "La primera fila del checklist se revela con su criterio",
+     "target": "fila cuanto gastas"
+    },
+    {
+     "anchor": {
+      "phrase": "en un mes normal"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta precisa que el gasto se mide sobre un mes normal",
+     "target": "fila cuanto gastas"
+    },
+    {
+     "anchor": {
+      "phrase": "es tu ingreso real"
+     },
+     "action": "callout_target",
+     "semantic_delta": "La etiqueta subraya que el ingreso a medir es el real, no el esperado",
+     "target": "fila que tan estable"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Con ingreso variable la reserva correcta"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "quantity_diagram",
+   "visual_mode": "diagrammatic",
+   "visual_family": "quantity_control",
+   "why_this_visual_not_other": "El punto es una comparacion directa entre dos cantidades; dos paneles lado a lado con veredicto la muestran sin ambiguedad.",
+   "editorial_point": "Con ingreso variable la reserva correcta es seis meses, no tres.",
+   "why_it_matters": "Cambia el numero objetivo de ahorro del espectador: el doble de colchon.",
+   "visual_proof": "Comparacion lado a lado TRES MESES contra SEIS MESES con el panel ganador resaltado en acento y check.",
+   "coverage_required": true,
+   "intent": "mostrar la correccion de la regla",
+   "visual_targets": [
+    "panel tres meses",
+    "panel seis meses resaltado"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "sube de tres a seis"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra el panel derecho con la cifra corregida de seis meses",
+     "target": "panel seis meses"
+    },
+    {
+     "anchor": {
+      "phrase": "a seis meses"
+     },
+     "action": "callout_target",
+     "semantic_delta": "El veredicto resalta seis meses como la reserva correcta",
+     "target": "panel seis meses",
+     "label": "RESERVA CORRECTA"
+    },
+    {
+     "anchor": {
+      "phrase": "correcta sube de tres"
+     },
+     "action": "component_state",
+     "semantic_delta": "Entra el panel izquierdo con la cifra vieja de tres meses",
+     "target": "panel tres meses"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Seis meses te compran tiempo"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "diagram",
+   "plate_purpose": "stat_card",
+   "visual_mode": "diagrammatic",
+   "visual_family": "action_proof",
+   "why_this_visual_not_other": "El beneficio es una cantidad dicha literal (seis meses); el anillo con el numero y el remate TIEMPO lo prueban sin escenografia.",
+   "editorial_point": "Seis meses de reserva compran tiempo para reponerse sin deuda.",
+   "why_it_matters": "Reencuadra el ahorro extra como compra de tiempo, no como sacrificio.",
+   "visual_proof": "Anillo con el numero seis y sufijo meses, y remate TIEMPO en la zona superior.",
+   "coverage_required": true,
+   "intent": "beneficio concreto de la reserva correcta",
+   "visual_targets": [
+    "anillo seis meses",
+    "remate tiempo"
+   ],
+   "visual_beats": [
+    {
+     "anchor": {
+      "phrase": "sin vender nada"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo completa el llenado al nombrar la independencia de deuda",
+     "target": "anillo seis meses"
+    },
+    {
+     "anchor": {
+      "phrase": "para reponerte"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo avanza mientras se nombra el proposito del colchon",
+     "target": "anillo seis meses"
+    },
+    {
+     "anchor": {
+      "phrase": "pedir prestado"
+     },
+     "action": "component_state",
+     "semantic_delta": "El anillo cierra su llenado al descartar la deuda como salida",
+     "target": "anillo seis meses"
+    }
+   ]
+  },
+  {
+   "role": "plate",
+   "anchor": {
+    "phrase": "Guarda este video"
+   },
+   "clip": {
+    "source": "none"
+   },
+   "layout": "cta",
+   "plate_purpose": "cta_resource",
+   "visual_mode": "cta",
+   "visual_family": "cta_document",
+   "why_this_visual_not_other": "Cierre con recurso concreto: el checklist del calculo es el objeto que el espectador guarda.",
+   "editorial_point": "El espectador puede calcular su numero real hoy con tres datos.",
+   "why_it_matters": "Convierte el video en una accion inmediata y medible.",
+   "visual_proof": "Tarjeta de recurso con titulo Regla de reserva y tres puntos del checklist visibles.",
+   "coverage_required": false,
+   "intent": "cta",
+   "visual_targets": [
+    "tarjeta del recurso",
+    "boton guarda"
+   ]
+  }
+ ],
+ "overlays": [
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "Tu fondo de emergencia"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "Rotulo del golpe inicial: nombra el error dicho literalmente antes de que entre el anillo de la regla.",
+   "duration_ms": 2100,
+   "params": {
+    "text": "MAL CALCULADO",
+    "sub": "tu fondo de emergencia",
+    "sub_source": "narrated"
+   }
+  },
+  {
+   "type": "stat",
+   "component": "StatRing",
+   "anchor": {
+    "phrase": "La regla dice tres meses"
+   },
+   "semantic_kind": "number",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "La voz dice literalmente tres meses; el anillo muestra la cifra de la regla comun en el instante en que se nombra.",
+   "params": {
+    "value": 3,
+    "suffix": "meses",
+    "label": "la regla comun",
+    "fit_mode": "responsive"
+   },
+   "duration_ms": 3100
+  },
+  {
+   "type": "emphasis",
+   "component": "BigWordSequence",
+   "anchor": {
+    "phrase": "Esa regla asume"
+   },
+   "semantic_kind": "emphasis",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "El supuesto oculto se clava con dos palabras gigantes dichas en secuencia; KeywordPop quedaria corto para dos beats.",
+   "params": {
+    "words": [
+     "INGRESO",
+     "FIJO"
+    ],
+    "item_anchors": [
+     "ingreso fijo",
+     "llega igual cada mes"
+    ]
+   },
+   "duration_ms": 3400
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "Si tu ingreso varia"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "Nombra la consecuencia dicha literalmente (la reserva se queda corta) sin construir estructura de lista.",
+   "params": {
+    "text": "SE QUEDA CORTA",
+    "sub": "la reserva con ingreso variable",
+    "sub_source": "narrated"
+   },
+   "duration_ms": 4300
+  },
+  {
+   "type": "list",
+   "component": "StepList",
+   "anchor": {
+    "phrase": "Mide dos cosas"
+   },
+   "semantic_kind": "list",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "Enumeracion real de dos criterios de medicion dichos en orden; cada fila se revela con su frase.",
+   "params": {
+    "items": [
+     "CUANTO GASTAS",
+     "QUE TAN ESTABLE"
+    ],
+    "variant": "criteria",
+    "future_reveal": "skeleton_only",
+    "item_anchors": [
+     "cuanto gastas en un mes",
+     "que tan estable es tu ingreso"
+    ]
+   },
+   "duration_ms": 6600
+  },
+  {
+   "type": "compare",
+   "component": "SplitCompare",
+   "anchor": {
+    "phrase": "Con ingreso variable la reserva correcta"
+   },
+   "semantic_kind": "process",
+   "placement": "full_context",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "El guion contrasta explicitamente tres contra seis meses; la comparacion lado a lado con veredicto es el formato exacto del beat.",
+   "params": {
+    "left_label": "TRES MESES",
+    "right_label": "SEIS MESES",
+    "verdict": "right"
+   },
+   "duration_ms": 4600
+  },
+  {
+   "type": "stat",
+   "component": "StatRing",
+   "anchor": {
+    "phrase": "Seis meses te compran tiempo"
+   },
+   "semantic_kind": "number",
+   "placement": "safe_center",
+   "must_not_cover": [
+    "caption"
+   ],
+   "rationale": "La voz dice literalmente seis meses; el anillo muestra la cifra corregida mientras se explica el beneficio.",
+   "params": {
+    "value": 6,
+    "suffix": "meses",
+    "label": "reserva correcta",
+    "fit_mode": "responsive"
+   },
+   "duration_ms": 3400
+  },
+  {
+   "type": "label",
+   "component": "LowerThird",
+   "anchor": {
+    "phrase": "sin vender nada"
+   },
+   "semantic_kind": "label",
+   "placement": "safe_lower",
+   "must_not_cover": [
+    "subject"
+   ],
+   "rationale": "El beneficio final se dice literal: reponerse sin vender ni endeudarse; rotulo inferior sin competir con el anillo.",
+   "duration_ms": 1900,
+   "params": {
+    "text": "SIN VENDER NI PEDIR PRESTADO",
+    "sub": "eso compra la reserva",
+    "sub_source": "narrated"
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "id": "ui-meter-fill",
+   "anchor": {
+    "phrase": "La regla dice tres meses"
+   },
+   "gain": 1.0
+  },
+  {
+   "id": "ui-impact-soft",
+   "anchor": {
+    "phrase": "asume un ingreso fijo"
+   },
+   "gain": 1.0
+  },
+  {
+   "id": "ui-card-pop",
+   "anchor": {
+    "phrase": "Primero cuanto gastas"
+   },
+   "gain": 0.9
+  },
+  {
+   "id": "ui-check-tick",
+   "anchor": {
+    "phrase": "que tan estable es tu ingreso"
+   },
+   "gain": 0.85
+  },
+  {
+   "id": "ui-filter-pass",
+   "anchor": {
+    "phrase": "Seis meses te compran tiempo"
+   },
+   "gain": 1.0
+  },
+  {
+   "id": "ui-page-swipe",
+   "anchor": {
+    "phrase": "Guarda este video"
+   },
+   "gain": 0.9
+  }
+ ],
+ "cta": {
+  "text": "Calcula tu numero real hoy",
+  "button": "GUARDA",
+  "anchor": {
+   "phrase": "Guarda este video"
+  },
+  "resource_title": "Regla de reserva",
+  "resource_points": [
+   "Gasto de un mes normal",
+   "Estabilidad del ingreso",
+   "Meses de cobertura"
+  ],
+  "mockup_type": "checklist"
+ }
+}

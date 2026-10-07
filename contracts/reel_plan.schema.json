@@ -1,0 +1,1287 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "reel_plan.schema.json",
+ "title": "ReelPlan",
+ "description": "Plan que emite el DIRECTOR (skill) y ejecuta el MOTOR. Contiene TODAS las decisiones creativas: guion, hook art-dirigido, escenas/clips, overlays con su toolbox de Remotion, y SFX. Los tiempos NO se ponen aqui: cada elemento se ancla a una 'phrase' del script y el motor la resuelve a milisegundos tras el alignment palabra-a-palabra. Principio: cada overlay debe etiquetar/enfatizar/cuantificar/mostrar algo que se dice en ese instante; nada decorativo.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "meta",
+  "hook",
+  "script",
+  "scenes",
+  "cta"
+ ],
+ "properties": {
+  "meta": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "topic",
+    "language",
+    "brand"
+   ],
+   "properties": {
+    "topic": {
+     "type": "string",
+     "minLength": 3
+    },
+    "language": {
+     "type": "string",
+     "default": "es"
+    },
+    "target_seconds": {
+     "type": "integer",
+     "minimum": 10,
+     "maximum": 90,
+     "default": 35
+    },
+    "fps": {
+     "enum": [
+      24,
+      30
+     ],
+     "default": 24
+    },
+    "platform": {
+     "enum": [
+      "reels",
+      "tiktok",
+      "shorts"
+     ],
+     "default": "reels"
+    },
+    "avatar_policy": {
+     "enum": [
+      "required",
+      "auto",
+      "disabled"
+     ],
+     "default": "required",
+     "description": "required: el director coloca las escenas de avatar (el motor completa si faltan). auto: el motor coloca/reposiciona el avatar en el aha y el cierre. disabled: sin avatar (requiere avatar_disabled_reason)."
+    },
+    "avatar_disabled_reason": {
+     "type": "string",
+     "minLength": 20,
+     "maxLength": 220,
+     "description": "Razon concreta si avatar_policy=disabled."
+    },
+    "media_policy": {
+     "enum": [
+      "production",
+      "diagram_only"
+     ],
+     "default": "production",
+     "description": "production exige mezcla visual con b-roll o imagenes. diagram_only solo para temas puramente abstractos."
+    },
+    "media_min_scenes": {
+     "type": "integer",
+     "minimum": 0,
+     "maximum": 8,
+     "default": 2,
+     "description": "Minimo de escenas body con clip.source pexels/clip_extractor/image en media_policy=production."
+    },
+    "angle_type": {
+     "enum": [
+      "contraintuitivo",
+      "mito_incompleto",
+      "mecanismo_oculto",
+      "error_comun",
+      "prueba_practica",
+      "riesgo_evitable",
+      "objecion",
+      "otro"
+     ],
+     "description": "Angulo editorial ganador antes de escribir el guion."
+    },
+    "angle_sentence": {
+     "type": "string",
+     "minLength": 8,
+     "maxLength": 180,
+     "description": "Frase clara del angulo ganador. El hook debe salir de aqui, no solo del tema."
+    },
+    "angle_scorecard": {
+     "type": "array",
+     "minItems": 4,
+     "maxItems": 6,
+     "description": "Matriz opcional de angulos candidatos usada por el director.",
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "angle_type",
+       "angle_sentence",
+       "tension",
+       "novedad",
+       "proof",
+       "visualidad",
+       "especificidad",
+       "utilidad",
+       "riesgo",
+       "score"
+      ],
+      "properties": {
+       "angle_type": {
+        "enum": [
+         "contraintuitivo",
+         "mito_incompleto",
+         "mecanismo_oculto",
+         "error_comun",
+         "prueba_practica",
+         "riesgo_evitable",
+         "objecion",
+         "otro"
+        ]
+       },
+       "angle_sentence": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 180
+       },
+       "hook_claim": {
+        "type": "string",
+        "minLength": 4,
+        "maxLength": 120
+       },
+       "common_belief": {
+        "type": "string",
+        "maxLength": 240
+       },
+       "ignored_variable": {
+        "type": "string",
+        "maxLength": 240
+       },
+       "specific_case": {
+        "type": "string",
+        "maxLength": 240
+       },
+       "cta_action": {
+        "type": "string",
+        "maxLength": 160
+       },
+       "tension": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "novedad": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "proof": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "visualidad": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "especificidad": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "utilidad": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "riesgo": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+       },
+       "score": {
+        "type": "integer",
+        "minimum": 7,
+        "maximum": 35
+       },
+       "selected": {
+        "type": "boolean",
+        "default": false
+       },
+       "reason": {
+        "type": "string",
+        "maxLength": 240
+       }
+      }
+     }
+    },
+    "brand": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "bg",
+      "fg",
+      "accent"
+     ],
+     "properties": {
+      "bg": {
+       "type": "string",
+       "pattern": "^#?[0-9A-Fa-f]{6}$"
+      },
+      "fg": {
+       "type": "string",
+       "pattern": "^#?[0-9A-Fa-f]{6}$"
+      },
+      "accent": {
+       "type": "string",
+       "pattern": "^#?[0-9A-Fa-f]{6}$"
+      }
+     }
+    },
+    "style": {
+     "type": "object",
+     "additionalProperties": false,
+     "description": "Decisiones visuales del DIRECTOR. El motor no debe imponer fuente, caption style, paleta ni placas automaticas si esto viene definido.",
+     "properties": {
+      "font": {
+       "enum": [
+        "plus_jakarta",
+        "inter",
+        "montserrat",
+        "bebas",
+        "oswald",
+        "playfair",
+        "anton"
+       ]
+      },
+      "base_theme": {
+       "enum": [
+        "light",
+        "dark",
+        "mixed"
+       ],
+       "description": "Tema base extraido de la fuente visual. 'light' significa fondo global claro; oscuros solo como acentos o bloques."
+      },
+      "background_role": {
+       "enum": [
+        "cream",
+        "white",
+        "dark",
+        "image",
+        "mixed"
+       ],
+       "description": "Rol del fondo principal observado en la fuente. Evita convertir acentos oscuros en fondo global."
+      },
+      "caption_style": {
+       "enum": [
+        "word_pop",
+        "boxed",
+        "minimal",
+        "none"
+       ],
+       "description": "Tratamiento visual del caption. La granularidad del engine es siempre palabra por palabra; karaoke no es un modo valido."
+      },
+      "caption_emphasis_policy": {
+       "enum": [
+        "smart_stopwords",
+        "all_equal",
+        "minimal_stopwords"
+       ],
+       "default": "smart_stopwords",
+       "description": "Como Remotion compone palabras funcionales cortas. smart_stopwords mantiene palabra por palabra, pero baja jerarquia de conectores como de, con, es, para no competir con el visual."
+      },
+      "caption_granularity": {
+       "enum": [
+        "word"
+       ],
+       "default": "word"
+      },
+      "caption_decoration": {
+       "enum": [
+        "none",
+        "underline"
+       ],
+       "default": "none"
+      },
+      "caption_position": {
+       "enum": [
+        "center_low",
+        "bottom",
+        "top"
+       ]
+      },
+      "caption_readability_mode": {
+       "enum": [
+        "adaptive_boxed",
+        "high_contrast_boxed"
+       ],
+       "default": "adaptive_boxed",
+       "description": "Legibilidad de captions sobre media. adaptive_boxed/high_contrast_boxed obligan pastilla de alto contraste sobre full-bleed."
+      },
+      "render_policy": {
+       "enum": [
+        "declared_only"
+       ],
+       "default": "declared_only",
+       "description": "Unica politica soportada: Skill/Motor declaran texto/labels/valores/items; Remotion solo decide geometria, safe zones, animacion y legibilidad."
+      },
+      "plate_layout": {
+       "enum": [
+        "auto",
+        "none"
+       ],
+       "default": "none"
+      },
+      "graphic_style": {
+       "enum": [
+        "clean",
+        "editorial",
+        "kinetic",
+        "documentary",
+        "minimal"
+       ]
+      },
+      "hook_overlay": {
+       "enum": [
+        "none",
+        "spectacle"
+       ],
+       "default": "none"
+      },
+      "hook_label": {
+       "type": "string",
+       "maxLength": 48
+      },
+      "hook_text_zone": {
+       "enum": [
+        "top_clean",
+        "center_clean",
+        "bottom_clean",
+        "auto"
+       ],
+       "default": "top_clean",
+       "description": "Zona segura para el headline del hook. El prompt del hook debe dejar espacio limpio en esa zona."
+      },
+      "progress_bar": {
+       "enum": [
+        "none",
+        "accent",
+        "warning"
+       ],
+       "default": "none"
+      },
+      "texture": {
+       "enum": [
+        "none",
+        "subtle",
+        "dotted"
+       ],
+       "default": "subtle"
+      },
+      "style_source": {
+       "type": "object",
+       "additionalProperties": false,
+       "description": "Fuente visual provista por el usuario y lineamientos extraidos. No es una regla por marca; es evidencia de estilo para este plan.",
+       "properties": {
+        "url": {
+         "type": "string"
+        },
+        "notes": {
+         "type": "string"
+        },
+        "extracted_guidelines": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         },
+         "maxItems": 16
+        }
+       }
+      },
+      "palette": {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+        "bg": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "fg": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "accent": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "secondary": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "danger": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "warning": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "panel": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "cream": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "off": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "ink": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        },
+        "muted": {
+         "type": "string",
+         "pattern": "^#?[0-9A-Fa-f]{6}$"
+        }
+       }
+      }
+     }
+    },
+    "narrative_structure": {
+     "enum": [
+      "arc",
+      "case",
+      "countdown"
+     ],
+     "description": "Estructura narrativa del guion, elegida por tema: arc (giro/contraintuitivo), case (caso/historia con protagonista o evento), countdown (enumeracion con jerarquia ascendente). No usar arc por inercia."
+    },
+    "benchmark_notes": {
+     "type": "array",
+     "maxItems": 8,
+     "items": {
+      "type": "string",
+      "maxLength": 200
+     },
+     "description": "Observaciones de FORMATO extraidas de references/ (tipo de hook, densidad de cortes, tratamiento, duracion). Nunca contenido copiado de las referencias."
+    },
+    "media_min_ratio": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1,
+     "description": "Override del ratio minimo de escenas body media-backed (default shared/core.json media_base.media_backed_min_ratio=0.6). La base del reel son personas/accion."
+    },
+    "hook_plate_reason": {
+     "type": "string",
+     "minLength": 20,
+     "maxLength": 260,
+     "description": "SOLO si el hook es deliberadamente 100%-texto (pico tipografico): por que el gancho no se dramatiza con media. Sin este campo, el hook debe MOSTRAR la creencia/accion."
+    },
+    "subject_lock": {
+     "type": "string",
+     "minLength": 10,
+     "maxLength": 200,
+     "description": "Descripcion canonica del producto/objeto heroe (forma, envase, color; sin marca). Se concatena a TODO prompt de imagen para que el producto sea identico entre escenas (gpt-image-2 no tiene referencia/seed)."
+    },
+    "person_lock": {
+     "type": "string",
+     "minLength": 10,
+     "maxLength": 200,
+     "description": "Descripcion canonica del PROTAGONISTA humano (edad aprox, pelo, rasgos, vestuario; sin nombre de persona real). Se concatena SOLO a los prompts de imagen que muestran una persona o sus manos, para que sea el mismo individuo entre escenas (gpt-image-2 no tiene referencia/seed). Usar cuando el reel tiene un protagonista humano recurrente."
+    },
+    "avatar_appearances": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 2,
+     "description": "Numero de apariciones de avatar cuando esta habilitado (default shared/core.json avatar_split.appearances=2). El mandato: el avatar sale 2 veces, mitad inferior, sin recorte."
+    }
+   }
+  },
+  "hook": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "spoken",
+    "headline",
+    "visual"
+   ],
+   "properties": {
+    "spoken": {
+     "type": "string",
+     "description": "Primera linea del VO. DEBE ser el comienzo literal de 'script'."
+    },
+    "headline": {
+     "type": "string",
+     "description": "Texto grande en pantalla durante el hook (<=8 palabras, idealmente MAYUSCULAS)."
+    },
+    "visual": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "provider"
+     ],
+     "properties": {
+      "provider": {
+       "enum": [
+        "asset",
+        "clip_extractor",
+        "pexels",
+        "image",
+        "motion",
+        "none",
+        "google"
+       ]
+      },
+      "prompt": {
+       "type": "string",
+       "description": "Art-direction del hook: que se VE en el frame 1 (especifico al gancho, no generico del tema). Requerido si provider=google o image."
+      },
+      "query": {
+       "type": "string",
+       "description": "Si provider=pexels/clip_extractor: query de busqueda especifico del hook."
+      },
+      "asset": {
+       "type": "string",
+       "description": "Ruta/URL/media/* del asset de usuario para el hook."
+      },
+      "generative_reason": {
+       "type": "string",
+       "minLength": 20,
+       "maxLength": 260,
+       "description": "Obligatorio si provider=google: por que el hook necesita video generativo."
+      },
+      "why_real_media_failed": {
+       "type": "string",
+       "minLength": 20,
+       "maxLength": 260,
+       "description": "Obligatorio si provider=google: por que asset, clip_extractor, Pexels e image no comunican mejor el hook."
+      }
+     }
+    },
+    "mode": {
+     "enum": [
+      "evidence",
+      "spectacle"
+     ],
+     "description": "Modo del hook visual: evidence (momento/objeto/persona REAL via asset/clip_extractor/pexels; el hook es la evidencia misma) o spectacle (generado, imposible-pero-fotorealista via image/google; el hook es el impacto visual). Elige por tema: entidad reconocible -> evidence; concepto/promesa -> spectacle. Las reglas de cada modo no compiten entre si."
+    }
+   }
+  },
+  "script": {
+   "type": "string",
+   "minLength": 40,
+   "description": "Guion COMPLETO del VO (incluye el texto del hook al inicio). El motor lo manda a TTS y de ahi salen los captions y los anclajes."
+  },
+  "scenes": {
+   "type": "array",
+   "minItems": 2,
+   "description": "Pista visual base, en orden. La primera DEBE ser role=hook. Cada escena dura desde su anchor hasta el anchor de la siguiente.",
+   "items": {
+    "$ref": "#/$defs/scene"
+   }
+  },
+  "overlays": {
+   "type": "array",
+   "default": [],
+   "description": "Gráficos de motion con significado, encima de la pista base. Cada uno disparado por un anchor.",
+   "items": {
+    "$ref": "#/$defs/overlay"
+   }
+  },
+  "sfx": {
+   "type": "array",
+   "default": [],
+   "description": "Efectos de sonido por momento. El director elige cual y donde (no hardcode).",
+   "items": {
+    "$ref": "#/$defs/sfx"
+   }
+  },
+  "cta": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "text",
+    "button"
+   ],
+   "properties": {
+    "text": {
+     "type": "string"
+    },
+    "button": {
+     "type": "string"
+    },
+    "anchor": {
+     "$ref": "#/$defs/anchor"
+    },
+    "resource_title": {
+     "type": "string",
+     "maxLength": 64
+    },
+    "resource_footer": {
+     "type": "string",
+     "maxLength": 48,
+     "description": "Pie opcional de la tarjeta de recurso (ej. 'listo para guardar'). Si se omite, Remotion no renderiza pie: no inventa copy."
+    },
+    "resource_points": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "maxLength": 44
+     },
+     "maxItems": 6
+    },
+    "mockup_type": {
+     "enum": [
+      "card",
+      "checklist",
+      "document",
+      "comment",
+      "none"
+     ],
+     "default": "checklist"
+    },
+    "visual_style": {
+     "type": "string",
+     "maxLength": 80
+    }
+   }
+  }
+ },
+ "$defs": {
+  "anchor": {
+   "type": "object",
+   "additionalProperties": false,
+   "description": "Donde ocurre algo. 'phrase' = texto literal del script (1-6 palabras) que el motor localiza en el alignment. 'at' = puntos especiales.",
+   "properties": {
+    "phrase": {
+     "type": "string",
+     "minLength": 2
+    },
+    "at": {
+     "enum": [
+      "start",
+      "hook_end",
+      "cta",
+      "end"
+     ]
+    }
+   },
+   "oneOf": [
+    {
+     "required": [
+      "phrase"
+     ]
+    },
+    {
+     "required": [
+      "at"
+     ]
+    }
+   ]
+  },
+  "scene": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "role",
+    "anchor",
+    "clip"
+   ],
+   "properties": {
+    "role": {
+     "enum": [
+      "hook",
+      "broll",
+      "avatar",
+      "plate"
+     ]
+    },
+    "anchor": {
+     "$ref": "#/$defs/anchor"
+    },
+    "clip": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "source"
+     ],
+     "properties": {
+      "source": {
+       "enum": [
+        "asset",
+        "google",
+        "pexels",
+        "clip_extractor",
+        "kreado",
+        "image",
+        "none"
+       ],
+       "description": "Cada escena decide su proveedor. asset=medio del usuario; clip_extractor/pexels=image para media; google solo si se justifica explicitamente; kreado para avatar; none para plates/motion."
+      },
+      "query": {
+       "type": "string",
+       "maxLength": 72,
+       "description": "pexels/clip_extractor: query especifico para ESTA linea. En clip_extractor se escribe como BUSQUEDA DE YOUTUBE sobre titulos reales ('{sujeto} {accion} stock footage', '{software} screen recording', '{concepto} animation'), no como prompt de imagen; conceptos abstractos de software van a motion graphics/animation. Nunca vertical/9:16. En pexels: escena fisica concreta estilo tags de stock."
+      },
+      "pexels_query": {
+       "type": "string",
+       "maxLength": 72,
+       "description": "Variante del query en idioma-Pexels (tags de stock, sin 'stock footage') para cuando la escalera desciende de clip_extractor a pexels. Opcional; sin ella el descenso reusa query."
+      },
+      "prompt": {
+       "type": "string",
+       "description": "Art-direction del clip generativo. Si source=image, se genera por Codex OAuth con gpt-image-2 y se anima con Ken Burns en Remotion."
+      },
+      "characteristics": {
+       "type": "object",
+       "additionalProperties": false,
+       "description": "clip_extractor: SE ENVIA al backend como parte del contrato de /api/clips (ver GET /api/search-guidelines del servicio). source_mode antepone variantes de busqueda del tipo de material; avoid penaliza clases malas en titulo/canal y en la validacion de Gemma; must_have_visuals define el momento exacto a localizar; nice_to_have_visuals desempata.",
+       "properties": {
+        "source_mode": {
+         "enum": ["b_roll", "screen_recording", "motion_graphics", "tutorial", "known_scene"]
+        },
+        "must_have_visuals": {
+         "type": "array",
+         "maxItems": 3,
+         "items": {"type": "string", "maxLength": 80}
+        },
+        "nice_to_have_visuals": {
+         "type": "array",
+         "maxItems": 3,
+         "items": {"type": "string", "maxLength": 80}
+        },
+        "avoid": {
+         "type": "array",
+         "maxItems": 8,
+         "items": {"type": "string", "maxLength": 40}
+        }
+       }
+      },
+      "avatar_key": {
+       "type": "string",
+       "description": "Identidad logica de avatar para reutilizar el mismo presentador en varias apariciones."
+      },
+      "image_provider": {
+       "enum": [
+        "codex-oauth"
+       ],
+       "description": "source=image usa Codex OAuth, no OpenAI API key."
+      },
+      "model": {
+       "type": "string",
+       "maxLength": 80,
+       "description": "source=image: gpt-image-2; source=clip_extractor: modelo backend opcional como gemma-local."
+      },
+      "vllm_base_url": {
+       "type": "string",
+       "maxLength": 180,
+       "description": "clip_extractor: override opcional del vLLM base URL del backend."
+      },
+      "max_clip_seconds": {
+       "type": "integer",
+       "minimum": 2,
+       "maximum": 30,
+       "description": "clip_extractor: override opcional de duracion maxima solicitada."
+      },
+      "asset": {
+       "type": "string",
+       "description": "ruta a medio provisto por el usuario."
+      },
+      "generative_reason": {
+       "type": "string",
+       "minLength": 20,
+       "maxLength": 260,
+       "description": "Obligatorio si source=google: por que esta escena necesita video generativo."
+      },
+      "why_real_media_failed": {
+       "type": "string",
+       "minLength": 20,
+       "maxLength": 260,
+       "description": "Obligatorio si source=google: por que asset, clip_extractor, Pexels e imagen no comunican mejor esta escena."
+      },
+      "companion": {
+       "type": "object",
+       "additionalProperties": false,
+       "description": "Solo avatar: visual de la mitad superior. Prioridad de produccion: asset de usuario, clip_extractor para evidencia/persona/evento real, pexels, image con Ken Burns, motion.",
+       "properties": {
+        "source": {
+         "enum": [
+          "asset",
+          "clip_extractor",
+          "pexels",
+          "image",
+          "motion"
+         ],
+         "description": "asset=clip usuario; clip_extractor=evidencia/persona/evento real; pexels=video stock; image=still Codex con Ken Burns; motion=motion graphics sin media."
+        },
+        "asset": {
+         "type": "string",
+         "description": "Ruta/URL/media/* del clip provisto por usuario para la mitad superior."
+        },
+        "query": {
+         "type": "string",
+         "maxLength": 72,
+         "description": "Pexels/clip_extractor query especifico para lo que dice esta escena de avatar."
+        },
+        "prompt": {
+         "type": "string",
+         "description": "Prompt de imagen solo si Pexels no puede mostrar el concepto con claridad."
+        },
+        "image_provider": {
+         "enum": [
+          "codex-oauth"
+         ]
+        },
+        "model": {
+         "enum": [
+          "gpt-image-2"
+         ]
+        },
+        "clip_model": {
+         "type": "string",
+         "maxLength": 80,
+         "description": "clip_extractor: modelo backend opcional como gemma-local."
+        },
+        "vllm_base_url": {
+         "type": "string",
+         "maxLength": 180,
+         "description": "clip_extractor: override opcional del vLLM base URL del backend."
+        },
+        "max_clip_seconds": {
+         "type": "integer",
+         "minimum": 2,
+         "maximum": 30,
+         "description": "clip_extractor: duracion maxima solicitada."
+        },
+        "characteristics": {
+         "type": "object",
+         "additionalProperties": false,
+         "description": "clip_extractor: SE ENVIA al backend (mismo contrato que clip.characteristics de escena: source_mode/must_have_visuals/nice_to_have_visuals/avoid).",
+         "properties": {
+          "source_mode": {
+           "enum": ["b_roll", "screen_recording", "motion_graphics", "tutorial", "known_scene"]
+          },
+          "must_have_visuals": {
+           "type": "array",
+           "maxItems": 3,
+           "items": {"type": "string", "maxLength": 80}
+          },
+          "nice_to_have_visuals": {
+           "type": "array",
+           "maxItems": 3,
+           "items": {"type": "string", "maxLength": 80}
+          },
+          "avoid": {
+           "type": "array",
+           "maxItems": 8,
+           "items": {"type": "string", "maxLength": 40}
+          }
+         }
+        },
+        "motion": {
+         "enum": [
+          "kenburns-in",
+          "kenburns-out",
+          "pan-left",
+          "pan-right",
+          "static"
+         ],
+         "default": "kenburns-in"
+        },
+        "rationale": {
+         "type": "string",
+         "description": "Por que esta fuente visual complementa exactamente el texto del avatar."
+        }
+       }
+      },
+      "treatment": {
+       "enum": [
+        "none",
+        "vignette",
+        "spotlight",
+        "duotone_brand"
+       ],
+       "description": "Tratamiento visual del media (solo estilo, no contenido): vignette oscurece bordes, spotlight concentra la luz al centro, duotone_brand tinta el media con el acento de marca. Usalo con intencion (transicion emocional, unificar media dispar), no en todas las escenas."
+      }
+     }
+    },
+    "motion": {
+     "enum": [
+      "kenburns-in",
+      "kenburns-out",
+      "pan-left",
+      "pan-right",
+      "static"
+     ],
+     "default": "kenburns-in"
+    },
+    "layout": {
+     "enum": [
+      "full_bleed",
+      "full_frame",
+      "diagram",
+      "split",
+      "card",
+      "cta"
+     ],
+     "description": "Como Remotion debe usar el frame. Avatar y B-roll importantes deben ser full_bleed/full_frame; diagram solo para visuales explicativos reales."
+    },
+    "plate_purpose": {
+     "enum": [
+      "diagnosis_card",
+      "stat_card",
+      "rule_checklist",
+      "quantity_diagram",
+      "decision_card",
+      "cta_resource",
+      "chapter",
+      "none"
+     ],
+     "description": "Obligatorio cuando role=plate o clip.source=none. Define que pieza concreta debe componer Remotion; evita fondos genericos o wireframes vacios."
+    },
+    "visual_mode": {
+     "enum": [
+      "concrete",
+      "diagrammatic",
+      "kinetic_text",
+      "media_backed",
+      "cta"
+     ],
+     "description": "Modo visual elegido por el DIRECTOR para esta escena. concrete/media_backed cuando hay objeto real; diagrammatic/kinetic_text solo si el concepto no se puede mostrar mejor con media."
+    },
+    "visual_family": {
+     "enum": [
+      "hook_spectacle",
+      "diagnostic_flow",
+      "criteria_gate",
+      "rule_cards",
+      "concrete_proof",
+      "action_proof",
+      "quantity_control",
+      "cta_document",
+      "avatar_human",
+      "chapter"
+     ],
+     "description": "Familia visual escogida por el DIRECTOR para evitar repetir siempre la misma pantalla o grafica."
+    },
+    "why_this_visual_not_other": {
+     "type": "string",
+     "minLength": 20,
+     "maxLength": 260,
+     "description": "Justificacion concreta: por que esta escena debe ser imagen, B-roll, diagrama, regla, decision/checklist o CTA y no otra opcion."
+    },
+    "editorial_point": {
+     "type": "string",
+     "minLength": 12,
+     "maxLength": 220,
+     "description": "La tesis de la escena: que debe entender el espectador en este beat, no solo que aparece en pantalla."
+    },
+    "why_it_matters": {
+     "type": "string",
+     "minLength": 12,
+     "maxLength": 260,
+     "description": "Por que este beat importa para la decision, accion o cambio de criterio del espectador."
+    },
+    "visual_proof": {
+     "type": "string",
+     "minLength": 12,
+     "maxLength": 260,
+     "description": "Que prueba visual concreta debe verse. Evita escenas que solo nombran terminos sin explicar nada."
+    },
+    "coverage_required": {
+     "type": "boolean",
+     "default": true,
+     "description": "Si true, el validador exige overlays informativos cubriendo la escena plate sin huecos largos."
+    },
+    "visual_beats": {
+     "type": "array",
+     "description": "Cambios visuales internos SEMANTICOS anclados a frases del guion. Obligatorio cuando una escena supera ~3.2s y no hay overlay/item reveal suficiente. Un wipe, borde, sweep o linea decorativa no cuenta.",
+     "maxItems": 8,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "anchor",
+       "action",
+       "semantic_delta",
+       "target"
+      ],
+      "properties": {
+       "anchor": {
+        "$ref": "#/$defs/anchor"
+       },
+       "action": {
+        "enum": [
+         "new_media",
+         "crop_reframe",
+         "component_state",
+         "layout_swap",
+         "callout_target",
+         "insert_card"
+        ],
+        "description": "Accion real que cambia informacion visible dentro de la escena. No se aceptan acciones cosmeticas."
+       },
+       "semantic_delta": {
+        "type": "string",
+        "minLength": 12,
+        "maxLength": 180,
+        "description": "Que informacion nueva entiende el espectador cuando ocurre el beat."
+       },
+       "target": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80,
+        "description": "Objeto, zona, componente o estado visual que cambia."
+       },
+       "label": {
+        "type": "string",
+        "maxLength": 42,
+        "description": "Texto publico corto opcional para el callout/card. Debe ser legible y no repetir captions largos."
+       },
+       "strength": {
+        "enum": [
+         "soft",
+         "medium"
+        ],
+        "default": "soft"
+       }
+      }
+     }
+    },
+    "transition_in": {
+     "enum": [
+      "cut",
+      "fade",
+      "slide",
+      "wipe",
+      "clockWipe",
+      "flip",
+      "punch_in",
+      "whip"
+     ],
+     "default": "fade"
+    },
+    "caption_position": {
+     "enum": [
+      "center_low",
+      "bottom",
+      "top"
+     ],
+     "description": "Override por escena de style.caption_position. Usalo cuando el overlay de esta escena es alto (lista de 4+ items, diagrama) y necesita mas zona libre: bottom libera ~100px extra; top libera toda la mitad inferior. La caption lane del renderer y el check geometrico del validador siguen este valor."
+    },
+    "intent": {
+     "type": "string",
+     "description": "Por que esta escena existe: hook, evidencia visual, prueba concreta, humano, diagrama o CTA."
+    },
+    "visual_targets": {
+     "type": "array",
+     "description": "Objetos/acciones que deben verse claramente en esta escena. Evita B-roll generico.",
+     "items": {
+      "type": "string"
+     },
+     "maxItems": 8
+    },
+    "max_duration_ms": {
+     "type": "integer",
+     "minimum": 500,
+     "maximum": 12000,
+     "description": "Duracion maxima deseada tras resolver anchors; el QA debe reportar si se excede."
+    },
+    "avatar_layout": {
+     "enum": [
+      "split_h",
+      "frame_low",
+      "overlay_pip"
+     ],
+     "description": "Composicion del avatar, elegida por contenido: split_h (50/50 default), frame_low (companion dominante 63% + banda de avatar 37%, cuando la evidencia visual pesa mas que el presentador), overlay_pip (companion full-bleed + avatar en PiP, cuando el media debe ocupar todo el frame)."
+    },
+    "transition_reason": {
+     "type": "string",
+     "minLength": 12,
+     "maxLength": 180,
+     "description": "Obligatorio si transition_in es punch_in o whip: por que ESTE cambio de escena merece una transicion expresiva (cambio de energia, revelacion, contraste). Maximo 3 expresivas por reel."
+    },
+    "plate_last_resort_reason": {
+     "type": "string",
+     "minLength": 20,
+     "maxLength": 260,
+     "description": "Obligatorio en plates no estructurales (no cta/chapter) bajo media_policy=production: por que NINGUNA media puede dramatizar este beat. Plate = ultimo recurso (mandato v2)."
+    }
+   }
+  },
+  "overlay": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "type",
+    "anchor",
+    "component"
+   ],
+   "properties": {
+    "type": {
+     "enum": [
+      "chart",
+      "stat",
+      "list",
+      "emphasis",
+      "label",
+      "annotation",
+      "chapter",
+      "compare"
+     ]
+    },
+    "anchor": {
+     "$ref": "#/$defs/anchor"
+    },
+    "duration_ms": {
+     "type": "integer",
+     "minimum": 300,
+     "maximum": 8000,
+     "description": "cuanto permanece; si se omite, default por tipo."
+    },
+    "component": {
+     "enum": [
+      "StoryArcChart",
+      "CountUp",
+      "StatRing",
+      "StepList",
+      "CausalMeter",
+      "ObjectCallout",
+      "KeywordPop",
+      "LowerThird",
+      "Annotation",
+      "ChapterDots",
+      "FocusPunch",
+      "SplitCompare",
+      "BigWordSequence"
+     ]
+    },
+    "semantic_kind": {
+     "enum": [
+      "process",
+      "number",
+      "list",
+      "emphasis",
+      "label",
+      "object_callout",
+      "chapter"
+     ],
+     "description": "Por que existe el overlay. El validador usa esto para evitar que el director escoja graficas decorativas."
+    },
+    "placement": {
+     "enum": [
+      "safe_top",
+      "safe_center",
+      "safe_lower",
+      "left_callout",
+      "right_callout",
+      "full_context"
+     ],
+     "description": "Posicion visual esperada dentro de las zonas seguras del reel."
+    },
+    "must_not_cover": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "caption",
+       "face",
+       "subject",
+       "hook_subject",
+       "cta",
+       "data"
+      ]
+     },
+     "maxItems": 6,
+     "description": "Elementos que el overlay no puede tapar."
+    },
+    "toolbox": {
+     "type": "array",
+     "description": "Paquetes/capacidades de Remotion que usa este overlay (guia de implementacion).",
+     "items": {
+      "enum": [
+       "charts",
+       "count-up",
+       "shapes",
+       "paths",
+       "motion-blur",
+       "lottie",
+       "transitions",
+       "audio-viz",
+       "noise",
+       "three",
+       "layout-utils"
+      ]
+     }
+    },
+    "rationale": {
+     "type": "string",
+     "description": "Por que este componente es el correcto para esta frase. Debe explicar la relacion semantica, no decorar."
+    },
+    "max_duration_ms": {
+     "type": "integer",
+     "minimum": 300,
+     "maximum": 8000,
+     "description": "Limite explicito para evitar overlays que se quedan tapando el visual."
+    },
+    "safe_zone": {
+     "enum": [
+      "top",
+      "center",
+      "bottom",
+      "full",
+      "left",
+      "right"
+     ],
+     "description": "Zona intencional del overlay para que no tape captions, cara, sujeto o CTA."
+    },
+    "blocks_captions": {
+     "type": "boolean",
+     "default": false,
+     "description": "Solo true cuando el overlay ocupa intencionalmente la lane de captions. Por defecto captions siguen palabra por palabra."
+    },
+    "params": {
+     "type": "object",
+     "description": "Parametros del componente (value, label, items, words, etc.)."
+    }
+   }
+  },
+  "sfx": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "anchor"
+   ],
+   "properties": {
+    "id": {
+     "enum": [
+      "whoosh",
+      "impact",
+      "riser",
+      "sub-drop",
+      "click",
+      "pop",
+      "swoosh-up",
+      "ui-soft-click",
+      "ui-card-pop",
+      "ui-check-tick",
+      "ui-line-draw",
+      "ui-meter-fill",
+      "ui-filter-pass",
+      "ui-filter-reject",
+      "ui-callout-ping",
+      "ui-page-swipe",
+      "ui-impact-soft",
+      "none"
+     ]
+    },
+    "anchor": {
+     "$ref": "#/$defs/anchor"
+    },
+    "gain": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1.5,
+     "default": 0.8
+    }
+   }
+  }
+ }
+}

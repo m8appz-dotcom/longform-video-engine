@@ -1,0 +1,34 @@
+{
+ "assets": [
+  {
+   "kind": "image",
+   "media": "media/image_0.png",
+   "provider": "codex",
+   "signature": "6b53734e9c443174f15e29d15ca728db612badb4",
+   "prompt": "Fotografia vertical 9:16, baño claro, mujer de 50 años sosteniendo un frasco generico de crema corporal y mirando la etiqueta, una mano señala la parte trasera del envase, zona superior limpia para titular, sin marca real, sin texto legible excepto formas de etiqueta.",
+   "model": "gpt-image-2"
+  },
+  {
+   "kind": "image",
+   "media": "media/image_1.png",
+   "provider": "codex",
+   "signature": "59d29e7d98bc939498ff1afe99d6c64212416404",
+   "prompt": "Composicion vertical 9:16 split visual de un frasco generico: al frente se ve un reclamo grande tipo piel lisa, al reverso se ven pequenas lineas genericas de etiqueta; mano femenina madura girando el envase, baño luminoso, sin marca real, sin logos.",
+   "model": "gpt-image-2"
+  },
+  {
+   "kind": "image",
+   "media": "media/image_5.png",
+   "provider": "codex",
+   "signature": "7f011841c6207743ebb7455a127ed356e8c54116",
+   "prompt": "Fotografia vertical 9:16: mano de una mujer madura sosteniendo e inspeccionando un frasco generico de crema corporal, girandolo como quien revisa, bano claro desenfocado al fondo, luz suave, composicion limpia, sin marca real, sin logos, sin marcas de agua, sin texto legible, espacio inferior despejado para captions.",
+   "model": "gpt-image-2"
+  },
+  {
+   "kind": "audio",
+   "media": "media/audio.m4a",
+   "provider": "real",
+   "signature": "539cfd2633ec1ab4c4c7e2ab07ee68c42cc97026"
+  }
+ ]
+}

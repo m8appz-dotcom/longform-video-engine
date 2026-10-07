@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.2",
+  "run_id": "lf-cremas-v3-2m-20260717",
+  "script_locked": true,
+  "script_hash": "c8dd33f32073ffd39fc6ad0121e8d4b833b9f75cd6df3ef249d478c60075ba3b",
+  "title": "Cremas reductoras: lo que sí cambia y lo que no",
+  "thumbnail_promise": "ANTES DE COMPRARLA",
+  "hook": "Antes de comprar otra crema reductora, mira esto.",
+  "target_minutes": 2,
+  "language": "es",
+  "audience_profile": "Audiencia adulta hispanohablante del canal Adrian Yepez Fitness que busca distinguir cambios visibles reales de promesas exageradas sobre piel y composición corporal.",
+  "avatar_feedback": "Quiero una explicación directa, visual y útil que no confunda una mejora temporal de la piel con pérdida de grasa.",
+  "avatar_appearances": 2,
+  "design_source": {
+    "type": "url",
+    "value": "https://adrianyepez.com"
+  },
+  "design_instructions": "Usa el lenguaje visual observado en el sitio, incluyendo su ritmo, composición y efectos avanzados cuando aporten claridad. El video debe seguir siendo legible y determinista en 16:9.",
+  "product_context": {
+    "fictional_brand": "LUMERA",
+    "product_name": "CREMA CORPORAL",
+    "product_size": "200 ML",
+    "label_language": "es"
+  },
+  "cta": {
+    "spoken_text": "Ahora mira Alimento rico en colágeno: qué aporta a piel y firmeza. Ahí verás qué sí puede aportar la alimentación a la apariencia de la piel.",
+    "target_video_id": "nZ5KG52rfH8",
+    "target_video_title": "Alimento rico en colágeno: qué aporta a piel y firmeza",
+    "target_channel_id": "UCB0vssTrVuRXTf_7vFRoxzw",
+    "target_url": "https://www.youtube.com/watch?v=nZ5KG52rfH8",
+    "visibility": "public",
+    "verified": true,
+    "verified_at": "2026-07-17T00:00:00Z",
+    "screen_copy": "SIGUE CON ESTE VIDEO",
+    "end_screen_hold_seconds": 9
+  },
+  "user_clips": [],
+  "chapters": [
+    {
+      "id": "C01",
+      "title": "Lo que sí puede cambiar",
+      "spoken_text": "Antes de comprar otra crema reductora, mira esto. Una crema puede dejar la piel más hidratada, lisa o tensa durante unas horas. Eso se siente real y puede verse mejor con cierta luz. Pero no significa que haya eliminado grasa. La grasa está bajo la piel; una aplicación tópica no la derrite por contacto. El primer error es juzgar el producto por calor, cosquilleo o sudor. Esas sensaciones prueban que actuó sobre la superficie, no que cambió tu composición corporal. Mira el envase. Si promete centímetros menos sin explicar tiempo, uso y límites, la promesa es más grande que la evidencia. Una etiqueta responsable habla de apariencia, textura o hidratación; no de una transformación permanente. Esta diferencia evita pagar por un resultado que el producto no puede cumplir."
+    },
+    {
+      "id": "C02",
+      "title": "La prueba que evita engaños",
+      "spoken_text": "Para probarla con criterio, usa la misma cantidad en una zona pequeña y toma una foto antes. Mantén la misma luz, distancia y postura. Después observa tres cosas por separado: textura de la piel, hidratación y comodidad. No cambies el ángulo para fabricar una diferencia. Tampoco confundas hinchazón temporal con grasa, ni una piel más luminosa con menos tejido adiposo. Si el producto irrita, arde demasiado o deja una reacción persistente, suspéndelo. Si mejora la apariencia y te gusta cómo se siente, ese puede ser un beneficio válido, aunque no reduzca grasa. La regla de compra es sencilla: promesa concreta, ingredientes identificables, tiempo realista y tolerancia de tu piel. Cuando separas esas cuatro preguntas, la publicidad pierde poder y tú comparas con método. Ahora mira Alimento rico en colágeno: qué aporta a piel y firmeza. Ahí verás qué sí puede aportar la alimentación a la apariencia de la piel."
+    }
+  ]
+}
