@@ -25,6 +25,8 @@ jobs:
           cache-dependency-path: remotion/package-lock.json
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: python -m pip install -r requirements.txt
+      - name: Verify lightweight source distribution
+        run: python tools/check_source_distribution.py
       - name: Clean-start entry point
         run: python -m engine.longform_pipeline --help
       - name: Offline regression suite
