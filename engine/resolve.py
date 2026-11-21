@@ -69,7 +69,7 @@ def resolve(plan, al):
     def anchor_ms(a):
         if "at" in a:
             return {"start":0,"hook_end":spoken_end or 2000,"cta":cta_start,"end":dur}[a["at"]]
-        r=find_phrase(toks, a["phrase"]); 
+        r=find_phrase(toks, a["phrase"]);
         return r[0] if r else None
     def anchor_label(a):
         return a.get("phrase") or a.get("at") or "<anchor>"
