@@ -1,6 +1,6 @@
 # Locked-script and renderer workflow
 
-![Original walkthrough screenshot](images/demo.png)
+![Original frame rendered by the Longform composition](images/demo.png)
 
 ## Reproduce
 
