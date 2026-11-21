@@ -60,3 +60,17 @@ remotion/props.json
 *.aab
 *.tgz
 *.tar.gz
+
+.venv/
+
+.pytest_cache/
+
+*.pyc
+
+test-results/
+
+playwright-report/
+
+/asset-library/**
+!/asset-library/README.md
+!/asset-library/library-manifest.json

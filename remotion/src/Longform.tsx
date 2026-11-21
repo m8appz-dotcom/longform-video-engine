@@ -51,7 +51,7 @@ const MediaCallout:React.FC<{shot:LongformShot;theme:LongformTheme}> = ({shot,th
 const TextCard:React.FC<{shot:LongformShot;theme:LongformTheme}> = ({shot,theme}) => {
   const frame=useCurrentFrame(); const {fps}=useVideoConfig(); const p=spring({frame,fps,config:{damping:18,stiffness:115,mass:.8}});
   return <AbsoluteFill style={{background:theme.background,color:theme.text,fontFamily:theme.fontBody,display:"grid",placeItems:"center"}}>
-    <div style={{width:1320,borderLeft:`14px solid ${theme.accent}`,padding:"44px 54px",opacity:p,transform:`translateY(${(1-p)*34}px)`}}>
+    <div style={{width:1320,border:`1px solid ${theme.hairline || '#3b4b58'}`,borderRadius:12,padding:"44px 54px",opacity:p,transform:`translateY(${(1-p)*34}px)`}}>
       <div style={{fontFamily:theme.fontDisplay,fontSize:fit(short(shot.screenCopy,"PUNTO CLAVE"),76,64,52),lineHeight:1,fontWeight:displayWeight(theme),letterSpacing:0}}>{short(shot.screenCopy,"PUNTO CLAVE")}</div>
       {shot.subcopy?<div style={{fontSize:32,lineHeight:1.15,fontWeight:bodyWeight(theme),color:theme.body||theme.text,marginTop:20}}>{short(shot.subcopy)}</div>:null}
     </div>

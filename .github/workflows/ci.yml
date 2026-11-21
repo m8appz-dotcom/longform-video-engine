@@ -1,0 +1,39 @@
+name: Longform offline checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PROVIDER_MODE: mock
+      NO_PROVIDER_CALLS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: remotion/package-lock.json
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: python -m pip install -r requirements.txt
+      - name: Clean-start entry point
+        run: python -m engine.longform_pipeline --help
+      - name: Offline regression suite
+        run: python -m unittest discover -s tests -v
+      - run: npm ci --prefix remotion
+      - run: npm run typecheck --prefix remotion
+      - name: Generate the contract walkthrough
+        run: python tools/create_demo.py --render
+      - uses: actions/upload-artifact@v4
+        with:
+          name: longform-offline-evidence-${{ github.sha }}
+          path: docs/examples
