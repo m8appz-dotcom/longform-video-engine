@@ -98,3 +98,7 @@ Tests cover contracts and orchestration; some checks require configured runtime 
 A benchmark run with an approved input, actual provider usage, elapsed time, cost, and reviewed video remains needed for those claims. Consult the [Spanish operating guide](README.es.md) for detailed routing rules, legacy vertical commands, and production procedures.
 
 See [pipeline boundaries](docs/ARCHITECTURE.md) and the [optional asset library](asset-library/README.md). Historical source snapshot records are in `docs/history/`.
+
+## Reviewed delivery
+
+See the [delivery workflow](docs/DELIVERY.md) for acceptance criteria, commit boundaries, identified AI/human review, protected integration, and source provenance.
