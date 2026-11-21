@@ -1,0 +1,16 @@
+{
+  "mode": "offline_contract_and_renderer",
+  "contractValidated": true,
+  "chapters": 2,
+  "words": 261,
+  "renderedFrame": true,
+  "frameDimensions": [
+    1920,
+    1080
+  ],
+  "composition": "Longform",
+  "previewOnly": true,
+  "narrationGenerated": false,
+  "liveProviderCalls": 0,
+  "productionQaClaimed": false
+}

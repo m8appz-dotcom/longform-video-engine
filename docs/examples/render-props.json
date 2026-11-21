@@ -1,0 +1,54 @@
+{
+  "runId": "portfolio-19d1ff5ba6",
+  "durationMs": 6000,
+  "audioSrc": "",
+  "sfx": [],
+  "musicBeds": [],
+  "showCaptions": false,
+  "showProgress": true,
+  "brand": {
+    "ink": "#ffffff",
+    "cream": "#101820",
+    "teal": "#8bd1c8",
+    "gold": "#ffffff",
+    "red": "#ffffff"
+  },
+  "theme": {
+    "background": "#101820",
+    "surface": "#192632",
+    "text": "#ffffff",
+    "body": "#d9e4ec",
+    "muted": "#aab8c5",
+    "hairline": "#3b4b58",
+    "accent": "#8bd1c8",
+    "highlight": "#ffffff",
+    "danger": "#ffffff",
+    "fontDisplay": "Arial, sans-serif",
+    "fontBody": "Arial, sans-serif",
+    "typography": {
+      "displayWeight": 600,
+      "bodyWeight": 400
+    },
+    "effects": {
+      "useShadows": false,
+      "useGradients": false
+    }
+  },
+  "shots": [
+    {
+      "shotId": "S0001",
+      "chapterId": "C01",
+      "startMs": 0,
+      "endMs": 6000,
+      "visualKind": "motion-card",
+      "source": "",
+      "mediaType": "card",
+      "sourceInMs": 0,
+      "sourceOutMs": 0,
+      "screenCopy": "KEEP THE SCRIPT LOCKED",
+      "subcopy": "Validate the contract before selecting media.",
+      "cardVariant": "chapter"
+    }
+  ],
+  "captions": []
+}

@@ -6,6 +6,18 @@ The engine handles post-script production. Its input contract fixes the narratio
 
 [Guía operativa completa en español](README.es.md)
 
+## Demonstration
+
+![Application output from the documented walkthrough](docs/images/demo.png)
+
+See the [reproducible walkthrough and its validation scope](docs/DEMO.md).
+
+## Project direction and use
+
+[Kenneth Yepez](https://github.com/kennethyepez) directs product requirements, architecture, integration, validation, and deployment. AI coding agents implement code under his direction.
+
+See [use and licensing](LICENSE.md), [contributing](CONTRIBUTING.md), and [security reporting](SECURITY.md).
+
 ## Architecture
 
 ```text
@@ -84,3 +96,5 @@ npm run typecheck --prefix remotion
 Tests cover contracts and orchestration; some checks require configured runtime dependencies. They do not by themselves establish audiovisual quality, cost, throughput, or production readiness.
 
 A benchmark run with an approved input, actual provider usage, elapsed time, cost, and reviewed video remains needed for those claims. Consult the [Spanish operating guide](README.es.md) for detailed routing rules, legacy vertical commands, and production procedures.
+
+See [pipeline boundaries](docs/ARCHITECTURE.md) and the [optional asset library](asset-library/README.md). Historical source snapshot records are in `docs/history/`.

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "run_id": "portfolio-19d1ff5ba6",
+  "script_locked": true,
+  "script_hash": "19d1ff5ba6629e0f6016da70a19ba242ec701f825fe9e47fc11aa54ecb3718fe",
+  "title": "Cómo revisar un proyecto antes de publicarlo",
+  "thumbnail_promise": "MUESTRA LO QUE PUEDES COMPROBAR",
+  "hook": "Antes de publicar un proyecto, revisa qué puede comprobar otra persona.",
+  "target_minutes": 2,
+  "language": "es",
+  "audience_profile": "Personas que revisan proyectos de software y necesitan ejemplos reproducibles con límites claros.",
+  "avatar_appearances": 2,
+  "chapters": [
+    {
+      "id": "C01",
+      "title": "Revisa el punto de partida",
+      "spoken_text": "Antes de publicar un proyecto, revisa qué puede comprobar otra persona. Empieza por describir el problema con palabras sencillas y elige un ejemplo pequeño que represente el trabajo. Ese ejemplo debe mostrar una entrada clara, una transformación observable y una salida que se pueda revisar. Evita prometer resultados que todavía no has medido.\n\nLa documentación también forma parte del producto. Una persona nueva necesita saber qué instalar, qué ejecutar y qué debería encontrar al terminar. Si un paso depende de una cuenta, un servicio externo o una biblioteca adicional, dilo antes de empezar. Deja una alternativa de prueba cuando sea posible y explica exactamente qué demuestra. Mantén los datos personales fuera del ejemplo. Usa material propio y conserva las fuentes para que los cambios puedan verificarse después."
+    },
+    {
+      "id": "C02",
+      "title": "Conserva pruebas del resultado",
+      "spoken_text": "Después de preparar el ejemplo, comprueba sus instrucciones en una copia aislada. Así puedes distinguir lo que funciona por el proyecto de lo que funciona solamente por la configuración de tu equipo. Guarda los resultados de las comprobaciones y relaciónalos con la versión que realmente probaste. Una captura ayuda a entender el resultado; las pruebas muestran qué comportamiento revisaste.\n\nCuando encuentres un fallo, corrige su causa y repite las comprobaciones afectadas. Conserva el historial para poder explicar qué cambió y por qué. No reemplaces una medición desfavorable por una afirmación optimista. Explica sus límites y el siguiente trabajo necesario. Al cerrar la revisión, otra persona debería poder identificar el objetivo, reproducir el ejemplo y entender qué sigue pendiente. Esa claridad permite conversar sobre decisiones concretas y valorar el trabajo a partir de evidencia visible."
+    }
+  ]
+}
