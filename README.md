@@ -1,176 +1,86 @@
-# Longform Engine
+# Longform Video Engine
 
-Motor post-guion para videos horizontales de YouTube. Es un fork del motor de
-Reels, pero no reemplaza el laboratorio creativo: recibe un guion ya elegido y
-bloqueado, y se encarga de TTS, alineacion, direccion visual, assets, Remotion,
-render y QA.
+Turn a locked, approved script into a narrated horizontal video through staged voice, asset, rendering, and quality checks.
 
-## Limite de responsabilidad
+The engine handles post-script production. Its input contract fixes the narration and script hash; stage orchestration coordinates voice alignment, visual planning, media selection, Remotion rendering, and QA.
+
+[Guía operativa completa en español](README.es.md)
+
+## Architecture
 
 ```text
-Laboratorio YouTube: datos -> empaque -> angulo -> guiones -> avatar elige
-                                      |
-                                      v
-Longform Engine: ApprovedScript -> voz -> plan -> assets -> Remotion -> QA
+ApprovedScript contract
+  -> validate script lock and hash
+  -> voice and alignment
+  -> visual plan and asset routing
+  -> Remotion props
+  -> draft render and QA
+  -> gated master output
 ```
 
-El texto narrado no se reescribe dentro de este repositorio. El hash SHA-256 del
-guion se valida al comienzo de cada etapa.
+| Component | Responsibility |
+| --- | --- |
+| [Input schema](contracts/approved_script.schema.json) | Locked script, chapters, audience, duration, and optional media/design context |
+| [Contract validation](engine/longform_contract.py) | Input validation and script integrity |
+| [Stage orchestrator](engine/longform_pipeline.py) | Validation, voice, planning, assets, props, render, QA, and run status |
+| [Provider adapters](providers/) | Voice and media integrations |
+| [Remotion project](remotion/) | Frame-based video composition |
+| [Longform tests](tests/test_longform.py) | Contract and pipeline regression cases |
 
-Importa directamente el ganador del laboratorio:
+The repository evolved from a vertical-video engine and retains that implementation. The longform entry point is `engine.longform_pipeline`; the older `engine.pipeline` is a separate workflow.
 
-```powershell
-python tools\build_approved_script.py 24_guion_duelo_ganador.md contracts\video.json `
-  --run-id video-001 --title "Titulo cerrado" --thumbnail-promise "TEXTO" `
-  --target-minutes 3 --audience-profile "Perfil observado de al menos 40 caracteres"
+## Start with contract validation
+
+From an isolated clone, install the Python requirements. Rendering also needs the Node dependencies under `remotion/` and the external tools described in the operating guide.
+
+```bash
+python -m pip install -r requirements.txt
+python -m engine.longform_pipeline --help
 ```
 
-## Produccion longform
+Build a contract from your own approved script:
 
-```powershell
-Copy-Item .env.example .env # completar credenciales una vez
-npm install --prefix remotion
-python -m engine.longform_pipeline validate contracts\mi_guion_aprobado.json
-python -m engine.longform_pipeline full contracts\mi_guion_aprobado.json
+```bash
+python tools/build_approved_script.py approved_script.md contracts/my_video.json --run-id video-001 --title "Approved video title" --thumbnail-promise "Approved promise" --target-minutes 3 --audience-profile "Viewers learning a specific, documented practical skill"
+python -m engine.longform_pipeline validate contracts/my_video.json
 ```
 
-La corrida completa ejecuta un preflight persistente antes de gastar llamadas,
-genera primero un borrador 960x540 con todo el audio y solo habilita el master
-si ese borrador pasa QA visual. Los caches mock y real tienen firmas distintas:
-un asset de prueba nunca puede colarse en una produccion.
+Contract creation and validation establish input structure and integrity. They do not demonstrate completed media production.
 
-Para probar sin APIs, las variables exportadas en la sesion tienen precedencia:
+## Offline development and real production
+
+Select mock provider configuration in PowerShell with:
 
 ```powershell
 $env:PROVIDER_MODE = 'mock'
-python -m engine.longform_pipeline props contracts\mi_guion_aprobado.json
 ```
 
-Artifacts por corrida:
+Individual production stages reuse artifacts from earlier stages. For example, `props` requires existing voice-alignment and resolved-plan files; it is not a shortcut from a new contract. Mock artifacts exercise pipeline behavior and are not evidence of provider output quality.
 
-```text
-work/longform_runs/<run_id>/       contratos, planes, manifest y QA
-remotion/public/runs/<run_id>/     audio y assets consumidos por Remotion
-out/longform/<run_id>/master.mp4   master final
+For real production, configure your own credentials using [.env.example](.env.example), install the Remotion dependencies, and follow [media routing](docs/MEDIA_ROUTING_LONGFORM.md) and [music/preflight setup](docs/PRODUCCION_SUNO_Y_PREFLIGHT.md). A full run can invoke paid providers and requires the configured local services.
+
+```bash
+npm ci --prefix remotion
+python -m engine.longform_pipeline full contracts/my_video.json
 ```
 
-La prioridad de reutilizacion sigue siendo clip suministrado por el usuario y
-biblioteca local. Despues, un router de factibilidad elige proveedor segun la
-evidencia que exige cada beat: accion humana, evento real, comentario ajeno,
-referencia cultural, estado UI exacto, concepto abstracto, proceso temporal o
-presentador. Clip Extractor no es stock: solo recupera una fuente real e
-identificable, como un suceso, declaracion, video ajeno, pelicula, serie o video
-musical. Pexels resuelve acciones humanas genericas. No se consulta Pexels para
-una interfaz exacta ni se pide a una imagen fija demostrar varios pasos. Cada
-video debe cubrir su shot sin loop; cada archivo se usa una sola vez por
-SHA-256 y queda indexado con procedencia, etiquetas y uso historico. El avatar aparece
-exactamente dos veces, a pantalla completa, siempre 16:9, centrado, sin recorte
-y dentro de un frame coherente con la estetica.
+The documented flow requires a provenance manifest for music obtained through an authenticated Suno browser session. The repository does not provide an official Suno API. Review the complete prerequisites before requesting a full run.
 
-El contrato, routing, presupuestos, compiladores y artefactos de auditoria se
-documentan en [docs/MEDIA_ROUTING_LONGFORM.md](docs/MEDIA_ROUTING_LONGFORM.md).
+## Artifacts and design choices
 
-Las motion cards no tienen una cuota artificial: se admiten cuando explican,
-comparan o dinamizan, pero nunca reemplazan la evidencia y no se repite el
-mismo medio o template mas de dos veces. El director evalua movimiento util,
-sincronizacion con TTS, evidencia por capitulo y variedad controlada; no fuerza
-porcentajes de stock, video o cards. Los envases generados deben llevar una
-etiqueta ficticia legible; se bloquean empaques blancos, texto absurdo y marcas
-reales.
+- `work/longform_runs/<run_id>/`: contracts, plans, manifests, and QA.
+- `remotion/public/runs/<run_id>/`: audio and assets used by the renderer.
+- `out/longform/<run_id>/master.mp4`: final output when the gates pass.
 
-El estilo tampoco esta codificado al canal. Cada contrato puede declarar
-`design_source` (URL o instrucciones) y `design_profile`. El preflight extrae
-paleta, tipografia, composicion, tiempos de animacion y recursos avanzados
-observables (Three.js, WebGL, canvas, shaders o particulas), conserva evidencia
-y genera un `DesignProfile` versionado. Remotion recibe ademas un `MotionSpec`
-por shot: proposito, primitiva, timeline, camara, transiciones, zonas que no se
-pueden tapar y cues semanticos de SFX. Las animaciones son deterministas por
-frame; el contenido nunca queda hardcoded dentro de un componente.
+Script hashes help prevent stages from silently changing approved narration. Media routing distinguishes literal evidence from illustrative material. Draft review precedes master output, while run metadata records provenance and stage state.
 
-El perfil builtin `frontier-dark-v1` usa canvas `#0A0A0A`, blanco como color
-primario, Inter 400, Geist Mono, hairlines, tarjetas de 8 px y ninguna sombra.
-Color de marca, colores semanticos, densidad, padding, radios, proporcion de
-split, entrada e intensidad pueden reemplazarse desde el perfil del proyecto. El
-HTML/CSS/JS de una URL solo se inspecciona como evidencia: nunca se ejecuta ni se
-copia al render. Three.js, WebGL o particulas quedan autorizados unicamente para
-shots abstractos que los pidan semanticamente; no sustituyen evidencia literal,
-anatomia, producto ni accion humana.
+## Verification and limits
 
-La musica de produccion proviene de Suno mediante navegador autenticado, porque
-no se simula una API inexistente. Despues de descargar un tema con derechos de
-la cuenta Pro, se ingresa con procedencia verificable:
-
-```powershell
-python tools\ingest_suno_music.py D:\descargas\tema.mp3 `
-  --run-dir work\longform_runs\video-001 `
-  --source-url "https://suno.com/song/..." `
-  --prompt "instrumental calido y creible, sin voz" `
-  --mood "calido, explicativo"
-```
-
-Sin ese manifiesto Suno, una corrida real no produce master. El compositor
-mezcla musica baja bajo la narracion, SFX discretos y un CTA hablado que nombra
-el video siguiente; la pantalla final se sostiene entre 8 y 10 segundos.
-
-Para el procedimiento operativo completo, incluyendo la ventana nativa `Save As`
-de Windows, archivos `.tmp`, validacion con `ffprobe`, preflight y reanudacion,
-leer [docs/PRODUCCION_SUNO_Y_PREFLIGHT.md](docs/PRODUCCION_SUNO_Y_PREFLIGHT.md).
-El helper materializa una descarga temporal estable antes de ingerirla:
-
-```powershell
-python tools\finalize_suno_download.py `
-  --downloads-dir "$env:USERPROFILE\Downloads" `
-  --output "$env:USERPROFILE\Downloads\video_suno.mp3"
-```
-
-## Contrato de entrada
-
-Usa `contracts/approved_script.schema.json`. Los clips del usuario pueden llevar
-`shot_ids` para asignacion exacta o una descripcion para matching semantico:
-
-```json
-{"path":"D:/clips/aplicacion.mp4","description":"aplicar crema en abdomen","shot_ids":["S0004"],"start_ms":1200}
-```
-
-## Verificacion
-
-```powershell
+```bash
 python -m unittest discover -s tests -v
 npm run typecheck --prefix remotion
-Push-Location remotion; npx remotion versions --log=verbose; Pop-Location
 ```
 
----
+Tests cover contracts and orchestration; some checks require configured runtime dependencies. They do not by themselves establish audiovisual quality, cost, throughput, or production readiness.
 
-## Motor vertical heredado
-
-Motor de reels verticales (1080x1920) 100% agnostico de dominio. Reescritura limpia de reel-engine con las mismas ideas y proveedores, y una arquitectura de UNA fuente de verdad.
-
-## Principios
-- **Una fuente de verdad.** Prompts en `prompts/`. Geometria y registro de componentes en `shared/core.json` (correr `python scripts/codegen.py` tras editarlo: genera `engine/_generated.py` y `remotion/src/generated.ts`). Umbrales en los validadores. El skill (`skill/reel-director.md`) orquesta sin duplicar reglas.
-- **Etapas puras + circuit breaker.** `python -m engine.pipeline {audition|plan|props|render}`. Cada etapa corre una vez; los fallos se registran en `work/pipeline_state.json`; al tope de reintentos (`MAX_STAGE_RETRIES=2`) el pipeline para y reporta. Nada de bucles silenciosos.
-- **declared_only.** Remotion decide geometria/animacion; el contenido (texto, valores, items) viene SIEMPRE declarado en el plan. Anchors por frase literal del guion.
-- **Core agnostico.** Nada de dominio en motor/skill/prompts; los dominios viven en `plugins/`.
-
-## Layout
-```
-contracts/   reel_plan.schema.json (+ planes)
-shared/      core.json (fuente unica de geometria/registro)
-prompts/     script.md + structure_{arc,case,countdown}.md
-engine/      pipeline, voice (TTS+align), props_build, validate_plan/props, qa (juez LLM), preview (contact sheet), audition, resolve, aligner
-providers/   core (ElevenLabs/Pexels/ClipExtractor/Cutout/Google/imagen), kreado, codex_oauth
-remotion/    renderer modular (src/components, src/layers, generated.ts)
-skill/       reel-director.md (el DIRECTOR)
-plugins/     dominios (SFX/contratos especificos)
-references/  reels de referencia del nicho (formato, nunca contenido)
-```
-
-## Quickstart
-```powershell
-cp .env.example .env   # rellenar llaves
-cd remotion && npm install && cd ..
-python scripts/codegen.py
-python -m engine.pipeline plan contracts/ejemplo_fondo_emergencia.json
-python -m engine.pipeline props contracts/ejemplo_fondo_emergencia.json
-python -m engine.pipeline render
-```
+A benchmark run with an approved input, actual provider usage, elapsed time, cost, and reviewed video remains needed for those claims. Consult the [Spanish operating guide](README.es.md) for detailed routing rules, legacy vertical commands, and production procedures.
