@@ -15,3 +15,9 @@ Corrections during browser review included an editor/navigation overlap in Longf
 Automated checks reject unsigned workspace access, foreign-origin mutations, invalid registration, replayed challenges and unknown credentials. Real holder registration/login/recovery remains pending. Full accessibility certification, physical mobile-device testing, paid/live AI calls, microphone/audio acceptance and finished-video acceptance are not claimed.
 
 Scope limit: The image is the existing original test frame. The demo does not produce a finished video, narration or selected footage. Timing is an estimate from word count, not measured playback.
+
+## Connected engine update
+
+Uses engine.longform_contract.full_script, script_hash and validate_approved_script. The content hash covers the native joined spoken text. English is explicit; Spanish and omitted-language scripts keep their existing diacritic checks. The preview calls the real Longform Remotion composition using the current locked chapters.
+
+Gateway negative tests cover origin, protected actions, session ownership, unsupported input, invalid service credentials, safe errors and path containment. Physical holder passkey acceptance remains pending; it is never inferred from these tests.

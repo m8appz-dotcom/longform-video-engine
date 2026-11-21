@@ -102,7 +102,10 @@ def validate_approved_script(data: dict[str, Any]) -> list[str]:
         wpm = len(words) / target_minutes
         if wpm < 105 or wpm > 190:
             errors.append("densidad estimada %.0f palabras/min fuera de 105-190" % wpm)
-    if len(text) >= 400:
+    language = str(data.get("language") or "es").lower()
+    if language not in {"es", "en"}:
+        errors.append("language must be es or en")
+    if language == "es" and len(text) >= 400:
         accent_count = len(re.findall(r"[áéíóúÁÉÍÓÚüÜñÑ¿¡]", text))
         if accent_count < 4:
             errors.append("guion largo en español sin suficientes tildes/diacriticos")

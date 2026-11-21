@@ -2,6 +2,8 @@
 
 Read and edit the two English chapters. Inspect a shot plan and estimate narration duration at a chosen reading pace. Lock the script and export its content-bound SHA-256 contract. Editing either chapter resets the lock.
 
+See [ENGINES.md](ENGINES.md) for the actual engine connection, additional runtime setup, credentials and acceptance limits.
+
 ## Run locally
 
 Requires Node.js 22 or newer and npm. From the repository root:
@@ -33,7 +35,7 @@ The included server integrates FIDO2/WebAuthn for optional private workspace cop
 
 ## Boundaries
 
-The image is the existing original test frame. The demo does not produce a finished video, narration or selected footage. Timing is an estimate from word count, not measured playback.
+The image remains the original test frame. A separate action renders a real silent 12-second chapter preview from the current locked script. It does not create a full narrated film or select footage. Narration duration is estimated from word count; preview duration is actual playback.
 
 The local server supports its documented localhost origin. This change does not deploy a public service or make these local workspaces production-ready. A public deployment needs a stable HTTPS origin/RP ID, durable protected storage, retention policy and completed holder acceptance. No provider keys or production data are included. No Spark data or services are touched.
 

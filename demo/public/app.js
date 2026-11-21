@@ -1,3 +1,4 @@
+import { runEngine, engineAction, showEngineResult } from "./engine-client.js";
 import {
   $,
   $$,
@@ -36,7 +37,7 @@ const valid = (s) =>
       c.spoken_text.length <= 20000,
   ) &&
   Number.isFinite(s.wpm) &&
-  s.wpm >= 100 &&
+  s.wpm >= 105 &&
   s.wpm <= 200 &&
   typeof s.locked === "boolean" &&
   (!s.locked || /^[a-f0-9]{64}$/.test(s.hash));
@@ -44,11 +45,15 @@ let state = load("film", blank, valid),
   chapter = 0,
   view = "frame";
 const canonical = () =>
-  JSON.stringify({
-    title: state.title,
-    language: "en",
-    chapters: state.chapters,
-  });
+  state.chapters
+    .map((c) => c.spoken_text.trim())
+    .join("\n\n")
+    .trim();
+const engineInput = () => ({
+  title: state.title,
+  chapters: structuredClone(state.chapters),
+  wpm: state.wpm,
+});
 function change(field, value) {
   state.chapters[chapter][field] = value;
   state.locked = false;
@@ -85,7 +90,7 @@ function render() {
               .map((p) => `<p>${esc(p)}</p>`)
               .join("")}</div>`;
   draw(
-    `<main id="main" class="film-shell"><header class="film-header"><strong>LONGFORM</strong><span>${esc(state.title)}</span>${access()}</header><div class="film-workspace"><nav class="film-index" aria-label="Chapters"><span class="film-index-title">Chapter index</span>${state.chapters.map((ch, i) => `<button data-chapter="${i}" aria-current="${i === chapter ? "page" : "false"}"><span class="mono">0${i + 1}</span><span>${esc(ch.title)}</span></button>`).join("")}<div class="film-index-bottom"><span>${state.locked ? "Script locked" : "Working script"} · ${time(total)} estimated</span><button data-full>Read full script ↗</button><label class="reading-speed">Reading pace<select id="reading-speed" aria-label="Reading pace">${[120, 145, 170].map((n) => `<option value="${n}" ${state.wpm === n ? "selected" : ""}>${n} words / min</option>`).join("")}</select></label><button class="film-action" data-lock ${state.locked ? "disabled" : ""}>${state.locked ? "Script locked" : "Lock script revision"}</button><button data-contract ${!state.locked ? "disabled" : ""}>Export locked script ↓</button></div></nav><section class="film-preview" aria-label="Chapter workspace"><div class="film-preview-head"><span>${{ frame: "Original test frame · C01", read: "Script", edit: "Edit chapter", shots: "Shot plan" }[view]}</span><span class="mono">${view === "frame" ? "C01" : c.id} / 02</span></div>${stage}<nav class="film-view-switch" aria-label="Chapter views">${[
+    `<main id="main" class="film-shell"><header class="film-header"><strong>LONGFORM</strong><span>${esc(state.title)}</span>${access()}</header><div class="film-workspace"><nav class="film-index" aria-label="Chapters"><span class="film-index-title">Chapter index</span>${state.chapters.map((ch, i) => `<button data-chapter="${i}" aria-current="${i === chapter ? "page" : "false"}"><span class="mono">0${i + 1}</span><span>${esc(ch.title)}</span></button>`).join("")}<div class="film-index-bottom"><span>${state.locked ? "Script locked" : "Working script"} · ${time(total)} estimated</span><button data-full>Read full script ↗</button><label class="reading-speed">Reading pace<select id="reading-speed" aria-label="Reading pace">${[120, 145, 170].map((n) => `<option value="${n}" ${state.wpm === n ? "selected" : ""}>${n} words / min</option>`).join("")}</select></label><button class="film-action" data-lock ${state.locked ? "disabled" : ""}>${state.locked ? "Script locked" : "Lock script revision"}</button><button data-contract ${!state.locked ? "disabled" : ""}>Export locked script ↓</button><button data-engine-render ${!state.locked ? "disabled" : ""}>Render chapter preview</button></div></nav><section class="film-preview" aria-label="Chapter workspace"><div class="film-preview-head"><span>${{ frame: "Original test frame · C01", read: "Script", edit: "Edit chapter", shots: "Shot plan" }[view]}</span><span class="mono">${view === "frame" ? "C01" : c.id} / 02</span></div>${stage}<nav class="film-view-switch" aria-label="Chapter views">${[
       ["frame", "Original frame"],
       ["read", "Read"],
       ["edit", "Edit script"],
@@ -169,49 +174,56 @@ function render() {
         render();
         notify("English example restored.");
       });
-      $("[data-lock]").onclick = async () => {
-        if (
-          state.chapters.some(
-            (ch) => !ch.title.trim() || !ch.spoken_text.trim(),
-          )
-        ) {
-          notify("Both chapters need a title and script before locking.", true);
-          return;
-        }
+      $("[data-lock]").onclick = async (e) => {
         const text = canonical(),
-          hash = await sha256(new TextEncoder().encode(text));
-        if (text !== canonical()) return;
-        state.hash = hash;
+          snapshot = JSON.stringify(engineInput());
+        const job = await engineAction(
+          e.currentTarget,
+          "validate",
+          engineInput(),
+          () => {},
+        );
+        if (
+          !job ||
+          text !== canonical() ||
+          snapshot !== JSON.stringify(engineInput())
+        )
+          return;
+        state.hash = job.result.contract.script_hash;
         state.locked = true;
         if (save("film", state)) {
           render();
-          notify("Script locked. Editing either chapter resets this lock.");
+          notify(
+            "Script validated and locked by the engine. Editing resets this lock.",
+          );
         }
       };
-      $("[data-contract]").onclick = async () => {
-        if (!state.locked) return;
-        const text = canonical();
-        if ((await sha256(new TextEncoder().encode(text))) !== state.hash) {
-          state.locked = false;
-          state.hash = null;
-          save("film", state);
-          render();
-          notify("The script changed. Lock it again before exporting.", true);
-          return;
-        }
-        download("longform-locked-script.json", {
-          schema_version: "1.0",
-          language: "en",
-          kind: "authored-english-demo",
-          script_locked: true,
-          script_hash: state.hash,
-          hash_encoding: "SHA-256 of UTF-8 canonical_script",
-          canonical_script: text,
-          ...JSON.parse(text),
-          estimated_seconds: total,
-          finished_video: false,
+      $("[data-contract]").onclick = (e) =>
+        engineAction(e.currentTarget, "validate", engineInput(), (job) => {
+          if (!state.locked || job.result.contract.script_hash !== state.hash) {
+            notify("The script changed. Lock this revision again.", true);
+            return;
+          }
+          showEngineResult(
+            "Locked script contract",
+            job,
+            `<p>${esc(job.result.scope)}</p>`,
+          );
         });
-      };
+      $("[data-engine-render]").onclick = (e) =>
+        engineAction(
+          e.currentTarget,
+          "render",
+          { ...engineInput(), scriptHash: state.hash },
+          (job) => {
+            const movie = job.files.find((f) => f.mime === "video/mp4");
+            showEngineResult(
+              "Chapter preview",
+              job,
+              `<p>${esc(job.result.preview.scope)}</p><video controls playsinline preload="metadata" aria-label="Rendered chapter preview" src="${esc(movie.url)}" class="engine-video"></video>`,
+            );
+          },
+        );
       $("[data-export]").onclick = () =>
         download("longform-draft.json", {
           kind: "authored-english-demo",
