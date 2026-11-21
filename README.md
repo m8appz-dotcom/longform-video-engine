@@ -6,6 +6,10 @@ The engine handles post-script production. Its input contract fixes the narratio
 
 [Guía operativa completa en español](README.es.md)
 
+## Interactive English demo
+
+[Run the interactive demo](demo/README.md) to explore the approved product interface, local example workflows and downloadable outputs. The isolated demo uses English throughout and preserves the original application below. See its README for the exact example boundaries and passkey acceptance status.
+
 ## Demonstration
 
 ![Application output from the documented walkthrough](docs/images/demo.png)
