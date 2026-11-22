@@ -6,15 +6,15 @@ The engine handles post-script production. Its input contract fixes the narratio
 
 [Guía operativa completa en español](README.es.md)
 
-## Interactive English demo
+## See the workspace
 
-[Run the interactive demo](demo/README.md) to explore the approved product interface, local example workflows and downloadable outputs. The isolated demo uses English throughout and preserves the original application below. See its README for the exact example boundaries and passkey acceptance status.
+A chapter workspace for editing narration and preserving an approved script contract.
 
-## Demonstration
+![The current Longform Video Engine workspace](docs/images/workspace-desktop.jpg)
 
-![Application output from the documented walkthrough](docs/images/demo.png)
+[Run locally](demo/README.md) · [Desktop and phone views](docs/PRODUCT.md)
 
-See the [reproducible walkthrough and its validation scope](docs/DEMO.md).
+The local example and the connected engine have separate setup instructions and documented limits.
 
 ## Project direction and use
 
